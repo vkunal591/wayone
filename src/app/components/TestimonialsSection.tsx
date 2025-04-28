@@ -1,0 +1,132 @@
+"use client"
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import { Pagination, Autoplay } from "swiper/modules";
+
+SwiperCore.use([Pagination, Autoplay]);
+
+const testimonials: any = [
+  {
+    image: "/assets/images/testimonials/testimonials-1.jpg",
+    name: "Rajesh Kumar",
+    testimonial:
+      "“WayOne's team completely transformed our online presence. Their SEO and digital marketing expertise helped us rank higher on search engines, bringing in more leads than ever before!”",
+  },
+  {
+    image: "/assets/images/testimonials/testimonials-2.jpg",
+    name: "Nisha Gupta",
+    testimonial:
+      "“WayOne’s web development team built a custom website for us that perfectly reflects our brand. The entire process was seamless, and the final product exceeded our expectations.”",
+  },
+  {
+    image: "/assets/images/testimonials/testimonials-3.jpg",
+    name: "Arvind Sharma",
+    testimonial:
+      "“The branding and design services provided by WayOne gave our company a modern, professional look that resonates with our target audience. We’ve noticed a significant increase in customer engagement!”",
+  },
+  {
+    image: "/assets/images/testimonials/testimonials-4.jpg",
+    name: "Sneha Mehta",
+    testimonial:
+      "“The results from WayOne’s digital marketing campaigns have been outstanding. Our social media following has grown significantly, and we’re seeing tangible results from their PPC and SEO efforts.”",
+  },
+  {
+    image: "/assets/images/testimonials/testimonials-5.jpg",
+    name: "Karan Singh",
+    testimonial:
+      "“WayOne’s mobile app development team delivered an intuitive, user-friendly app that has enhanced our customer experience. Their team’s attention to detail was exceptional.”",
+  },
+];
+
+const TestimonialsSection: React.FC = () => {
+  return (
+    <section
+      id="testimonials"
+      className="testimonials cs-testimonials section py-16"
+    >
+      <div className="section-heading text-center mb-12 lg:w-4/5 m-auto">
+        <h2 className="text-3xl text-gray-800 font-semibold">
+          Over 100+{" "}
+          <span className="text-primary">
+            Satisfied Clients and Counting
+          </span>
+        </h2>
+        <p className="mt-4 text-gray-700">
+          We take pride in having served over 130 clients across diverse
+          industries, delivering results-driven digital solutions that exceed
+          expectations. Our focus on quality, customer satisfaction, and
+          long-term partnerships has earned us the trust of businesses across
+          India. Join the growing list of brands that trust us to drive their
+          digital transformation and growth.
+        </p>
+      </div>
+
+      <div className="container mx-auto">
+        <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            className="col-lg-3 info"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="/assets/images/testi1.png"
+              alt="Client 1"
+              className="w-full h-auto"
+            />
+          </div>
+          <div
+            className="col-lg-3 info"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="/assets/images/testi2.png"
+              alt="Client 2"
+              className="w-full h-auto"
+            />
+          </div>
+
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <Swiper
+              loop={true}
+              speed={600}
+              autoplay={{ delay: 5000 }}
+              slidesPerView="auto"
+              pagination={{ clickable: true }}
+              className="swiper-container"
+            >
+              {testimonials.map((testimonial: any, index: any) => (
+                <SwiperSlide key={index}>
+                  <div className="testimonial-item  p-6 rounded-lg">
+                    <p className="text-lg text-gray-600 italic">
+                      <span>“{testimonial.testimonial}”</span>
+                    </p>
+                    <div className="flex items-center mt-4">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="testimonial-img w-16 h-16 object-cover rounded-full flex-shrink-0"
+                      />
+                      <div className="ml-4">
+                        <h3 className="font-semibold text-xl text-gray-800">
+                          {testimonial.name}
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialsSection;
