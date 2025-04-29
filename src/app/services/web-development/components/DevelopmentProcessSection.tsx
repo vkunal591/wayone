@@ -80,7 +80,7 @@ export default function DevelopmentProcessSection() {
                             className="bg-white rounded-xl shadow-lg p-8 transition hover:shadow-xl"
                         >
                             <div className="text-primary text-xl font-bold mb-4">
-                                <span className="bg-blue-100 text-primary px-3 py-1 rounded-full">
+                                <span className="bg-blue-100/50 text-primary px-3 py-1 rounded-full">
                                     {stepData.step}
                                 </span>
                             </div>
@@ -89,7 +89,7 @@ export default function DevelopmentProcessSection() {
                                 {stepData.items.map((item, i) => (
                                     <div
                                         key={i}
-                                        className={`flex items-center space-x-2 bg-blue-50 p-2 rounded-lg text-gray-700`}>
+                                        className={`flex items-center space-x-2 bg-blue-50/50 p-2 rounded-lg text-gray-700`}>
                                         <span className="text-primary text-lg">•</span>
                                         <span>{item}</span>
                                     </div>

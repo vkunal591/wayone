@@ -1,33 +1,33 @@
+import FaqSection from '@/app/components/common/FaqSection';
+import IndustriesSection from '@/app/components/IndustriesSection';
 import React from 'react'
-import ContactHeroSection from './components/ContactSection'
-import ServicesSection from './components/ServicesSection'
-import OurWorkSlide from './components/OurWorkSlide'
-import DevelopmentProcessSection from './components/DevelopmentProcessSection'
-import IndustriesSection from './components/IndustriesSection'
-import TechnologiesSection from './components/TechnologySection'
-import WhyChooseUsSection from './components/WhyChooseSection'
-import FaqSection from '../../components/common/FaqSection'
+    ;
+import ContactHeroSection from '../web-development/components/ContactSection';
+import TechnologiesSection from '../web-development/components/TechnologySection';
+import WhyChooseUsSection from '../web-development/components/WhyChooseSection';
+
 
 const dynamicData = {
-    title: "Build Future-Ready",
-    heiglight: " Websites with Wayone",
+    title: "Empowering Businesses with Cutting-Edge AI Solutions for Innovation and Growth",
+    heiglight: " ",
     shortDesc: "Custom, Scalable & High-Performance Web Solutions",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     ctaText: "Start Your Project",
     ctaLink: "#contact",
-    subheading: "Digital Transformation Services"
+    subheading: "AI Development Services – Wayone"
 };
+
+
 
 export default function page() {
     return (
         <div className=''>
             <ContactHeroSection {...dynamicData} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
-                <ServicesSection />
+
             </div>
-            <OurWorkSlide />
+
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
-                <DevelopmentProcessSection />
                 <IndustriesSection />
                 <TechnologiesSection />
                 <WhyChooseUsSection />

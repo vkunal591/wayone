@@ -44,7 +44,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="services-section py-20   ">
+    <section id="services" className="services-section pb-16   ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-primary font-semibold uppercase tracking-widest">Our Web Development Services</p>
