@@ -175,15 +175,15 @@ const Sidebar = () => {
   return (
     <div className="relative font-[poppins]">
       <div
-        className={`fixed top-0 right-0 h-full bg-gray-900 text-primary z-50 transform ${
+        className={`fixed top-0 right-0 h-full bg-gray-50 text-primary z-50 transform ${
           isOpen ? "w-[85%] md:w-3/4" : "w-0"
         } transition-all duration-500 ease-in-out`}
       >
-        <div className="bg-gray-900 text-gray-50">
+        <div className="bg-gray-50 text-gray-50">
           <div className="flex p-3 shadow-md z-50 justify-between items-center">
             <Link href={"/"}>
               <Image
-                src={"/assets/logo/logo.png"}
+                src={"/assets/images/logo.png"}
                 width={150}
                 height={70}
                 unoptimized
@@ -196,7 +196,7 @@ const Sidebar = () => {
               x
             </p>
           </div>
-          <div className="p-4 pb-40 bg-gray-900 overflow-auto h-screen">
+          <div className="p-4 pb-40 bg-gray-50 text-gray-900 overflow-auto h-screen">
             <Link
               href={"/"}
               aria-label={"Home"}
@@ -232,7 +232,7 @@ const Sidebar = () => {
       <IoIosMenu
         size={30}
         onClick={toggleSidebar}
-        className="lg:hidden text-white"
+        className="lg:hidden text-primary"
       />
       {isOpen && (
         <div

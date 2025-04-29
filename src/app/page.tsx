@@ -87,8 +87,8 @@ const featuresData = [
 
 export default function Home() {
   return (
-    <div className="mt-[6rem]">
-      <HeroSection />
+    <div className="">
+      <HeroSection client={true} />
       <div className="p-4 lg:px-16 bg-white">
         <FeatureCards features={featuresData} />
         <AboutSection />

@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col pt-8 md:pt-20 lg:pt-24 items-center justify-center min-h-screen p-4 bg-gray-100 text-center">
+    <div className="flex flex-col pt-8 md:pt-20 lg:pt-24 mt-[5.5rem] items-center justify-center min-h-screen p-4 bg-gray-100 text-center">
       <Image
-        src={"/assets/others/Illustration.png"}
+        src={"/assets/images/not-found.png"}
         alt="404 Page Image"
-        width={500}
-        height={500}
+        width={400}
+        height={400}
         unoptimized
         priority
-        className="object-contain"
+        className="object-contain filter invert-25 "
       />
       <h2 className="text-2xl mt-5 font-bold text-primary">
         404 - Page Not Found

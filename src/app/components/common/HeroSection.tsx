@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { IoArrowForward } from "react-icons/io5";
 
-const HeroSection = () => {
+const HeroSection = ({ client = false, title1, title2, description }: { client?: boolean, title1?: any, title2?: any, description?: any }) => {
   return (
-    <section id="hero" className="hero section bg-gray-50 py-16">
+    <section id="hero" className="hero section bg-gray-50 py-16 pt-[6rem]">
       <div className="container mx-auto text-center">
         <div className="flex flex-col items-center justify-center space-y-8 lg:space-y-5">
-          <div className="happy-client flex items-center gap-2">
+          {client && <div className="happy-client flex items-center gap-2">
             <Image
               src="/assets/images/happy-client.png"
               alt="Happy Client"
@@ -19,20 +19,15 @@ const HeroSection = () => {
             <p className="text-base text-gray-700 font-medium">
               Over 100+ Satisfied Clients
             </p>
-          </div>
+          </div>}
 
           <h1 className="text-3xl lg:text-5xl/16 font-extrabold text-gray-800">
-            Empowering Business Growth <br className="hidden md:inline" />
-            <span className="text-primary">with Smarter IT Solutions</span>
+            {title1 || "Empowering Business Growth"} <br className="hidden md:inline" />
+            <span className="text-primary">{title2 || "with Smarter IT Solutions"}</span>
           </h1>
 
           <p className="text-base font-[cabin] lg:w-4/5 text-gray-600 px-4 md:px-16">
-            In today’s rapidly evolving digital landscape, traditional methods
-            simply aren’t enough. At WayOne, we deliver intelligent IT solutions
-            designed to streamline operations, reduce costs, and maximize
-            performance. From seamless system integrations to advanced software
-            development, we tailor every solution to your business needs —
-            ensuring you're not just keeping up with change, but leading it.
+            {description ||  " In today’s rapidly evolving digital landscape, traditional methods  simply aren’t enough. At WayOne, we deliver intelligent IT solutions designed to streamline operations, reduce costs, and maximize performance. From seamless system integrations to advanced software development, we tailor every solution to your business needs — ensuring you're not just keeping up with change, but leading it."}
           </p>
 
           <div className="hero-btn flex space-x-4 justify-center">

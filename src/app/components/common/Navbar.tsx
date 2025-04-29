@@ -2,62 +2,62 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 
 const services = [
   {
     name: "Web Development",
-    image: "/assets/webdev.png",
+    image: "/assets/images/webdev.png",
     path: "/services/web-development",
     id: "web-development", // Unique ID for submenu
   },
   {
     name: "App Development",
-    image: "/assets/appdev.png",
+    image: "/assets/images/appdev.png",
     path: "/services/app-development",
     id: "app-development", // Unique ID for submenu
   },
   {
     name: "Artificial Intelligence",
-    image: "/assets/ai.png",
+    image: "/assets/images/ai.png",
     path: "/services/artificial-intelligence",
     id: "ai", // Unique ID for submenu
   },
   {
     name: "Saas Development",
-    image: "/assets/saas.png",
+    image: "/assets/images/saas.png",
     path: "/services/saas-development",
     id: "saas", // Unique ID for submenu
   },
   {
     name: "Blockchain Development",
-    image: "/assets/block.png",
+    image: "/assets/images/block.png",
     path: "/services/blockchain-development",
     id: "blockchain", // Unique ID for submenu
   },
   {
     name: "CRM Development",
-    image: "/assets/crm.png",
+    image: "/assets/images/crm.png",
     path: "/services/crm-development",
     id: "crm", // Unique ID for submenu
   },
   {
     name: "UX/UI Designing",
-    image: "/assets/ux.png",
+    image: "/assets/images/ux.png",
     path: "/services/ux-ui-designing",
     id: "ux-ui", // Unique ID for submenu
   },
   {
     name: "Digital Marketing",
-    image: "/assets/webdev.png",
+    image: "/assets/images/webdev.png",
     path: "/services/digital-marketing",
     id: "digital-marketing", // Unique ID for submenu
   },
   {
     name: "API Development",
-    image: "/assets/api.png",
+    image: "/assets/images/api.png",
     path: "/services/api-development",
     id: "api", // Unique ID for submenu
   },
@@ -67,61 +67,61 @@ const industries = [
   {
     id: "health-care", // Added id
     name: "Health Care",
-    image: "/assets/serve1.png",
+    image: "/assets/images/serve1.png",
     path: "/industries/health-care",
   },
   {
     id: "oil-gas-energy", // Added id
     name: "Oil & Gas Energy",
-    image: "/assets/serve2.png",
+    image: "/assets/images/serve2.png",
     path: "/industries/oil-gas-energy",
   },
   {
     id: "retails-e-commerce", // Added id
     name: "Retails & E-Commerce",
-    image: "/assets/serve3.png",
+    image: "/assets/images/serve3.png",
     path: "/industries/retails-e-commerce",
   },
   {
     id: "real-estate-construction", // Added id
     name: "Real Estate & Construction",
-    image: "/assets/serve4.png",
+    image: "/assets/images/serve4.png",
     path: "/industries/real-estate-construction",
   },
   {
     id: "finance-banking", // Added id
     name: "Finance & Banking",
-    image: "/assets/serve5.png",
+    image: "/assets/images/serve5.png",
     path: "/industries/finance-banking",
   },
   {
     id: "government-smart-cities", // Added id
     name: "Goverment & Smart Cities",
-    image: "/assets/serve6.png",
+    image: "/assets/images/serve6.png",
     path: "/industries/government-smart-cities",
   },
   {
     id: "education-service", // Added id
     name: "Education Service",
-    image: "/assets/serve7.png",
+    image: "/assets/images/serve7.png",
     path: "/industries/education-service",
   },
   // {
   //   id: "logistic-transportation", // Added id
   //   name: "Logistic & Transportation",
-  //   image: "/assets/serve8.png",
+  //   image: "/assets/images/serve8.png",
   //   path: "/industries/logistic-transportation",
   // },
   // {
   //   id: "hospitality-tourism", // Added id
   //   name: "Hospitality & Tourism",
-  //   image: "/assets/serve9.png",
+  //   image: "/assets/images/serve9.png",
   //   path: "/industries/hospitality-tourism",
   // },
   // {
   //   id: "legal-compliance", // Added id
   //   name: "Legal & Compliance",
-  //   image: "/assets/serve10.png",
+  //   image: "/assets/images/serve10.png",
   //   path: "/industries/legal-compliance",
   // },
 ];
@@ -129,7 +129,16 @@ const industries = [
 const Navbar = () => {
   const pathname = usePathname(); // Get current route
   const [activeSubmenuId, setActiveSubmenuId] = useState<string | null>(null); // Track active submenu by ID
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Change 50 to whatever offset you prefer
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const handleMouseEnter = (submenuId: string) => {
     setActiveSubmenuId(submenuId); // Set the submenu as active on hover
   };
@@ -166,7 +175,7 @@ const Navbar = () => {
   const handleLinkClick = () => setActiveSubmenuId(null);
 
   return (
-  <nav className="bg-white fixed flex justify-between p-4 lg:p-0 lg:justify-evenly items-center lg:h-24  top-0 z-[100] w-full shadow">
+    <nav className={`${!scrolled ? "bg-transparent":"bg-white shadow"} fixed flex justify-between p-4 lg:p-0 lg:justify-evenly items-center lg:h-24  top-0 z-[100] w-full `}>
       <div>
         <Link href={"/"}>
           <Image
@@ -191,11 +200,10 @@ const Navbar = () => {
           >
             <Link href={item.path} className="border-none outline-none hover:text-blue-800">
               <li
-                className={`mr-10 text-sm  hover:scale-105 ${
-                  pathname === item.path
+                className={`mr-10 text-sm  hover:scale-105 ${pathname === item.path
                     ? "border-b-4 border-color-primary text-primary font-bold"
                     : "text-dark-primary  transition-all duration-300"
-                } `}
+                  } `}
                 onClick={(e) => {
                   item.submenu && e.preventDefault(); // Prevent link navigation to enable click behavior
                   handleClick(item.name); // Toggle submenu on click
@@ -208,9 +216,8 @@ const Navbar = () => {
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute top-20 left-[-20rem] w-[60vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 ${
-                  activeSubmenuId === item.name ? "block" : "hidden"
-                }`}
+                className={`absolute top-20 left-[-20rem] w-[60vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 ${activeSubmenuId === item.name ? "block" : "hidden"
+                  }`}
                 onMouseLeave={handleMouseLeave} // Reset on mouse leave
               >
                 <ul className="space-y-2 p-2 grid grid-cols-1 lg:grid-cols-3">
