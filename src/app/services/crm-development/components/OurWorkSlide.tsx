@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Pagination } from "swiper/modules";
-import HeaderSection from "@/app/components/common/HeaderSection";
 
 const portfolioItems = [
   {
@@ -43,17 +42,19 @@ export default function OurWorkSlide() {
   return (
     <section className="py-20 bg-white">
       <div className="w-full">
-
-        <div className="max-w-7xl m-auto lg:px-16">
-          <HeaderSection
-            subtitle="Our Build Projects"
-            title="Showcasing Innovation & Excellence in"
-            br={true}
-            highlight="Digital Solutions"
-            description="At WayOne, We focus on creating exceptional designs that seamlessly combine creativity and functionality. Every project we undertake reflects our unwavering commitment to excellence and innovation, ensuring we consistently exceed client expectations."
-            textAlign="text-left me-auto"
-          />
+        <div className="text-center mb-12">
+        <span className="text-primary font-semibold mb-2 block">{"Our Digital Marketing Process"}</span>
+          <h2 className="text-4xl font-bold">
+            From Initial Concept to
+            <span className="text-primary">
+              Seamless Deployment
+            </span>
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto mt-4">
+            At WayOne, we focus on creating exceptional designs that seamlessly combine creativity and functionality. Every project we undertake reflects our unwavering commitment to excellence and innovation, ensuring we consistently exceed client expectations.
+          </p>
         </div>
+
         <Swiper
           slidesPerView={1}
           pagination={{ clickable: true }}

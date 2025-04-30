@@ -22,11 +22,11 @@ const technologyItems: TechnologyItem[] = [
 const TechnologySection: React.FC = () => {
   return (
     <section className="technology cs-technology py-16">
-      <div className="section-heading text-center mb-8 lg:w-4/5 m-auto ">
-        <h2 className="text-3xl font-semibold text-gray-800">
+      <div className="section-heading text-left mb-8 me-auto ">
+        <h2 className="text-4xl font-semibold lg:w-3/5 text-gray-800">
           Our <span className="text-primary">Technology Partners</span>
         </h2>
-        <p className="mt-4 text-gray-700">
+        <p className="mt-4 font-[cabin] lg:w-3/5 text-gray-700">
           At WayOne, we collaborate with leading technology innovators to deliver best-in-class solutions for your
           business. Through our strategic partnerships, we gain access to the latest tools and technologies, enabling
           us to offer secure, scalable, and innovative solutions that meet the evolving demands of our clients. Together,

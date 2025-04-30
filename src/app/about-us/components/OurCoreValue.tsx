@@ -2,12 +2,12 @@
 export default function OurCoreValue() {
     return (
       <section className="values py-16 ">
-        <div className="max-w-4xl mx-auto text-center px-4 mb-12">
-          <h3 className="text-lg text-blue-600 font-medium uppercase mb-2">Our Core Values</h3>
+        <div className="mx-auto text-left mb-12">
+          <h3 className="text-lg text-primary font-medium lg:w-3/4 uppercase mb-2">Our Core Values</h3>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             The Pillars of Innovation, Excellence, and Integrity
           </h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 font-[cabin] lg:w-4/5 mb-6">
             At WayOne, our core values are the foundation of everything we do. We are deeply committed to continuous
             innovation, maintaining the highest standards of excellence, and operating with integrity in all our business
             interactions. These principles guide us as we deliver exceptional IT solutions, ensuring that every project is

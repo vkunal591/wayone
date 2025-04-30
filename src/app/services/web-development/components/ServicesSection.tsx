@@ -1,4 +1,5 @@
 // components/ServicesSection.js
+import HeaderSection from "@/app/components/common/HeaderSection";
 import { BiCart, BiLaptop, BiWindow, BiPalette } from "react-icons/bi";
 import { FaLaptop } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
@@ -45,23 +46,28 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="services-section pb-16   ">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <p className="text-primary font-semibold uppercase tracking-widest">Our Web Development Services</p>
-          <h2 className="text-3xl md:text-4xl font-bold">Transforming Ideas into</h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">Powerful Websites</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            At WayOne, we specialize in turning your ideas into high-performance websites that help you achieve your business goals. Our services are designed to ensure a seamless online experience, from concept to execution.
-          </p>
-        </div>
+      <div className="container mx-auto ">
+
+        <HeaderSection
+          subtitle="Our Web Development Services"
+          title="Transforming Ideas into"
+          br={true}
+          highlight="Powerful Websites"
+          description="At WayOne, we specialize in turning your ideas into high-performance websites that help you achieve your business goals. Our services are designed to ensure a seamless online experience, from concept to execution"
+          textAlign="text-left me-auto"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-all duration-300">
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+            <div
+              key={index}
+              className="bg-gray-200/40 p-6 text-center rounded-4xl shadow transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1"
+            >
+              <div className="mb-4 mx-auto bg-white inline-block rounded-full p-4 text-3xl">{service.icon}</div>
+              <h3 className="text-xl text-primary font-medium mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-justify font-[cabin]">{service.description}</p>
             </div>
+
           ))}
         </div>
       </div>

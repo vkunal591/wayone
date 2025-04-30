@@ -59,3 +59,33 @@ body {
 .border-color-primary {
   border-color: var(--primary);
 }
+
+
+
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--color-white);
+}
+
+.button-primary:hover {
+  background-color: var(--primary);
+  opacity: 0.8;
+  color: var(--color-white);
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.button-seondary {
+  background-color: white;
+  color: var(--primary);
+}
+
+.button-seondary:hover {
+  background-color: rgba(230, 230, 230, 0.731);
+  color: var(--primary);
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
+

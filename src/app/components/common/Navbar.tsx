@@ -164,11 +164,11 @@ const Navbar = () => {
       submenu: services,
     },
     { name: "Our Work", path: "/our-work" },
-    {
-      name: "Industries",
-      path: "/industries",
-      submenu: industries,
-    },
+    // {
+    //   name: "Industries",
+    //   path: "/industries",
+    //   submenu: industries,
+    // },
     { name: "Contact Us", path: "/contact-us" },
   ];
 
@@ -216,7 +216,7 @@ const Navbar = () => {
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute top-20 left-[-20rem] w-[60vw] mt-2 rounded-2xl bg-gray-50 text-gray-800 ${activeSubmenuId === item.name ? "block" : "hidden"
+                className={`absolute top-16 left-[-20rem] w-[60vw] mt-2 z-[10000] rounded-2xl bg-gray-100 text-gray-800 shadow ${activeSubmenuId === item.name ? "block" : "hidden"
                   }`}
                 onMouseLeave={handleMouseLeave} // Reset on mouse leave
               >

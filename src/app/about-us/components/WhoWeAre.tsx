@@ -5,7 +5,7 @@ import Image from 'next/image';
 const WhoWeAre: React.FC = () => {
   return (
     <section id="about" className="py-16">
-      <div className="container mx-auto px-4" data-aos="fade-up">
+      <div className="container mx-auto" data-aos="fade-up">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Text Content */}
           <div
@@ -13,18 +13,18 @@ const WhoWeAre: React.FC = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-gray-700">Who We Are</h3>
-              <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+            <div>
+              <h3 className="text-primary">Who We Are</h3>
+              <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
                 Innovating IT Solutions for a{' '}
                 <span className="text-blue-800">Smarter Tomorrow</span>
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 mb-4 font-[cabin]">
                 WayOne is a leading Indian IT and digital solutions company, committed to helping businesses
                 thrive in today’s fast-evolving digital environment. Our expert team blends creativity, strategy,
                 and cutting-edge technology to deliver tailor-made solutions that produce real, measurable results.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 font-[cabin] mb-4">
                 From web development and app creation to SEO, social media, and performance marketing, we provide
                 end-to-end services that strengthen your digital presence and drive long-term growth. Our mission
                 is simple — to turn your digital vision into lasting business value.

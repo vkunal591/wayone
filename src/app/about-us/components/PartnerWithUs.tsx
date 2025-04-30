@@ -2,7 +2,7 @@
 export default function PartnerWithUs() {
     return (
       <section className="partner-with-us py-16 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 mb-12">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner with Us?</h2>
           <p className="text-gray-700">
             At WayOne, we pride ourselves on delivering innovative, secure, and reliable trading solutions. Whether you're
@@ -11,7 +11,7 @@ export default function PartnerWithUs() {
           </p>
         </div>
   
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="bg-gray-100 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow">

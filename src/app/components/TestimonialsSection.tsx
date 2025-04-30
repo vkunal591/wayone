@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Pagination, Autoplay } from "swiper/modules";
+import { FaPlay } from "react-icons/fa";
+import Image from "next/image";
 
 SwiperCore.use([Pagination, Autoplay]);
 
@@ -49,7 +51,7 @@ const TestimonialsSection: React.FC = () => {
       id="testimonials"
       className="testimonials cs-testimonials section py-16"
     >
-      <div className="section-heading text-center mb-12 lg:w-4/5 m-auto">
+      <div className="section-heading text-left mb-12 lg:w-4/5 me-auto">
         <h2 className="text-3xl text-gray-800 font-semibold">
           Over 100+{" "}
           <span className="text-primary">
@@ -69,26 +71,42 @@ const TestimonialsSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            className="col-lg-3 info"
+            className="col-lg-3 relative info"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <img
+            <Image
+              height={400}
+              width={400}
               src="/assets/images/testi1.png"
               alt="Client 1"
               className="w-full h-auto"
             />
+            <div className="absolute bottom-5 left-5 text-white text-2xl font-semibold flex items-center  gap-4">
+              <span className=" rounded-full text-2xl bg-white p-4">
+                <FaPlay className=" text-primary" />
+              </span>
+              Mrs Suji
+            </div>
           </div>
           <div
-            className="col-lg-3 info"
+            className="col-lg-3 info relative"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <img
+            <Image
+              height={400}
+              width={400}
               src="/assets/images/testi2.png"
               alt="Client 2"
               className="w-full h-auto"
             />
+            <div className="absolute bottom-5 left-5 text-white text-2xl font-semibold flex items-center  gap-4">
+              <span className=" rounded-full text-2xl bg-white p-4">
+                <FaPlay className=" text-primary" />
+              </span>
+              Mrs William
+            </div>
           </div>
 
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">

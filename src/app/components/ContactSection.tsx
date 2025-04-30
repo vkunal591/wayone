@@ -30,8 +30,8 @@ const ContactSection: React.FC = () => {
 
   return (
     <div className="wrapper cs-wrapper py-16">
-      <div className="contact-container flex flex-col md:flex-row items-center justify-between">
-        <div className="contact-form w-full md:w-3/5 bg-gray-100 p-16 rounded-l-3xl ">
+      <div className="contact-container flex flex-col-reverse md:flex-row items-center justify-between">
+        <div className="contact-form w-full md:w-2/4 bg-gray-100  lg:p-16 rounded-4xl ">
           <h2 className="text-2xl font-semibold text-left text-primary mb-4">
             Connect With Us Today
           </h2>
@@ -79,9 +79,9 @@ const ContactSection: React.FC = () => {
             ></textarea>
             <button
               type="submit"
-              className="submit-btn bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+              className="submit-btn button-primary text-white py-3 px-6 rounded-lg w-full  transition duration-300"
             >
-              Message
+              Submit
             </button>
           </form>
 
@@ -91,16 +91,16 @@ const ContactSection: React.FC = () => {
             </div>
           )}
         </div>
-
-        <div className="contact-image w-full md:w-2/5 py-5">
+        <div className="contact-image w-full md:w-2/4 rounded-4xl md:rounded-none overflow-hidden mb-8 md:mb-0">
           <Image
             width={900}
-            height={900}
+            height={700}
             src="/assets/images/image 08.png"
             alt="Company Building"
-            className="w-full object-cover"
+            className="lg:w-5/6"
           />
         </div>
+
       </div>
     </div>
   );

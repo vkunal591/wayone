@@ -1,6 +1,7 @@
 // components/AboutSection.tsx
 
 import Image from "next/image";
+import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
 
 const AboutSection = () => {
@@ -23,7 +24,7 @@ const AboutSection = () => {
           </div>
 
           <div
-            className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left"
+            className="lg:w-1/2 flex flex-col justify-center lg:text-center lg:text-left"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -47,13 +48,13 @@ const AboutSection = () => {
                 enhance your brand’s online visibility and performance.
               </p>
               <div className=" mt-8">
-                <a
+                <Link
                   href="/about"
-                  className=" inline-flex items-center justify-center px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary transition-all duration-300"
+                  className=" inline-flex button-primary items-center justify-center px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary transition-all duration-300"
                 >
                   <span>Explore More</span>
                   <IoArrowForward className="ml-2" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

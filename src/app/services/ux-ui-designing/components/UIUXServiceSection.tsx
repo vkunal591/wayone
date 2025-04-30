@@ -1,0 +1,59 @@
+import React from 'react';
+import { AiOutlineAlipay } from 'react-icons/ai';
+
+// Interface for each service in the section
+interface Service {
+  icon: string;
+  title: string;
+  description: string;
+  delay: number;
+}
+
+interface ServicesSectionProps {
+  subtitle: string;
+  title: string;
+  description: string;
+  services: Service[];
+}
+
+const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
+  subtitle,
+  title,
+  description,
+  services,
+}) => {
+  return (
+    <section id="services" className="py-16">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <div className="section-header text-left p-5 my-4" data-aos="fade-up">
+          <span className="section-subtitle d-block mb-2">{subtitle}</span>
+          <h2 className="text-4xl font-bold">
+            {title}
+          </h2>
+          <p className="section-desc mt-3 text-gray-600">{description}</p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="service-card text-start border-2 border-color-primary rounded-lg p-6"
+              data-aos="fade-up"
+              data-aos-delay={`${service.delay}`}
+            >
+              <div className="text-primary text-4xl mb-4">
+                <AiOutlineAlipay className={`bi ${service.icon}`} />
+              </div>
+              <h3 className="font-medium text-xl text-primary mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default UIUXServicesSection;

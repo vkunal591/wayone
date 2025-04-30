@@ -24,11 +24,11 @@ const industryItems: IndustryItem[] = [
 const IndustriesSection: React.FC = () => {
   return (
     <section className="industries cs-industries py-16">
-      <div className="section-heading text-center mb-8 m-auto lg:w-4/5">
-        <h2 className="text-3xl text-gray-800 font-semibold">
+      <div className="section-heading text-left mb-8 me-auto ">
+        <h2 className="text-4xl text-gray-800 lg:w-3/4 font-semibold">
           Industries <span className="text-primary">We Serve with Innovation</span>
         </h2>
-        <p className="mt-4  text-gray-700  ">
+        <p className="mt-4 font-cabin lg:w-3/5 text-gray-700  ">
           At WayOne, we provide customized digital solutions to a diverse range of industries including healthcare, retail, manufacturing, finance, and education. Our bespoke services are designed to optimize operations, enhance efficiency, and help businesses stay ahead in their respective markets. We focus on delivering high-quality, innovative solutions that drive performance, productivity, and growth.
         </p>
       </div>
@@ -36,7 +36,7 @@ const IndustriesSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="row grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {industryItems.map((item, index) => (
-            <div key={index} className="col flex justify-center items-center">
+            <div key={index} className="col flex justify-center items-center bg-gray-200/30 rounded-4xl p-4 h-60">
               <div className="industry-content text-center">
                 <img src={item.src} alt={item.alt} className="mx-auto mb-4 w-20 h-20 object-contain" />
                 <p className="text-xl font-semibold text-gray-800">{item.label}</p>

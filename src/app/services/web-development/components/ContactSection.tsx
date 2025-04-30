@@ -1,6 +1,14 @@
 import React from 'react';
 
-export default function ContactHeroSection({ title, heiglight, shortDesc, description, ctaText, ctaLink, subheading }: any) {
+export default function ContactHeroSection({ title, heiglight, shortDesc, description, ctaText, ctaLink, subheading }: {
+  title?: string;
+  heiglight?: string;
+  shortDesc?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  subheading?: string;
+}) {
   return (
     <section className="hero-section py-16 pt-28 bg-white">
       <div className="mx-auto px-4">
@@ -10,7 +18,7 @@ export default function ContactHeroSection({ title, heiglight, shortDesc, descri
             <div className="hero-content space-y-5">
               {/* Optional Subheading */}
               {subheading && (
-                <span className="text-sm text-primary font-medium tracking-widest">
+                <span className="text-base text-primary font-medium tracking-widest">
                   {subheading}
                 </span>
               )}

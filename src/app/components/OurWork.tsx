@@ -1,6 +1,7 @@
 // components/PortfolioSection.tsx
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface OurWord {
   title: string;
@@ -49,24 +50,24 @@ const OurWork = () => {
   return (
     <section className="portfolio-page cs-portfolio py-16">
       <div className="container mx-auto">
-        <div className="section-heading text-center lg:w-4/5 m-auto">
-          <h2 className="text-3xl font-semibold text-gray-800">
+        <div className="section-heading text-left  mr-auto">
+          <h2 className="text-4xl font-semibold lg:w-3/4 mb-4 text-gray-800">
             Showcasing <span className="text-primary">Our Excellence</span>
           </h2>
-          <p className="mb-4 text-gray-600">
+          <p className="font-[cabin] lg:w-3/5 text-gray-600">
             We specialize in delivering exceptional designs that blend
             creativity with functionality, ensuring that every project showcases
             our commitment to excellence and innovation.
           </p>
         </div>
 
-        <div className="row mt-10 grid grid-cols-1 gap-8">
+        <div className="row grid grid-cols-1 gap-8">
           {OurWords.map((item, index) => (
             <div
               key={index}
               className="portfolio-item col-lg-12 col-sm-12 "
             >
-              <div className="flex items-center">
+              <div className="flex flex-col-reverse lg:flex-row items-center">
                 <div className="lg:w-1/2">
                   <h3 className="mt-4 mb-6 text-4xl font-medium text-gray-800">
                     {item.title}
@@ -81,15 +82,15 @@ const OurWork = () => {
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6">{item.description}</p>
-                  <a
+                  <p className="text-gray-700 font-[cabin] mb-6">{item.description}</p>
+                  <Link
                     href={item.link}
-                    className="mt-6 inline-flex items-center text-white bg-primary rounded p-3  hover:text-primary"
+                    className="mt-6 inline-flex items-center button-primary rounded-lg p-3  "
                   >
                     <span>Let's Discuss Your Project</span>
                     <i className="fas fa-chevron-right fa-icon ml-2" />
                     <span className="circle ml-2" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="lg:w-1/2">
                   <div className="images-wide-blocktt">
@@ -104,8 +105,8 @@ const OurWork = () => {
                         <Image
                           src={item.imageSrc}
                           alt={item.title}
-                          width={600}
-                          height={400}
+                          width={800}
+                          height={500}
                           className="hover:scale-105 transition-all ease-in-out duration-300 rounded-lg"
                         />
                       </div>

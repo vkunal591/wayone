@@ -30,9 +30,9 @@ const partnerCards: PartnerCard[] = [
 const PartnerWithUsSection: React.FC = () => {
   return (
     <section className="partner-with-us cs-partner-with-us py-16">
-      <div className="section-heading text-center mb-8 m-auto lg:w-4/5 ">
-        <h2 className="text-3xl text-gray-800 font-semibold">Why Partner with Us?</h2>
-        <p className="mt-4 -lg text-gray-700">
+      <div className="section-heading text-left mb-8 m-auto ">
+        <h2 className="text-4xl text-primary font-semibold lg:w-3/4 ">Why Partner with Us?</h2>
+        <p className="mt-4 -lg text-gray-700 lg:w-3/5">
           At WayOne, we are dedicated to providing innovative, secure, and efficient solutions that empower your business. Whether you are a new entrepreneur or an experienced professional, our tailored services are designed to ensure success in an ever-evolving digital landscape. By partnering with us, you gain access to cutting-edge tools and strategies that drive growth, enhance performance, and keep you ahead of the competition.
         </p>
       </div>
@@ -41,7 +41,7 @@ const PartnerWithUsSection: React.FC = () => {
         <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partnerCards.map((card, index) => (
             <div key={index} className="col">
-              <div className="card bg-white shadow-lg rounded-lg overflow-hidden">
+              <div className="card bg-white shadow-lg rounded-3xl p-2 lg:p-6 overflow-hidden">
                 <div className="card-image p-4">
                   <img src={card.imgSrc} alt={card.title} className="mx-auto w-16 h-16 object-contain" />
                 </div>
