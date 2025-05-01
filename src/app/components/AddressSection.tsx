@@ -3,11 +3,11 @@ import React from 'react';
 const AddressSection: React.FC = () => {
   return (
     <div className="container mx-auto py-16">
-      <div className="h-full flex flex-col md:flex-row items-center justify-between relative">
+      <div className="h-full flex flex-col lg:flex-row items-center justify-between relative">
 
         {/* Right Side (India) */}
-        <div className="cs-address-bo w-full md:w-1/2 text-center md:text-left">
-          <div className="img w-3/4 mx-auto md:mx-0">
+        <div className="cs-address-bo w-full md:w-1/2 text-center lg:text-left">
+          <div className="img w-3/4 mx-auto lg::mx-0">
             <img src="/assets/images/india.png" alt="India" className="w-full" />
           </div>
           <h2 className="text-2xl text-primary font-semibold mt-4">INDIA</h2>
@@ -18,7 +18,7 @@ const AddressSection: React.FC = () => {
         </div>
 
         <span
-          className="absolute border-r-2"
+          className="absolute hidden lg:inline-block border-r-2"
           style={{
             width: '1px',
             height: '100%',
@@ -29,7 +29,7 @@ const AddressSection: React.FC = () => {
         ></span>
 
         {/* Left Side (Dubai) */}
-        <div className="cs-address-box flex flex-col items-end w-full md:w-1/2 text-center md:text-right mt-8 md:mt-0">
+        <div className="cs-address-box flex flex-col lg:items-end w-full md:w-1/2 text-center lg:text-right mt-8 lg:mt-0">
           <div className="img w-3/4 ml-auto mx-auto md:mx-0">
             <img src="/assets/images/dubai city line-01 1.png" alt="Dubai" className="w-full" />
           </div>

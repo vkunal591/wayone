@@ -5,7 +5,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 const HeroSection = ({ client = false, title1, title2, description, awardShow = false, primaryButton ,secondaryButton }: { client?: boolean, title1?: any, title2?: any, description?: any, awardShow?: any, primaryButton?: any, secondaryButton?: any }) => {
   return (
-    <section id="hero" className="hero section bg-gray-50 px-4 py-16 pt-[6rem]">
+    <section id="hero" className="hero section  px-4 py-16 pt-[6rem]">
       <div className="container mx-auto text-center">
         <div className="flex flex-col items-center justify-center space-y-8 lg:space-y-5">
           {client && <div className="happy-client flex items-center gap-2">
