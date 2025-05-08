@@ -301,10 +301,10 @@ export default function Footer() {
                 Delhi(110015)
               </p>
               <p className="flex items-center gap-4 pl-6">
-                <Link href={""} title="facebook">
+                <Link href={"https://www.facebook.com/wayone.india"} title="facebook">
                   <FaFacebook className="text-2xl text-blue-600" />
                 </Link>
-                <Link href={""} title="instagram">
+                <Link href={"https://www.instagram.com/wayone.india"} title="instagram">
                   <FaInstagramSquare className="text-2xl text-pink-500" />
                 </Link>
               </p>

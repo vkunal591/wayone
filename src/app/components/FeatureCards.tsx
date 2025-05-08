@@ -1,6 +1,7 @@
 // components/FeatureCards.tsx
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Feature = {
   title: string;
@@ -9,6 +10,7 @@ type Feature = {
   buttonText: string;
   bgColor: string;
   delay: number;
+  link?: string | undefined;
 };
 
 type FeatureCardsProps = {
@@ -40,12 +42,12 @@ const FeatureCards = ({ features }: FeatureCardsProps) => {
               data-aos="zoom-in"
               data-aos-delay={feature.delay.toString()}
             >
-              <Image src={feature.iconSrc} alt={feature.title} width={1200} height={1200} className="mb-4 w-16" />
-              <h4 className="text-xl font-semibold text-gray-800">{feature.title}</h4>
+              <Image src={feature.iconSrc} alt={feature?.title} width={1200} height={1200} className="mb-4 w-16" />
+              <h4 className="text-xl font-semibold text-gray-800">{feature?.title}</h4>
               <p className="text-base font-[cabin] h-36 text-gray-600 line-clamp-6 mt-2">{feature.description}</p>
-              <button className="mt-4 px-6 py-2 button-primary text-white rounded-lg hover:bg-primary">
+              <Link href={feature?.link || "/"} className="mt-4 px-6 py-2 button-primary text-white rounded-lg hover:bg-primary">
                 {feature.buttonText}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

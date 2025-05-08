@@ -49,7 +49,7 @@ const AboutSection = () => {
               </p>
               <div className=" mt-8">
                 <Link
-                  href="/about"
+                  href="/about-us"
                   className=" inline-flex button-primary items-center justify-center px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary transition-all duration-300"
                 >
                   <span>Explore More</span>

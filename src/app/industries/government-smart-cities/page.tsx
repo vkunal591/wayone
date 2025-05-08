@@ -52,7 +52,7 @@ export default function Page() {
                         "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
                     ]}
                     linkText="Know More"
-                    linkHref="/about"
+                    linkHref="/about-us"
                 />
             </div>
                 <WhatWeHaveDone />

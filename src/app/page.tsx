@@ -19,6 +19,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 100,
+    link: "/web-development"
   },
   {
     title: "App Development",
@@ -28,6 +29,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 200,
+    link: "/services/app-development"
   },
   {
     title: "Artificial Intelligence",
@@ -37,6 +39,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 300,
+    link: "/services/artificial-intelligence"
   },
   {
     title: "SaaS Development",
@@ -46,6 +49,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 400,
+    link: "/services/saas-development"
   },
   {
     title: "UI/UX Designing",
@@ -55,6 +59,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 600,
+    link: "/services/ux-ui-designing"
   },
   {
     title: "Digital Marketing",
@@ -64,6 +69,27 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 600,
+    link: "/services/digital-marketing"
+  },
+  {
+    title: "BlockChain Development",
+    description:
+      "Our ERP solutions integrate core business functions, improving efficiency, decision-making, and providing real-time insights to help your business grow.",
+    iconSrc: "/assets/images/icon/gear 2.png",
+    buttonText: "Learn more",
+    bgColor: "bg-gray-50",
+    delay: 800,
+    link: "/services/blockchain-development"
+  },
+  {
+    title: "API Development",
+    description:
+      "We design customized CRM systems that streamline customer interactions, enhance satisfaction, and help businesses build long-lasting relationships with their clients.",
+    iconSrc: "/assets/images/icon/programmer 2.png",
+    buttonText: "Learn more",
+    bgColor: "bg-gray-50",
+    delay: 700,
+    link: "/services/api-development"
   },
   {
     title: "CRM Development",
@@ -73,22 +99,14 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 700,
-  },
-  {
-    title: "ERP Management",
-    description:
-      "Our ERP solutions integrate core business functions, improving efficiency, decision-making, and providing real-time insights to help your business grow.",
-    iconSrc: "/assets/images/icon/gear 2.png",
-    buttonText: "Learn more",
-    bgColor: "bg-gray-50",
-    delay: 800,
+    link: "/services/crm-development"
   },
 ];
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <HeroSection client={true} awardShow={true} primaryButton={"What We Do"} secondaryButton={"View More"} />
+      <HeroSection client={true} awardShow={true} primaryLinkTitle={"What We Do"} primaryLink={"/our-work"} secondaryLinkTitle={"View More"} secondaryLink={"/about-us"} />
       <div className="max-w-7xl m-auto p-4 lg:px-16 bg-white">
         <FeatureCards features={featuresData} />
         <AboutSection />

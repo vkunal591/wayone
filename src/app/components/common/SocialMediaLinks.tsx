@@ -10,7 +10,7 @@ import {
 const SocialMediaLinks = ({ size }: { size?: number }) => {
   const socialLinks = [
     {
-      href: "https://www.instagram.com/aboveallagency1/",
+      href: "https://www.instagram.com/wayone.india/",
       icon: (
         <FaInstagram
           size={size ?? 20}
@@ -20,7 +20,7 @@ const SocialMediaLinks = ({ size }: { size?: number }) => {
       label: "Instagram",
     },
     {
-      href: "https://www.facebook.com/people/aboveallagency/61560059016993/",
+      href: "https://www.facebook.com/wayone.india",
       icon: (
         <FaFacebook
           size={size ?? 20}
@@ -39,26 +39,26 @@ const SocialMediaLinks = ({ size }: { size?: number }) => {
     //   ),
     //   label: "Twitter",
     // },
-    {
-      href: "https://www.linkedin.com/company/aboveallagency/?viewAsMember=true",
-      icon: (
-        <FaLinkedinIn
-          size={size ?? 20}
-          className="text-white hover:text-primary"
-        />
-      ),
-      label: "LinkedIn",
-    },
-    {
-      href: "https://in.pinterest.com/aboveallagency/",
-      icon: (
-        <FaPinterest
-          size={size ?? 20}
-          className="text-white hover:text-primary"
-        />
-      ),
-      label: "Pinterest",
-    },
+    // {
+    //   href: "https://www.linkedin.com/company/aboveallagency/?viewAsMember=true",
+    //   icon: (
+    //     <FaLinkedinIn
+    //       size={size ?? 20}
+    //       className="text-white hover:text-primary"
+    //     />
+    //   ),
+    //   label: "LinkedIn",
+    // },
+    // {
+    //   href: "https://in.pinterest.com/aboveallagency/",
+    //   icon: (
+    //     <FaPinterest
+    //       size={size ?? 20}
+    //       className="text-white hover:text-primary"
+    //     />
+    //   ),
+    //   label: "Pinterest",
+    // },
   ];
 
   return (

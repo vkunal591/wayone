@@ -10,7 +10,7 @@ import ContactSection from '../components/ContactSection'
 export default function page() {
     return (
         <div className='bg-white'>
-            <HeroSection title1={"Transforming the Future of IT with"} title2={"Innovation and Technology"} description={"At WayOne, we are redefining how businesses leverage technology by providing innovative IT solutions that shape the future. Our goal is to empower businesses to unlock their full potential using advanced digital platforms and customized technology solutions. We focus on moving away from traditional methods to deliver modern, efficient solutions with measurable results. By collaborating closely with our clients and understanding their unique needs, we bring ideas to life, driving growth, efficiency, and productivity in today’s fast-paced digital world."} primaryButton={"Explore More"} />
+            <HeroSection title1={"Transforming the Future of IT with"} title2={"Innovation and Technology"} description={"At WayOne, we are redefining how businesses leverage technology by providing innovative IT solutions that shape the future. Our goal is to empower businesses to unlock their full potential using advanced digital platforms and customized technology solutions. We focus on moving away from traditional methods to deliver modern, efficient solutions with measurable results. By collaborating closely with our clients and understanding their unique needs, we bring ideas to life, driving growth, efficiency, and productivity in today’s fast-paced digital world."} primaryLinkTitle={"Explore More"} primaryLink={"/contact-us"} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <WhoWeAre />
                 <OurVission />

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WhoWeAre: React.FC = () => {
   return (
@@ -30,8 +31,8 @@ const WhoWeAre: React.FC = () => {
                 is simple — to turn your digital vision into lasting business value.
               </p>
               <div className="text-center lg:text-left">
-                <a
-                  href="#"
+                <Link
+                  href="/about-us"
                   className="inline-flex items-center justify-center bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition-colors"
                 >
                   <span>Explore More</span>
@@ -46,7 +47,7 @@ const WhoWeAre: React.FC = () => {
                       d="M1 8a.5.5 0 01.5-.5h11.793l-4.147-4.146a.5.5 0 11.708-.708l5 5a.5.5 0 010 .708l-5 5a.5.5 0 11-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
