@@ -56,7 +56,7 @@ export default function OurWorkSlide() {
         </div>
         <Swiper
           slidesPerView={1}
-          pagination={{ clickable: true }}
+          pagination={false}
           modules={[Pagination]}
           className="w-full bg-white"
         >

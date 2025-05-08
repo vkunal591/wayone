@@ -19,8 +19,8 @@ const AddressSection: React.FC = () => {
         </div>
 
 
-        {/* Right Side (India) */}
-        <div className="cs-address-bo w-full md:w-1/2 text-center  lg:text-center  border-l-2 border-r-2 border-gray-300 px-8">
+        {/* Mid Side (India) */}
+        <div className="cs-address-bo w-full md:w-1/2 text-center  lg:text-center  md:border-l-2 md:border-r-2 border-gray-300 px-8">
           <div className="img  mx-auto  lg:mx-0">
             <Image width={900} height={900} src="/assets/images/australlia.png" alt="India" className="w-full py-6" />
           </div>
