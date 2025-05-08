@@ -16,14 +16,14 @@ interface AIProcessProps {
 
 const AIProcessSection: React.FC<AIProcessProps> = ({ title, subtitle, description, steps }) => {
     return (
-        <section id="ui-ux-process" className="py-16">
-            <div className="container mx-auto px-6">
+        <section id="ui-ux-process" className="py-4 lg:py-16">
+            <div className="container mx-auto ">
                 <div className="text-start" data-aos="fade-up">
                     <h6 className="text-primary text-lg font-semibold">{subtitle}</h6>
                     <h2 className="text-3xl font-bold text-gray-900 mt-2">
                         {title} <span className="text-primary">Seamless Deployment</span>
                     </h2>
-                    <p className="text-gray-600 mt-3 w-1/2">{description}</p>
+                    <p className="text-gray-600 mt-3 lg:w-1/2">{description}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 flex-wrap justify-center">

@@ -80,66 +80,78 @@ export const services = [
     title: "Industries",
     links: [
       {
-        id: "health-care", // Added id
+        id: "health-care",
         label: "Health Care",
-        image: "/assets/serve1.png",
+        image: "/assets/images/serve1.png",
         href: "/industries/health-care",
       },
       {
-        id: "oil-gas-energy", // Added id
+        id: "oil-gas-energy",
         label: "Oil & Gas Energy",
-        image: "/assets/serve2.png",
+        image: "/assets/images/serve2.png",
         href: "/industries/oil-gas-energy",
       },
       {
-        id: "retails-e-commerce", // Added id
+        id: "retails-e-commerce",
         label: "Retails & E-Commerce",
-        image: "/assets/serve3.png",
+        image: "/assets/images/serve3.png",
         href: "/industries/retails-e-commerce",
       },
       {
-        id: "real-estate-construction", // Added id
+        id: "real-estate-construction",
         label: "Real Estate & Construction",
-        image: "/assets/serve4.png",
+        image: "/assets/images/serve4.png",
         href: "/industries/real-estate-construction",
       },
       {
-        id: "finance-banking", // Added id
+        id: "finance-banking",
         label: "Finance & Banking",
-        image: "/assets/serve5.png",
+        image: "/assets/images/serve5.png",
         href: "/industries/finance-banking",
       },
       {
-        id: "government-smart-cities", // Added id
+        id: "government-smart-cities",
         label: "Goverment & Smart Cities",
-        image: "/assets/serve6.png",
+        image: "/assets/images/serve6.png",
         href: "/industries/government-smart-cities",
       },
       {
-        id: "education-service", // Added id
+        id: "education-service",
         label: "Education Service",
-        image: "/assets/serve7.png",
+        image: "/assets/images/serve7.png",
         href: "/industries/education-service",
       },
-      // {
-      //   id: "logistic-transportation", // Added id
-      //   label: "Logistic & Transportation",
-      //   image: "/assets/serve8.png",
-      //   href: "/industries/logistic-transportation",
-      // },
-      // {
-      //   id: "hospitality-tourism", // Added id
-      //   label: "Hospitality & Tourism",
-      //   image: "/assets/serve9.png",
-      //   href: "/industries/hospitality-tourism",
-      // },
-      // {
-      //   id: "legal-compliance", // Added id
-      //   label: "Legal & Compliance",
-      //   image: "/assets/serve10.png",
-      //   href: "/industries/legal-compliance",
-      // },
-    ],
+      {
+        id: "logistic-transportation",
+        label: "Logistic & Transportation",
+        image: "/assets/images/serve8.png",
+        href: "/industries/logistic-transportation",
+      },
+      {
+        id: "hospitality-tourism",
+        label: "Hospitality & Tourism",
+        image: "/assets/images/serve9.png",
+        href: "/industries/hospitality-tourism",
+      },
+      {
+        id: "events",
+        label: "Events & Tickets",
+        image: "/assets/images/serve10.png",
+        href: "/industries/events-tickets",
+      },
+      {
+        id: "manufacturing",
+        label: "Manufacturig Industries",
+        image: "/assets/images/serve10.png",
+        href: "/industries/manufacturig-industries",
+      },
+      {
+        id: "technology",
+        label: "Technology & Innovation",
+        image: "/assets/images/serve10.png",
+        href: "/industries/technology-innovation",
+      },
+    ]
   },
 ];
 
@@ -175,9 +187,8 @@ const Sidebar = () => {
   return (
     <div className="relative font-[poppins]">
       <div
-        className={`fixed top-0 right-0 h-full bg-gray-50 text-primary z-50 transform ${
-          isOpen ? "w-[85%] md:w-3/4" : "w-0"
-        } transition-all duration-500 ease-in-out`}
+        className={`fixed top-0 right-0 h-full bg-gray-50 text-primary z-50 transform ${isOpen ? "w-[85%] md:w-3/4" : "w-0"
+          } transition-all duration-500 ease-in-out`}
       >
         <div className="bg-gray-50 text-gray-50">
           <div className="flex p-3 shadow-md z-50 justify-between items-center">

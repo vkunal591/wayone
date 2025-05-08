@@ -87,7 +87,7 @@ const featuresData = [
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white">
       <HeroSection client={true} awardShow={true} primaryButton={"What We Do"} secondaryButton={"View More"} />
       <div className="max-w-7xl m-auto p-4 lg:px-16 bg-white">
         <FeatureCards features={featuresData} />

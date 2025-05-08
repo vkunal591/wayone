@@ -14,7 +14,7 @@ export default function OurVission() {
               </div>
               <div className="flex-1">
                 <div className="content">
-                  <h2 className="text-4xl font-medium mb-4">Our Vision</h2>
+                  <h2 className="text-4xl font-medium text-gray-800 mb-4">Our Vision</h2>
                   <p className="text-gray-700 text-justify text-lg font-[cabin]">
                     At WayOne, our vision is to be India's most trusted and sought-after IT solutions and digital
                     transformation partner. We aim to empower businesses by providing innovative, scalable technology
@@ -40,7 +40,7 @@ export default function OurVission() {
               </div>
               <div className="flex-1">
                 <div className="content">
-                  <h2 className="text-4xl font-medium mb-4">Our Mission</h2>
+                  <h2 className="text-4xl font-medium text-gray-800 mb-4">Our Mission</h2>
                   <p className="text-gray-700 text-lg text-justify font-[cabin]">
                     At WayOne, we believe in empowering businesses by providing innovative IT solutions and digital
                     transformation expertise that deliver real, measurable results. We are committed to offering

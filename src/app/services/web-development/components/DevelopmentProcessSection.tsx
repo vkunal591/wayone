@@ -58,7 +58,7 @@ const processSteps = [
 
 export default function DevelopmentProcessSection() {
     return (
-        <section id="development-process" className="py-20">
+        <section id="development-process" className="py-4 lg:py-16">
             <div className="container mx-auto">
                 
                 <HeaderSection
@@ -82,7 +82,7 @@ export default function DevelopmentProcessSection() {
                          {stepData.step}
                        </span>
                      </div>
-                     <h3 className="text-2xl font-semibold mb-6">{stepData.title}</h3>
+                     <h3 className="text-2xl text-gray-800 font-semibold mb-6">{stepData.title}</h3>
                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                        {stepData.items.map((item, i) => (
                          <div

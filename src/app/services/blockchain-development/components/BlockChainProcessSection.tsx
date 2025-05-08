@@ -23,12 +23,12 @@ const BlockChainProcessSection: React.FC<BlockChainProcessSectionProps> = ({
   steps,
 }) => {
   return (
-    <section id="ui-ux-process" className="py-16">
+    <section id="ui-ux-process" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-start" data-aos="fade-up">
           <h6 className="text-primary font-semibold">{subtitle}</h6>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl text-gray-800 font-bold">
             From Initial Concept to <span className="text-primary">Seamless Deployment</span>
           </h2>
           <p className="text-gray-600 mt-3" style={{ width: '50%' }}>
@@ -57,7 +57,7 @@ const BlockChainProcessSection: React.FC<BlockChainProcessSectionProps> = ({
                     <AiOutlineAim className={`text-5xl ${step.iconClass}`}></AiOutlineAim>
                   </div>
                   <h6 className="mb-2 font-medium text-primary">{step.title}</h6>
-                  <p>{step.description}</p>
+                  <p className='text-gray-800'>{step.description}</p>
                 </div>
               </div>
             </div>

@@ -16,9 +16,9 @@ interface ServicesSectionProps {
 
 const AIServicesSection: React.FC<ServicesSectionProps> = ({ subtitle, heading, description, services }) => {
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
-        <div className="text-left p-5 my-4" data-aos="fade-up">
+        <div className="text-left  my-4" data-aos="fade-up">
           <span className="text-sm font-semibold text-gray-600 mb-2 block">{subtitle}</span>
           <h2 className="text-4xl font-extrabold text-gray-900 w-full">
             <span className="">{heading}</span>

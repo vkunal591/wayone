@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const WhoWeAre: React.FC = () => {
   return (
-    <section id="about" className="py-16">
+    <section id="about" className="py-4 lg:py-16">
       <div className="container mx-auto" data-aos="fade-up">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Text Content */}
@@ -15,7 +15,7 @@ const WhoWeAre: React.FC = () => {
           >
             <div>
               <h3 className="text-primary">Who We Are</h3>
-              <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold leading-snug text-gray-800 mb-4">
                 Innovating IT Solutions for a{' '}
                 <span className="text-blue-800">Smarter Tomorrow</span>
               </h2>

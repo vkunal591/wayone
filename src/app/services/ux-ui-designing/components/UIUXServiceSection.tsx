@@ -23,12 +23,12 @@ const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
   services,
 }) => {
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="section-header text-left p-5 my-4" data-aos="fade-up">
-          <span className="section-subtitle d-block mb-2">{subtitle}</span>
-          <h2 className="text-4xl font-bold">
+        <div className="section-header text-left  my-4" data-aos="fade-up">
+          <span className="section-subtitle text-primary d-block mb-2">{subtitle}</span>
+          <h2 className="text-4xl text-gray-800 font-bold">
             {title}
           </h2>
           <p className="section-desc mt-3 text-gray-600">{description}</p>

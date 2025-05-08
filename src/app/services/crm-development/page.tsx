@@ -97,7 +97,7 @@ const steps = [
 
 export default function page() {
     return (
-        <div className=''>
+        <div className='bg-white'>
             <ContactHeroSection {...dynamicData} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <BlockchainServicesSection

@@ -106,7 +106,7 @@ const steps = [
 
 export default function page() {
     return (
-        <div className=''>
+        <div className='bg-white'>
             <ContactHeroSection {...dynamicData} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <UIUXServicesSection
@@ -117,7 +117,7 @@ export default function page() {
                 />
                 <UIUXProcessSection
                     subtitle="Our UI/UX Designing Process"
-                    title="From Initial Concept to <span class='highlight'>Seamless <br> Deployment</span>"
+                    title="From Initial Concept to Seamless  Deployment"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     steps={steps}
                 />

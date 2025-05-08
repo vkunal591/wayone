@@ -10,9 +10,9 @@ export default function ContactHeroSection({ title, heiglight, shortDesc, descri
   subheading?: string;
 }) {
   return (
-    <section className="hero-section py-16 pt-28 bg-white">
-      <div className="mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
+    <section className="hero-section p-4 lg:p-16 pt-28 bg-white">
+      <div className="mx-auto w-full">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 ">
           {/* Hero Content */}
           <div className="w-full lg:w-6/12">
             <div className="hero-content space-y-5">
@@ -23,7 +23,7 @@ export default function ContactHeroSection({ title, heiglight, shortDesc, descri
                 </span>
               )}
 
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-800">
                 {title || "Build Future-Ready "}
                 <span className="text-primary">{heiglight || "Websites with Wayone"}</span>
               </h1>
@@ -43,7 +43,7 @@ export default function ContactHeroSection({ title, heiglight, shortDesc, descri
           </div>
 
           {/* Hero Form */}
-          <div className="w-full lg:w-4/12">
+          <div className="w-full lg:w-5/12 lg:pt-8">
             <div className="hero-form-area bg-primary text-gray-50 rounded-2xl shadow-md p-8">
               <form className="consultation-form space-y-3">
                 <h3 className=" font-semibold mb-4">Get a Free Consultation – Contact Us Today!</h3>

@@ -41,7 +41,7 @@ export default function FaqSection() {
     };
 
     return (
-        <section id="faq" className="py-20 ">
+        <section id="faq" className="py-4 lg:py-16 ">
             <div className="container mx-auto">
 
                 <HeaderSection

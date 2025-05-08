@@ -16,7 +16,7 @@ const OurWords: OurWord[] = [
     title: "Unifi Cars",
     description:
       "Unifi Cars is a reliable online platform for buying and selling used cars. We make things easy with easy-to-understand prices and intuitive interface, saving you time finding or selling your car fast and securely.",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/UNIFICARS (2) 1.png",
     link: "#",
   },
@@ -24,7 +24,7 @@ const OurWords: OurWord[] = [
     title: "Wayon FX",
     description:
       "Wayone FX is a premier online trading platform that offers real-time information, tools, and resources for trading forex and cryptocurrencies. Through safe transactions and an easy-to-use interface, we enable traders to thrive in the international market.",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/WAYONE (2) 1.png",
     link: "#",
   },
@@ -32,7 +32,7 @@ const OurWords: OurWord[] = [
     title: "Donlop",
     description:
       "Donlop is a leading destination for quality tyres. We have a variety of tyres for every type of vehicle, providing durability, safety, and performance. Get the perfect fit for your vehicle with our expert advice and product range.",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/dunlopbahrain (1) 1.png",
     link: "#",
   },
@@ -40,16 +40,16 @@ const OurWords: OurWord[] = [
     title: "Saash",
     description:
       "Saash is a fashion brand offering elegant jewelry and curated gift boxes for women. Known for its oxidized silver-tone pieces and stylish designs, Saash combines tradition with modern aesthetics, making it a popular choice for trendy ethnic accessories.",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/SASSHI (1) 1.png",
     link: "#",
   },
 ];
 
-const OurWork = () => {
+const OurWork = ({ layout }:{layout?: any}) => {
   return (
     <section className="portfolio-page cs-portfolio py-16">
-      <div className="container mx-auto">
+      <div className={`container mx-auto ${layout}`}>
         <div className="section-heading text-left  mr-auto">
           <h2 className="text-4xl font-semibold lg:w-3/4 mb-4 text-gray-800">
             Showcasing <span className="text-primary">Our Excellence</span>

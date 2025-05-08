@@ -20,7 +20,7 @@ const SaasProcessSection: React.FC<UiUxProcessSectionProps> = ({
   steps,
 }) => {
   return (
-    <section id="ui-ux-process" className="py-16">
+    <section id="ui-ux-process" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         <div className="text-start" data-aos="fade-up">
           <h6 className="text-primary font-bold">{subtitle}</h6>

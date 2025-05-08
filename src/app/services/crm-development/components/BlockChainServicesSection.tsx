@@ -19,12 +19,12 @@ const BlockchainServicesSection: React.FC<BlockchainServicesSectionProps> = ({
   services,
 }) => {
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-left p-5 my-4" data-aos="fade-up">
+        <div className="text-left  my-4" data-aos="fade-up">
           <span className="text-primary font-semibold mb-2 block">{subtitle}</span>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl text-gray-800 font-bold">
             Secure & Scalable <span className="text-primary">{title}</span>
             <br />
             Services

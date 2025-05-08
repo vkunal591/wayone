@@ -14,8 +14,8 @@ type PortfolioSectionProps = {
 
 const AppPortfolioSection: React.FC<PortfolioSectionProps> = ({ items }) => {
     return (
-        <section id="portfolio" className="py-20 bg-gray-50">
-            <div className="container mx-auto px-6">
+        <section id="portfolio" className="py-4 lg:py-16 bg-gray-50">
+            <div className="container mx-auto p-4 ">
                 <div className="section-header text-left mb-16" data-aos="fade-up">
                     <div className="section-subtitle text-xl text-gray-500">Our Portfolio</div>
                     <h2 className="text-3xl font-semibold text-gray-900 mt-2">

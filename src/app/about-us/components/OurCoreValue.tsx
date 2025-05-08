@@ -4,7 +4,7 @@ export default function OurCoreValue() {
       <section className="values py-16 ">
         <div className="mx-auto text-left mb-12">
           <h3 className="text-lg text-primary font-medium lg:w-3/4 uppercase mb-2">Our Core Values</h3>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl text-gray-800 font-bold mb-6">
             The Pillars of Innovation, Excellence, and Integrity
           </h2>
           <p className="text-gray-700 font-[cabin] lg:w-4/5 mb-6">

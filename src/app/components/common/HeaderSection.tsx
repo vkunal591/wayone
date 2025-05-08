@@ -13,7 +13,7 @@ const HeaderSection = ({ subtitle, title, br, highlight, description, textAlign 
             {subtitle && <div className="text-base font-medium text-primary tracking-wide mb-2">
                 {subtitle}
             </div>}
-            {title && <h2 className="text-4xl font-bold lg:w-3/4 mb-4">
+            {title && <h2 className="text-4xl text-gray-800 font-bold lg:w-3/4 mb-4">
                 {title}{" "}
                 {br && <br />}
                 {highlight && <span className="text-primary">{highlight}</span>}

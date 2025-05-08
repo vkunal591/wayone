@@ -3,7 +3,7 @@ export default function PartnerWithUs() {
     return (
       <section className="partner-with-us py-16 bg-white">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner with Us?</h2>
+          <h2 className="text-3xl md:text-4xl text-gray-800 font-bold mb-6">Why Partner with Us?</h2>
           <p className="text-gray-700">
             At WayOne, we pride ourselves on delivering innovative, secure, and reliable trading solutions. Whether you're
             a beginner or an experienced trader, our platform is designed to support your success in the global market,
@@ -22,7 +22,7 @@ export default function PartnerWithUs() {
                   className="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Efficient Project Management</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Efficient Project Management</h3>
               <p className="text-gray-600">
                 We ensure that all your trading activities are carried out with the utmost precision. Our intuitive
                 platform and expert team simplify the trading process, allowing you to concentrate on key decisions and
@@ -39,7 +39,7 @@ export default function PartnerWithUs() {
                   className="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Team at Your Service</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team at Your Service</h3>
               <p className="text-gray-600">
                 Our team at WayOne consists of skilled professionals who are dedicated to supporting you every step of the way.
                 From real-time market analysis to round-the-clock customer support, our experts are always available to help
@@ -56,7 +56,7 @@ export default function PartnerWithUs() {
                   className="mx-auto w-20 h-20 object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Timely Project Completion</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Timely Project Completion</h3>
               <p className="text-gray-600">
                 Time is valuable, and we understand that. Our platform ensures that all tasks, from trade execution to
                 account management, are completed within agreed timeframes. With our efficient service, we help you stay

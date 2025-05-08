@@ -1,7 +1,7 @@
 // components/HeroContact.js
 export default function HeroContact() {
     return (
-        <section id="hero" className="hero py-20 bg-white">
+        <section id="hero" className="hero py-16 bg-white">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col justify-center text-center lg:text-left">
                     <div className="flex flex-col lg:flex-row items-center gap-12">

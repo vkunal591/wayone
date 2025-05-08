@@ -28,7 +28,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section id="industries" className="py-20 bg-white">
+    <section id="industries" className="py-4 lg:py-16 bg-white">
       <div className="container mx-auto">
 
         {/* CTA Banner */}

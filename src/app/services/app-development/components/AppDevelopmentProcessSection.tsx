@@ -1,6 +1,7 @@
 // components/DevelopmentProcessSection.tsx
 
 import React from 'react';
+import { FaCode } from 'react-icons/fa';
 
 type ProcessStep = {
   id: string;
@@ -14,8 +15,8 @@ type DevelopmentProcessSectionProps = {
 
 const AppDevelopmentProcessSection: React.FC<DevelopmentProcessSectionProps> = ({ processSteps }) => {
   return (
-    <section id="development-process" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="development-process" className="py-4 lg:py-16">
+      <div className="container mx-auto ">
         <div className="section-header text-left mb-16" data-aos="fade-up">
           <span className="section-subtitle text-xl text-gray-500">Our App Development Process</span>
           <h2 className="text-3xl font-semibold text-gray-900 mt-2">
@@ -26,7 +27,7 @@ const AppDevelopmentProcessSection: React.FC<DevelopmentProcessSectionProps> = (
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-between gap-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-4">
           {processSteps.map((step, index) => (
             <div
               key={step.id}
@@ -36,10 +37,11 @@ const AppDevelopmentProcessSection: React.FC<DevelopmentProcessSectionProps> = (
             >
               <div className="process-circle mb-4">
                 <div className="step-number text-primary text-4xl">
-                  <i className={step.icon}></i>
+                  {/* <i className={step.icon}></i> */}
+                  <FaCode />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
+              <h3 className="text-lg font-medium text-gray-900">{step.title}</h3>
             </div>
           ))}
         </div>

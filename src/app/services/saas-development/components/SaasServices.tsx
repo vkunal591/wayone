@@ -16,11 +16,11 @@ interface ServicesSectionProps {
 
 const SaasServices: React.FC<ServicesSectionProps> = ({ subtitle, title, description, services }) => {
     return (
-        <section id="services" className="services-section py-16">
-            <div className="container mx-auto px-6">
-                <div className="text-left p-5 my-4" data-aos="fade-up">
+        <section id="services" className="services-section lg:py-16">
+            <div className="container mx-auto ">
+                <div className="text-left  my-4" data-aos="fade-up">
                     <span className="section-subtitle block mb-2 text-primary">{subtitle}</span>
-                    <h2 className="text-4xl font-bold">
+                    <h2 className="text-4xl text-gray-800 font-bold">
                         End-to-End <span className="text-primary">{title}</span>
                     </h2>
                     <p className="section-desc mt-3 text-gray-600">{description}</p>
@@ -35,9 +35,9 @@ const SaasServices: React.FC<ServicesSectionProps> = ({ subtitle, title, descrip
                             data-aos="fade-up"
                             data-aos-delay={`${service.delay}`}
                         >
-                            <span className="highlight font-bold">{String(service.id).padStart(2, '0')}</span>
-                            <h3 className="highlight text-xl mb-2 font-semibold">{service.title}</h3>
-                            <p className="text-sm text-gray-600">{service.description}</p>
+                            <span className="text-primary font-bold">{String(service.id).padStart(2, '0')}</span>
+                            <h3 className="highlight text-gray-800 text-xl mb-2 font-semibold">{service.title}</h3>
+                            <p className="text-sm text-justify text-gray-600">{service.description}</p>
                         </div>
                     ))}
                 </div>

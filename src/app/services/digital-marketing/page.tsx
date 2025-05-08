@@ -99,7 +99,7 @@ const aiprocessSteps = [
 
 export default function page() {
     return (
-        <div className=''>
+        <div className='bg-white    '>
             <ContactHeroSection {...dynamicData} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <AIServiceSection
@@ -109,7 +109,7 @@ export default function page() {
                     services={aiservices}
                 />
                 <AIProcessSection
-                    subtitle="Our Artificial Development Process"
+                    subtitle="Our Digital Marketing Process"
                     title="From Initial Concept to"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                     steps={aiprocessSteps}

@@ -11,28 +11,28 @@ import HeaderSection from "@/app/components/common/HeaderSection";
 const portfolioItems = [
   {
     title: "Unifi Cars",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     description:
       "Unifi Cars is a reliable online platform for buying and selling used cars. We make things easy with easy-to-understand prices and intuitive interface, saving you time finding or selling your car fast and securely.",
     image: "/assets/images/UNIFICARS (2) 1.png",
   },
   {
     title: "Wayon FX",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     description:
       "Wayon FX is a premier online trading platform that offers real-time information, tools, and resources for trading forex and cryptocurrencies. Through safe transactions and an easy-to-use interface, we enable traders to thrive in the international market.",
     image: "/assets/images/WAYONE (2) 1.png",
   },
   {
     title: "Donlop",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     description:
       "Donlop is a leading destination for quality tyres. We have a variety of tyres for every type of vehicle, providing durability, safety, and performance. Get the perfect fit for your vehicle with our expert advice and product range.",
     image: "/assets/images/dunlopbahrain (1) 1.png",
   },
   {
     title: "Saash",
-    tags: ["UX/UI Design", "Development", "Strategy"],
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/assets/images/SASSHI (1) 1.png",
@@ -41,10 +41,10 @@ const portfolioItems = [
 
 export default function OurWorkSlide() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-4 lg:py-16 bg-white">
       <div className="w-full">
 
-        <div className="max-w-7xl m-auto lg:px-16">
+        <div className="max-w-7xl m-auto px-4 lg:px-16">
           <HeaderSection
             subtitle="Our Build Projects"
             title="Showcasing Innovation & Excellence in"
@@ -67,7 +67,7 @@ export default function OurWorkSlide() {
                   <img src={item.image} alt={item.title} className="rounded-lg" />
                 </div>
                 <div className="lg:w-1/2">
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
+                  <h3 className="text-2xl text-gray-800 font-semibold">{item.title}</h3>
                   <div className="flex flex-wrap gap-2 my-3">
                     {item.tags.map((tag, i) => (
                       <span

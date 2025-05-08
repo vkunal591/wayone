@@ -26,12 +26,12 @@ const UIUXProcessSection: React.FC<UIUXProcessSectionProps> = ({
   steps,
 }) => {
   return (
-    <section id="ui-ux-process" className="py-16">
+    <section id="ui-ux-process" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-start" data-aos="fade-up">
-          <h6 className="highlight text-blue-600">{subtitle}</h6>
-          <h2 className="font-bold text-3xl">
+          <h6 className="highlight text-primary">{subtitle}</h6>
+          <h2 className="font-bold text-gray-800 text-3xl">
             {title.split('<span class="highlight">')[0]}
             <span className="highlight text-blue-600">
               {title.split('<span class="highlight">')[1]}
@@ -55,8 +55,8 @@ const UIUXProcessSection: React.FC<UIUXProcessSectionProps> = ({
                 <BiBulb className={`text-7xl text-primary ${step.icon}`}/>
               </div>
               <div className="fw-semibold" style={{ width: '35%' }}>
-                <h4 className="mb-2">{step.title}</h4>
-                <p className="m-0">{step.description}</p>
+                <h4 className="mb-2 font-medium text-gray-800">{step.title}</h4>
+                <p className="m-0 text-gray-800">{step.description}</p>
               </div>
             </div>
           ))}

@@ -4,7 +4,7 @@ import ReachOut from './components/ReachOut';
 
 export default function page() {
     return (
-        <div className=''>
+        <div className='bg-white'>
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <HeroContact />
                 <ReachOut />

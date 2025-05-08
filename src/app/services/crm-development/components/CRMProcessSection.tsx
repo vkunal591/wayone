@@ -22,12 +22,12 @@ const CRMProcessSection: React.FC<CRMProcessSectionProps> = ({
   steps,
 }) => {
   return (
-    <section id="ui-ux-process" className="py-16">
+    <section id="ui-ux-process" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-start mb-10" data-aos="fade-up">
           <h6 className="text-primary font-semibold">{subtitle}</h6>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl text-gray-800 font-bold">
             {title.split("<span class='highlight'>")[0]}
             <span className="text-primary">{title.split("<span class='highlight'>")[1]}</span>
           </h2>

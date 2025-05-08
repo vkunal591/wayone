@@ -5,7 +5,7 @@
   --foreground: #171717;
   --primary: #0038A0;
   --secondary: #939393;
-  --dark-primary: #242424;
+  --dark-primary: #585858;
 }
 
 @theme inline {
@@ -17,8 +17,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    /* --background: #0a0a0a;
+    --foreground: #ededed; */
   }
 }
 
@@ -83,7 +85,7 @@ body {
 }
 
 .button-seondary:hover {
-  background-color: rgba(230, 230, 230, 0.731);
+  background-color: rgba(242, 242, 242, 0.731);
   color: var(--primary);
   scale: 1.05;
   transition: all 0.2s ease-in-out;

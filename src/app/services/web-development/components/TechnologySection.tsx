@@ -9,7 +9,7 @@ export default function TechnologiesSection() {
     ];
 
     return (
-        <section id="technologies" className="py-20">
+        <section id="technologies" className="py-4 lg:py-16">
             <div className="container mx-auto">
                 <HeaderSection
                     subtitle="Web App Frameworks & Languages"

@@ -16,8 +16,8 @@ type ServicesSectionProps = {
 
 const AppServicesSection: React.FC<ServicesSectionProps> = ({ services }) => {
   return (
-    <section id="services" className="py-20">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-4 lg:py-16">
+      <div className="container mx-auto ">
         <div className="section-header text-left mb-16" data-aos="fade-up">
           <span className="section-subtitle text-xl text-gray-500">Our App Development Services</span>
           <h2 className="text-3xl font-semibold text-gray-900 mt-2">

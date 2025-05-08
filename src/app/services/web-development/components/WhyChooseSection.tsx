@@ -24,7 +24,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-white">
+    <section id="why-choose-us" className="py-4 lg:py-16 bg-white">
       <div className="container mx-auto">
 
         <HeaderSection

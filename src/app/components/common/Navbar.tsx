@@ -106,24 +106,36 @@ const industries = [
     image: "/assets/images/serve7.png",
     path: "/industries/education-service",
   },
-  // {
-  //   id: "logistic-transportation", // Added id
-  //   name: "Logistic & Transportation",
-  //   image: "/assets/images/serve8.png",
-  //   path: "/industries/logistic-transportation",
-  // },
-  // {
-  //   id: "hospitality-tourism", // Added id
-  //   name: "Hospitality & Tourism",
-  //   image: "/assets/images/serve9.png",
-  //   path: "/industries/hospitality-tourism",
-  // },
-  // {
-  //   id: "legal-compliance", // Added id
-  //   name: "Legal & Compliance",
-  //   image: "/assets/images/serve10.png",
-  //   path: "/industries/legal-compliance",
-  // },
+  {
+    id: "logistic-transportation", // Added id
+    name: "Logistic & Transportation",
+    image: "/assets/images/serve8.png",
+    path: "/industries/logistic-transportation",
+  },
+  {
+    id: "hospitality-tourism", // Added id
+    name: "Hospitality & Tourism",
+    image: "/assets/images/serve9.png",
+    path: "/industries/hospitality-tourism",
+  },
+  {
+    id: "events", // Added id
+    name: "Events & Tickets ",
+    image: "/assets/images/serve10.png",
+    path: "/industries/events-tickets",
+  },
+  {
+    id: "manufacturing", // Added id
+    name: "Manufacturig Industries",
+    image: "/assets/images/serve10.png",
+    path: "/industries/manufacturig-industries",
+  },
+  {
+    id: "technology", // Added id
+    name: "Technology & Innovation",
+    image: "/assets/images/serve10.png",
+    path: "/industries/technology-innovation",
+  },
 ];
 
 const Navbar = () => {
