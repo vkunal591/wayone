@@ -37,7 +37,7 @@ const BlockchainServicesSection: React.FC<BlockchainServicesSectionProps> = ({
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card p-12 text-start bg-gray-200 rounded-xl  hover:shadow-lg transition-shadow duration-300"
+              className="service-card p-12 text-start bg-gray-100 rounded-xl  hover:shadow-lg transition-shadow duration-300"
               data-aos="fade-up"
               data-aos-delay={`${100 * (index + 1)}`}
             >

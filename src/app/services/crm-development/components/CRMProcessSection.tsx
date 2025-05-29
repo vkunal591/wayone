@@ -1,11 +1,13 @@
-import React from 'react';
-import { BiBulb } from 'react-icons/bi';
+import Image from "next/image";
+import React from "react";
+import { BiBulb } from "react-icons/bi";
 
 interface ProcessStep {
   stepNumber: number;
   title: string;
   description: string;
   delay: number;
+  image: string;
 }
 
 interface CRMProcessSectionProps {
@@ -29,9 +31,11 @@ const CRMProcessSection: React.FC<CRMProcessSectionProps> = ({
           <h6 className="text-primary font-semibold">{subtitle}</h6>
           <h2 className="text-4xl text-gray-800 font-bold">
             {title.split("<span class='highlight'>")[0]}
-            <span className="text-primary">{title.split("<span class='highlight'>")[1]}</span>
+            <span className="text-primary">
+              {title.split("<span class='highlight'>")[1]}
+            </span>
           </h2>
-          <p className="text-gray-600 mt-3" style={{ width: '50%' }}>
+          <p className="text-gray-600 mt-3" style={{ width: "50%" }}>
             {description}
           </p>
         </div>
@@ -45,11 +49,14 @@ const CRMProcessSection: React.FC<CRMProcessSectionProps> = ({
               data-aos="fade-up"
               data-aos-delay={`${step.delay}`}
             >
-              <div
-                className="border-2 border-color-primary h-full rounded-lg p-6 flex flex-col items-center text-center"
-              >
+              <div className="border-2 border-color-primary h-full rounded-lg p-6 flex flex-col items-center text-center">
                 <div className=" text-primary mb-4">
-                  <BiBulb className="bi bi-hospital text-3xl" />
+                  <Image
+                    width={100}
+                    height={100}
+                    src={step?.image}
+                    alt={`logo`}
+                  />
                 </div>
                 <h6 className="text-primary text-lg font-semibold mb-3">{`${step.stepNumber}. ${step.title}`}</h6>
                 <p className="text-gray-600 text-sm">{step.description}</p>

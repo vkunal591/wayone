@@ -9,37 +9,37 @@ const services = [
     icon: <BiCart className="text-4xl text-primary" />,
     title: "E-Commerce Development",
     description:
-      "We build secure, scalable, and customized e-commerce platforms tailored to your unique business needs. From personalized storefronts to smooth checkout processes, we help you increase sales and enhance customer experiences.",
+      "Build an effortless shopping experience for your shoppers with a custom-developed e-commerce platform that optimizes conversions and customer loyalty.",
   },
   {
     icon: <BiLaptop className="text-4xl text-primary" />,
     title: "Web Application Development",
     description:
-      "Our team develops robust web applications that address real-world challenges. Whether it's a custom dashboard, SaaS product, or internal tool, we focus on performance, security, and delivering user-centered solutions.",
+      "Create secure and scalable web design and development services that meet your unique business requirements, providing smooth functionality and customer satisfaction.",
   },
   {
     icon: <FaGear className="text-4xl text-primary" />,
     title: "Website Maintenance & Support",
     description:
-      "Keep your website running smoothly with our ongoing maintenance and support services. We manage updates, backups, performance optimization, and security monitoring, so you can focus on growing your business.",
+      "Guarantee the performance and longevity of your website with our full maintenance services, including technical support, security checks, and updates.",
   },
   {
     icon: <BiWindow className="text-4xl text-primary" />,
     title: "CMS Development",
     description:
-      "We create flexible and user-friendly content management systems using platforms like WordPress, Strapi, and headless CMS solutions. Empower your team to manage content easily and scale your website as your business grows.",
+      "Organize your content easily with our customised CMS solutions, created to offer you complete control while providing simplicity and flexibility.",
   },
   {
     icon: <BiPalette className="text-4xl text-primary" />,
     title: "UI/UX Design & Development",
     description:
-      "We craft intuitive, visually appealing user experiences that engage and convert. By blending design thinking with the latest UI trends, we create interfaces that not only look great but drive user satisfaction and business success.",
+      "Design an intuitive, engaging user interface with smooth design and development that improves user experience, boosts engagement, and drives conversions.",
   },
   {
     icon: <FaLaptop className="text-4xl text-primary" />,
     title: "Custom Website Development",
     description:
-      "From initial concept to final launch, we develop fully customized websites that align with your brand and business objectives. Whether it’s a business website, landing page, or a complex web solution, we deliver responsive, fast, and future-ready solutions.",
+      "From conceptualization to deployment, we deliver bespoke websites designed to scale with your business and meet your long-term goals.",
   },
 ];
 
@@ -50,10 +50,10 @@ export default function ServicesSection() {
 
         <HeaderSection
           subtitle="Our Web Development Services"
-          title="Transforming Ideas into"
-          br={true}
-          highlight="Powerful Websites"
-          description="At WayOne, we specialize in turning your ideas into high-performance websites that help you achieve your business goals. Our services are designed to ensure a seamless online experience, from concept to execution"
+          title="Crafting Scalable, High-Performance Websites "
+          br={false}
+          highlight="for Every Business"
+          description="From online stores to custom web design and development services. Wayone ensures that your web solution is built with scalability and performance in mind."
           textAlign="text-left me-auto"
         />
 

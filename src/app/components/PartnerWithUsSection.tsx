@@ -11,19 +11,19 @@ const partnerCards: PartnerCard[] = [
     imgSrc: '/assets/images/icon/project.png',
     title: 'Efficient Project Management',
     description:
-      'At WayOne, we ensure seamless project management, executing all trading activities with utmost precision. Our intuitive platform and skilled experts simplify the trading process, allowing you to focus on critical decisions and strategies without unnecessary distractions.',
+      'Our agile project management guarantees timely delivery within budget. With detailed planning, milestones, and regular feedback, we reduce risks and keep your project on track from beginning to end.',
   },
   {
     imgSrc: '/assets/images/icon/active.png',
     title: 'Dedicated Team of Experts',
     description:
-      'Our team of highly skilled and experienced professionals is committed to supporting you at every stage. From live market analysis to prompt customer support, our experts are always available to provide the assistance you need, ensuring a smooth trading experience.',
+      'Our skilled team collaborates with you closely to provide customised, high-quality solutions that match your business objectives, guaranteeing impactful and effective results',
   },
   {
     imgSrc: '/assets/images/icon/deal.png',
     title: 'Timely Project Completion',
     description:
-      'We value your time. WayOne guarantees that every process, from trade execution to account management, is completed on schedule. With our efficient and timely services, we help you stay ahead of the competition and achieve your trading goals within the expected timeframe.',
+      'We respect time. Our dedication to project completion on time, without ever sacrificing quality, has built us trust across industries, allowing you to proceed with confidence.',
   },
 ];
 
@@ -31,9 +31,9 @@ const PartnerWithUsSection: React.FC = () => {
   return (
     <section className="partner-with-us cs-partner-with-us py-16">
       <div className="section-heading text-left mb-8 m-auto ">
-        <h2 className="text-4xl text-primary font-semibold lg:w-3/4 ">Why Partner with Us?</h2>
+        <h2 className="text-4xl text-primary font-semibold lg:w-3/4 ">Why Choose WayOne?</h2>
         <p className="mt-4 -lg text-gray-700 lg:w-3/5">
-          At WayOne, we are dedicated to providing innovative, secure, and efficient solutions that empower your business. Whether you are a new entrepreneur or an experienced professional, our tailored services are designed to ensure success in an ever-evolving digital landscape. By partnering with us, you gain access to cutting-edge tools and strategies that drive growth, enhance performance, and keep you ahead of the competition.
+         With years of experience and a client-centric approach, we provide smooth collaboration, delivering innovative solutions that drive your business forward. Our emphasis on innovation, quality, and long-term success makes us the ideal partner for your next project.
         </p>
       </div>
 
@@ -41,12 +41,12 @@ const PartnerWithUsSection: React.FC = () => {
         <div className="row grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {partnerCards.map((card, index) => (
             <div key={index} className="col">
-              <div className="card bg-white shadow-lg rounded-3xl p-2 lg:p-6 overflow-hidden">
+              <div className="card bg-white shadow-lg rounded-3xl h-100 p-2 lg:p-6 overflow-hidden">
                 <div className="card-image p-4">
                   <img src={card.imgSrc} alt={card.title} className="mx-auto w-16 h-16 object-contain" />
                 </div>
-                <div className="card-content p-4">
-                  <h1 className="text-2xl font-semibold text-gray-800">{card.title}</h1>
+                <div className="card-content text-center p-4">
+                  <h1 className="text-xl font-semibold lg:w-4/5 m-auto text-primary">{card.title}</h1>
                   <p className="mt-2 text-gray-600">{card.description}</p>
                 </div>
               </div>

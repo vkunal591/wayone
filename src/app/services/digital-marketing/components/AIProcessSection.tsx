@@ -23,9 +23,9 @@ const AIProcessSection: React.FC<AIProcessProps> = ({ title, subtitle, descripti
                 <div className="text-start" data-aos="fade-up">
                     <h6 className="text-primary font-semibold">{subtitle}</h6>
                     <h2 className="text-4xl text-gray-800 font-bold">
-                        From Initial Concept to <span className="text-primary">Seamless Deployment</span>
+                       {title}
                     </h2>
-                    <p className="text-gray-600 mt-3" style={{ width: '50%' }}>
+                    <p className="text-gray-600 mt-3">
                         {description}
                     </p>
                 </div>

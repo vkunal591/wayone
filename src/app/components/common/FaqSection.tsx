@@ -50,7 +50,7 @@ export default function FaqSection() {
                     description="We understand that you may have questions about our web development services. Below are some of the most frequently asked questions by our clients. If you have any other questions, feel free to reach out to us!"
                 />
                 <div className="space-y-4 mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    {faqs.map((faq, index) => (
+                    {faqs && faqs?.map((faq, index) => (
                         <div
                             key={index}
                             className="border border-gray-200 rounded-xl bg-gray-200/40 shadow transition-all duration-300 ease-in-out"

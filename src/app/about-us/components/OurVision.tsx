@@ -14,16 +14,23 @@ export default function OurVission() {
               </div>
               <div className="flex-1">
                 <div className="content">
-                  <h2 className="text-4xl font-medium text-gray-800 mb-4">Our Vision</h2>
+                  <h2 className="text-4xl font-medium text-gray-800 mb-4">
+                    Our Vision
+                  </h2>
                   <p className="text-gray-700 text-justify text-lg font-[cabin]">
-                    At WayOne, our vision is to be India's most trusted and sought-after IT solutions and digital
-                    transformation partner. We aim to empower businesses by providing innovative, scalable technology
-                    solutions that address the ever-evolving needs of our clients. By leveraging emerging technologies,
-                    we help businesses navigate the path to success, growth, and operational efficiency. With a strong
-                    commitment to excellence, quality, and reliability, we are building a new digital landscape for the
-                    businesses of tomorrow. Our focus is on delivering custom IT solutions that not only cater to the
-                    current needs of businesses but also anticipate future opportunities, helping them thrive in this
-                    era of rapid digital transformation.
+                    Our vision  is to be the most sought-after and best Mobile
+                    and App development partner. Our goal is to empower
+                    businesses through  the provision of innovative and scalable
+                    technology solutions that meet changing client needs. With
+                    the application of emerging and new technologies,
+                    we aim to propel businesses towards success, growth, and
+                    efficiency globally. With unshakable resolve to excellence,
+                    quality, and dependability, we're constructing a
+                    new universe of the digital age. We aspire to
+                    provide custom IT solutions that not only support the
+                    current needs of businesses but also predict tomorrow’s
+                    prospects to help companies thrive in digital transformation
+                    era.
                   </p>
                 </div>
               </div>
@@ -40,14 +47,21 @@ export default function OurVission() {
               </div>
               <div className="flex-1">
                 <div className="content">
-                  <h2 className="text-4xl font-medium text-gray-800 mb-4">Our Mission</h2>
+                  <h2 className="text-4xl font-medium text-gray-800 mb-4">
+                    Our Mission
+                  </h2>
                   <p className="text-gray-700 text-lg text-justify font-[cabin]">
-                    At WayOne, we believe in empowering businesses by providing innovative IT solutions and digital
-                    transformation expertise that deliver real, measurable results. We are committed to offering
-                    value-driven technology solutions that are tailored to meet the unique needs of every client.
-                    By staying ahead of current trends and staying agile in adopting emerging technologies, we aim to
-                    drive quantifiable outcomes in improving operational efficiency, boosting business performance, and
-                    enhancing customer satisfaction.
+                    Wayone believes in empowering companies
+                    with groundbreaking IT solutions and digital
+                    transformation skills that deliver actual outcomes. We
+                    are dedicated to delivering actual business solutions by delivering value-based technology
+                    solutions that fit every single
+                    customer's requirement. Through maintaining leadership of the
+                    current trends and being responsive in
+                    a timely manner to emerging technologies,
+                    we aim to offer quantifiable results in
+                    the area of enhancing operating effectiveness,
+                    business performance, and customer satisfaction. 
                   </p>
                 </div>
               </div>

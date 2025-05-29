@@ -15,7 +15,7 @@ export default function TechnologiesSection() {
                     subtitle="Web App Frameworks & Languages"
                     title="Building Scalable, Secure, and"
                     highlight="High-Performance Solutions"
-                    description="Discover the most powerful web development languages and frameworks used to create fast, secure, and scalable applications. From frontend to backend, learn how to choose the right stack and best practices to build reliable, high-performance web solutions."
+                    description="We employ the newest technologies and frameworks to design high-performance, secure, and scalable web design and development services. From frontend frameworks such as React and Angular to backend solutions and bespoke CMS, we make your website run smoothly and be future-proof."
                 />
                 <div className="grid grid-cols-2 lg:grid-cols-4 lg:w-4/5 m-auto">
                     {techGroups.map((group, i) => (

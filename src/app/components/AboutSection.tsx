@@ -31,22 +31,13 @@ const AboutSection = () => {
             <div className="content">
               <h3 className=" font-medium text-primary">About Us</h3>
               <h2 className="text-4xl font-semibold text-gray-800 mt-4">
-                Innovative IT & Digital Solutions for a{" "}
-                <span className="text-primary">Smarter India</span>
+                Delivering Secure Mobile & Web Solutions for{" "}
+                <span className="text-primary">Modern Solutions</span>
               </h2>
               <p className="text-base font-[cabin] text-gray-600 mt-4">
-                WayOne is one of India’s leading digital and IT solution
-                providers, committed to helping businesses grow through powerful
-                web development and strategic digital marketing. Our expert team
-                blends creativity, industry insight, and cutting-edge technology
-                to build tailored solutions that deliver measurable, long-term
-                results.
+                Wayone India is an advanced technology for enterprises which require high-quality, scalable, and high-performing digital apps. We render custom mobile and web development solutions as per the needs of enterprise requirements of the current times. Our experienced team of experts apply the latest frameworks and agile development principles to develop applications that are secure, accessible, and future-ready. Whether a business application, e-commerce website, or enterprise software, we ensure seamless integration, quick deployment, and extended support — helping businesses streamline operations and achieve digital success with confidence.
               </p>
-              <p className="text-base font-[cabin] text-gray-600 mt-4">
-                We offer a complete suite of services — from content marketing
-                and social media management to SEO and PPC — all crafted to
-                enhance your brand’s online visibility and performance.
-              </p>
+
               <div className=" mt-8">
                 <Link
                   href="/about-us"

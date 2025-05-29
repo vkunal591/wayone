@@ -11,13 +11,14 @@ import AppServicesSection from './components/AppServiceSection';
 import AppDevelopmentProcessSection from './components/AppDevelopmentProcessSection';
 import App from 'next/app';
 import AppPortfolioSection from './components/AppPortfolioSection';
+import PartnerWithUsSection from '@/app/components/PartnerWithUsSection';
 
 
 const dynamicData = {
-    title: "Transform Your Vision into Reality with",
-    heiglight: " Wayone's Expert App Development Services",
-    shortDesc: "Custom, Scalable & High-Performance Web Solutions",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Bring Your Ideas to Life with Wayone’s ",
+    heiglight: "Expert App Development Services",
+    shortDesc: "Custom, Scalable & High-Performance App Development",
+    description: "we offer end-to-end app development services that turn your own ideas into reality. Our team designs customized, high-performing applications with smooth user interfaces and functionality in line with your business requirements.",
     ctaText: "Start Your Project",
     ctaLink: "#contact",
     subheading: "App Development Services – Wayone"
@@ -27,26 +28,26 @@ const dynamicData = {
 const services = [
     {
         id: '1',
-        icon: 'bi bi-phone',
+        icon: 'fa-brands fa-android',
         title: 'Android/IOS Application Development',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'We specialize in developing native mobile apps for iOS and Android. We make sure each app is customized to its platform, providing a smooth, natural experience and using platform-specific capabilities to deliver the best possible experience to users.',
         delay: 100,
     },
     {
         id: '2',
-        icon: 'bi bi-apple',
+        icon: 'fa-brands fa-flutter',
         title: 'Flutter App Development',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'With the strength of Flutter, we develop cross-platform apps that run flawlessly on both Android and iOS platforms. Flutter allows us to save time in development while delivering an excellent native-like quality of experience to your users.',
         delay: 200,
     },
     {
         id: '3',
-        icon: 'bi bi-gear',
+        icon: 'fa-solid fa-gear',
         title: 'React Native App Development',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Our React Native app development services enable us to develop apps that are both quick and scalable with native app platform. It also enables us to provide an identical experience both on iOS and Android.',
         delay: 300,
     },
 ];
@@ -54,27 +55,27 @@ const services = [
 const processSteps = [
     {
         id: '1',
-        icon: 'bi bi-bar-chart', // Replace with appropriate icons
+        icon: 'fa-brands fa-searchengin', // Replace with appropriate icons
         title: 'Research',
     },
     {
         id: '2',
-        icon: 'bi bi-palette', // Replace with appropriate icons
+        icon: 'fa-solid fa-swatchbook', // Replace with appropriate icons
         title: 'Design',
     },
     {
         id: '3',
-        icon: 'bi bi-code-slash', // Replace with appropriate icons
+        icon: 'fa-solid fa-code', // Replace with appropriate icons
         title: 'Development',
     },
     {
         id: '4',
-        icon: 'bi bi-clipboard-check', // Replace with appropriate icons
+        icon: 'fa-regular fa-file-lines', // Replace with appropriate icons
         title: 'Testing',
     },
     {
         id: '5',
-        icon: 'bi bi-box', // Replace with appropriate icons
+        icon: 'fa-solid fa-sitemap', // Replace with appropriate icons
         title: 'Deployment',
     },
 ];
@@ -126,9 +127,8 @@ export default function page() {
             </div>
             <AppPortfolioSection items={portfolioItems} />
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
-                <IndustriesSection />
-                <TechnologiesSection />
-                <WhyChooseUsSection />
+                <IndustriesSection />                
+                <PartnerWithUsSection />
                 <FaqSection />
             </div>
         </div>

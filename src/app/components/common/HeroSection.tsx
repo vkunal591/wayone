@@ -49,7 +49,7 @@ const HeroSection = ({
 
   return (
     <section id="hero" className="hero section px-4 py-16 pt-[6rem]">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center py-4">
         <motion.div
           ref={ref}
           variants={fadeUpVariant}
@@ -66,21 +66,21 @@ const HeroSection = ({
                 height={70}
               />
               <p className="text-base text-gray-700 font-medium">
-                Over 100+ Satisfied Clients
+                50k Satisfied Customer
               </p>
             </div>
           )}
 
           <h1 className="text-3xl md:text-3xl lg:text-5xl/16 font-extrabold text-gray-800">
-            {title1 || "Empowering Business Growth"} <br className="hidden md:inline" />
+            {title1 || "Advanced Web & App Development "} <br className="hidden md:inline" />
             <span className="text-primary">
-              {title2 || "with Smarter IT Solutions"}
+              {title2 || "Solutions for  Your Business"}
             </span>
           </h1>
 
           <p className="text-base font-[cabin] lg:w-4/5 text-gray-600 px-4 md:px-16">
             {description ||
-              "In today’s rapidly evolving digital landscape, traditional methods simply aren’t enough. At WayOne, we deliver intelligent IT solutions designed to streamline operations, reduce costs, and maximize performance. From seamless system integrations to advanced software development, we tailor every solution to your business needs — ensuring you're not just keeping up with change, but leading it."}
+              "We provide innovative and scalable web and mobile application solutions, developed with latest  technologies and framework to improve performance, guarantee system reliability, and business efficiency across various digital platforms"}
           </p>
 
           <div className="hero-btn flex space-x-4 justify-center">

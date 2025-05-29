@@ -228,9 +228,11 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-[poppins] tracking-wide text-sm/7 text-gray-800 mt-4 lg:mb-2">
-                Wayone is your trusted IT partner in Sydney, offering custom
-                solutions for websites, mobile apps, and advanced technologies
-                like AI. Let's create something exceptional together!
+                We provide reliable IT services including Website development,
+                App Development software solutions with tech support and all
+                Digital Marketing services. Helping businesses grow with smart
+                and simple technology. Trusted by clients across industries for
+                quality and commitment.
               </p>
             </div>
           </div>
@@ -293,35 +295,45 @@ export default function Footer() {
                 </strong>{" "}
                 +91 9889 9889 09
               </Link>
+
+              <Link
+                href={"tel:+917599990331"}
+                className="text-sm mb-2 flex items-center"
+              >
+                <strong>
+                  <IoCallOutline className="text-xl mr-2" />
+                </strong>{" "}
+                +91 7599 9903 31
+              </Link>
               <p className="text-sm flex items-center mb-4">
                 <strong>
                   <IoLocationOutline className="text-xl mr-2" />
                 </strong>{" "}
                 9 Laxmi Garden, 2nd floor above ICICI bank, Shivaji marg, New
-                Delhi(110015)
+                Delhi (110015)
               </p>
               <p className="flex items-center gap-4 pl-6">
-                <Link href={"https://www.facebook.com/wayone.india"} title="facebook">
+                <Link
+                  href={"https://www.facebook.com/wayone.india"}
+                  title="facebook"
+                >
                   <FaFacebook className="text-2xl text-blue-600" />
                 </Link>
-                <Link href={"https://www.instagram.com/wayone.india"} title="instagram">
+                <Link
+                  href={"https://www.instagram.com/wayone.india"}
+                  title="instagram"
+                >
                   <FaInstagramSquare className="text-2xl text-pink-500" />
                 </Link>
               </p>
-              <p className=" pt-5 text-primary font-medium ">Wayone Pvt Ltd</p>
-              <p className="text-sm">
-                Australian Company Number{" "}
-                <Link href={"tel:681469536"} className="hover:underline">
-                  681 469 536
-                </Link>
-              </p>
+              {/* <p className=" pt-5 text-primary font-medium ">Wayone Pvt Ltd</p> */}
             </div>
           </div>
         </div>
         <hr className="my-8 border-gray-800" />
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <div className="text-gray-900/80">
-            © {new Date().getFullYear()} Wayone. All rights reserved.
+            © {new Date().getFullYear()} Wayone Pvt. Ltd. All rights reserved.
           </div>
           <div className="flex space-x-4 text-base mt-2 md:mt-0">
             <Link

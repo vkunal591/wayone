@@ -14,7 +14,7 @@ const featuresData = [
   {
     title: "Web Development",
     description:
-      "We specialize in building and maintaining responsive, user-friendly websites that ensure functionality and optimal user experience. Our expertise spans both front-end and back-end development, delivering seamless, high-performance solutions.",
+      "We offer end-to-end web, app, and enterprise tech solutions that drive digital growth. Our services guarantee performance, security, and smooth user experience across platforms, customized to your business requirements.",
     iconSrc: "/assets/images/icon/service1.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -24,7 +24,7 @@ const featuresData = [
   {
     title: "App Development",
     description:
-      "From intuitive mobile applications to robust enterprise solutions, we create custom apps designed for superior performance, scalability, and real-time functionality tailored to your specific requirements.",
+      "From native to cross-platform apps, we create user-centric mobile apps with Flutter, Kotlin, and Swift. Our apps deliver smooth UI, fast loading, and enterprise-level functionality to drive maximum digital mobility for your users.",
     iconSrc: "/assets/images/icon/mobile-development 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -34,7 +34,7 @@ const featuresData = [
   {
     title: "Artificial Intelligence",
     description:
-      "Leverage the power of AI to automate processes, analyze data, and make smarter decisions, helping your business stay ahead in today’s competitive market.",
+      "We use AI-driven solutions like chatbots, predictive analytics, and recommendation engines to automate processes, personalize user experiences, and enhance operational efficiency across business functions.",
     iconSrc: "/assets/images/icon/artificial-intelligence 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -44,7 +44,7 @@ const featuresData = [
   {
     title: "SaaS Development",
     description:
-      "Our custom Software-as-a-Service (SaaS) solutions improve operational efficiency, automate workflows, and offer scalable options to meet your business’s evolving needs.",
+      "Our team constructs multi-tenant architecture, subscription billing-integrated, cloud-native-deployed SaaS products that are secure and scalable, providing high availability, easy maintenance, and seamless performance for successful growing software companies.",
     iconSrc: "/assets/images/icon/saas 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -54,7 +54,7 @@ const featuresData = [
   {
     title: "UI/UX Designing",
     description:
-      "We craft visually appealing and intuitive interfaces that elevate user experiences, ensuring your digital platforms are not only functional but also aesthetically engaging.",
+      "We create intuitive and visually appealing UI/UX designs with a focus on usability, accessibility, and interaction flow. Our design process ensures high engagement and conversion across all platforms and screen sizes.",
     iconSrc: "/assets/images/icon/ux 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -64,7 +64,7 @@ const featuresData = [
   {
     title: "Digital Marketing",
     description:
-      "We drive targeted traffic, boost brand visibility, and deliver measurable results with strategies like SEO, SEM, content marketing, and social media management.",
+      "We provide performance-oriented digital marketing services such as SEO, PPC, content marketing, and social media management. Our strategies increase online visibility, drive qualified traffic, and business growth that can be measured",
     iconSrc: "/assets/images/icon/megaphone 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -74,7 +74,7 @@ const featuresData = [
   {
     title: "BlockChain Development",
     description:
-      "Our ERP solutions integrate core business functions, improving efficiency, decision-making, and providing real-time insights to help your business grow.",
+      "We provide decentralized blockchain application development for sectors such as fintech, logistics, and healthcare. Our services involve smart contract development, DApps, and tokenization on Ethereum, Polygon, and other secure platforms.",
     iconSrc: "/assets/images/icon/gear 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -84,7 +84,7 @@ const featuresData = [
   {
     title: "API Development",
     description:
-      "We design customized CRM systems that streamline customer interactions, enhance satisfaction, and help businesses build long-lasting relationships with their clients.",
+      "We develop secure, strong, and Restful APIs for smooth communication between your systems and third-party services. Our APIs provide real-time data flow, strong authentication, and high scalability across platforms.",
     iconSrc: "/assets/images/icon/programmer 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
@@ -94,7 +94,7 @@ const featuresData = [
   {
     title: "CRM Development",
     description:
-      "We design customized CRM systems that streamline customer interactions, enhance satisfaction, and help businesses build long-lasting relationships with their clients.",
+      "We create bespoke CRM solutions to automate customer management, sales pipelines, and integrate with your current systems. Our CRMs are secure, scalable, and customized for your business processes.",
     iconSrc: "/assets/images/icon/customer 2.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",

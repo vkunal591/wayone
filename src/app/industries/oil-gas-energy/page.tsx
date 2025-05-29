@@ -44,9 +44,9 @@ const portfolioData = [
         link: "#",
     },
     {
-        title: "Wayon FX",
+        title: "WayOne FX",
         description:
-            "Wayone FX is a premier online trading platform that offers real-time information, tools, and resources for trading forex and cryptocurrencies. Through safe transactions and an easy-to-use interface, we enable traders to thrive in the international market.",
+            "WayOne FX is a premier online trading platform that offers real-time information, tools, and resources for trading forex and cryptocurrencies. Through safe transactions and an easy-to-use interface, we enable traders to thrive in the international market.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/WAYONE (2) 1.png",
         link: "#",

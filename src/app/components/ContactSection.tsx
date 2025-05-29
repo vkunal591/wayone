@@ -33,14 +33,10 @@ const ContactSection: React.FC = () => {
       <div className="contact-container flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="contact-form w-full md:w-2/4 bg-gray-100  lg:p-16 rounded-4xl ">
           <h2 className="text-2xl font-semibold text-left text-primary mb-4">
-            Connect With Us Today
+            Let’s Build the Future Together! Contact Us Today
           </h2>
           <p className=" text-gray-700 mb-6 text-left">
-            Ready to take your business to the next level? At WayOne, we’re here
-            to help you navigate the digital landscape and achieve your goals.
-            Whether you're looking for a customized website, a powerful digital
-            marketing strategy, or innovative IT solutions, our expert team is
-            just a message away.
+            Reach out now to discuss how our innovative solutions can accelerate your business growth and transform your digital landscape
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input

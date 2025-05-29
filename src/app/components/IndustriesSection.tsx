@@ -26,10 +26,10 @@ const IndustriesSection: React.FC = () => {
     <section className="industries cs-industries py-16">
       <div className="section-heading text-left mb-8 me-auto ">
         <h2 className="text-4xl text-gray-800 lg:w-3/4 font-semibold">
-          Industries <span className="text-primary">We Serve with Innovation</span>
+          Industries We <span className="text-primary"> Serve </span>
         </h2>
         <p className="mt-4 font-cabin lg:w-3/5 text-gray-700  ">
-          At WayOne, we provide customized digital solutions to a diverse range of industries including healthcare, retail, manufacturing, finance, and education. Our bespoke services are designed to optimize operations, enhance efficiency, and help businesses stay ahead in their respective markets. We focus on delivering high-quality, innovative solutions that drive performance, productivity, and growth.
+         We specialize in varied industries such as healthcare, finance, retail, education, manufacturing, and logistics, offering innovative tech solutions that enable businesses to excel in their respective industries.
         </p>
       </div>
 

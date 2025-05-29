@@ -21,12 +21,12 @@ const AppServicesSection: React.FC<ServicesSectionProps> = ({ services }) => {
         <div className="section-header text-left mb-16" data-aos="fade-up">
           <span className="section-subtitle text-xl text-gray-500">Our App Development Services</span>
           <h2 className="text-3xl font-semibold text-gray-900 mt-2">
-            Innovative <span className="text-primary">App Development Service</span>
+            Innovative <span className="text-primary">App Development Services</span>
             <br />
-            Tailored to Your Business Needs
+            Customized to Your Business Needs
           </h2>
           <p className="section-desc text-gray-700 mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            we specialize in creating mobile and web applications that are customized to your unique business needs.
           </p>
         </div>
 

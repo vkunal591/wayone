@@ -15,23 +15,23 @@ const OurWords: OurWord[] = [
   {
     title: "Unifi Cars",
     description:
-      "Unifi Cars is a reliable online platform for buying and selling used cars. We make things easy with easy-to-understand prices and intuitive interface, saving you time finding or selling your car fast and securely.",
+      "Unifi Cars is a trusted platform for buying and selling used vehicles. With no hidden fees, an easy interface, and protected transactions, we make the experience speedy and stress-free, so you get the best offer each time.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/UNIFICARS (2) 1.png",
     link: "/contact-us",
   },
   {
-    title: "Wayon FX",
+    title: "WayOne FX",
     description:
-      "Wayone FX is a premier online trading platform that offers real-time information, tools, and resources for trading forex and cryptocurrencies. Through safe transactions and an easy-to-use interface, we enable traders to thrive in the international market.",
+      "Wayon FX is a top forex trading platform, providing an intuitive interface and live market information. We offer innovative strategies and tools to assist traders in succeeding in the ever-changing forex environment. Our sophisticated security features guarantee safe, effective trading for every investor.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/WAYONE (2) 1.png",
     link: "/contact-us",
   },
   {
-    title: "Donlop",
+    title: "Dunlop",
     description:
-      "Donlop is a leading destination for quality tyres. We have a variety of tyres for every type of vehicle, providing durability, safety, and performance. Get the perfect fit for your vehicle with our expert advice and product range.",
+      "Dunlop Tyres provides superior-quality tyres for all vehicle types. Focused on delivering top-notch performance, longevity, and safety, we offer the ideal solution for your driving needs. Our vast collection ensures an ideal fit for your car, so you drive confidently and in peace of mind on every ride.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/dunlopbahrain (1) 1.png",
     link: "/contact-us",
@@ -46,18 +46,16 @@ const OurWords: OurWord[] = [
   },
 ];
 
-const OurWork = ({ layout }:{layout?: any}) => {
+const OurWork = ({ layout }: { layout?: any }) => {
   return (
     <section className="portfolio-page cs-portfolio py-16">
       <div className={`container mx-auto ${layout}`}>
         <div className="section-heading text-left  mr-auto">
           <h2 className="text-4xl font-semibold lg:w-3/4 mb-4 text-gray-800">
-            Showcasing <span className="text-primary">Our Excellence</span>
+            Where Every Project Tells a  <span className="text-primary">Story of Innovation</span>
           </h2>
           <p className="font-[cabin] lg:w-3/5 text-gray-600">
-            We specialize in delivering exceptional designs that blend
-            creativity with functionality, ensuring that every project showcases
-            our commitment to excellence and innovation.
+            We design bespoke digital solutions that combine creativity, technology, and strategy—every project reflecting our commitment to innovation, creating tangible impact and useful user experiences on a variety of industries and platforms.
           </p>
         </div>
 

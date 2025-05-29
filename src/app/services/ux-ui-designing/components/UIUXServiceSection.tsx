@@ -1,5 +1,6 @@
-import React from 'react';
-import { AiOutlineAlipay } from 'react-icons/ai';
+import Image from "next/image";
+import React from "react";
+import { AiOutlineAlipay } from "react-icons/ai";
 
 // Interface for each service in the section
 interface Service {
@@ -7,6 +8,7 @@ interface Service {
   title: string;
   description: string;
   delay: number;
+  image: string;
 }
 
 interface ServicesSectionProps {
@@ -27,10 +29,10 @@ const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="section-header text-left  my-4" data-aos="fade-up">
-          <span className="section-subtitle text-primary d-block mb-2">{subtitle}</span>
-          <h2 className="text-4xl text-gray-800 font-bold">
-            {title}
-          </h2>
+          <span className="section-subtitle text-primary d-block mb-2">
+            {subtitle}
+          </span>
+          <h2 className="text-4xl text-gray-800 font-bold">{title}</h2>
           <p className="section-desc mt-3 text-gray-600">{description}</p>
         </div>
 
@@ -44,9 +46,11 @@ const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
               data-aos-delay={`${service.delay}`}
             >
               <div className="text-primary text-4xl mb-4">
-                <AiOutlineAlipay className={`bi ${service.icon}`} />
+                <Image src={service?.image} alt="logo" width={70} height={70} />
               </div>
-              <h3 className="font-medium text-xl text-primary mb-2">{service.title}</h3>
+              <h3 className="font-medium text-xl text-primary mb-2">
+                {service.title}
+              </h3>
               <p className="text-gray-600">{service.description}</p>
             </div>
           ))}

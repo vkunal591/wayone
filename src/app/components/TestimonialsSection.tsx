@@ -53,18 +53,14 @@ const TestimonialsSection: React.FC = () => {
     >
       <div className="section-heading text-left mb-12 lg:w-4/5 me-auto">
         <h2 className="text-3xl text-gray-800 font-semibold">
-          Over 100+{" "}
+          1200+ Clients,
+          {" "}
           <span className="text-primary">
-            Satisfied Clients and Counting
+            Unmatched Satisfaction, and Growing!
           </span>
         </h2>
         <p className="mt-4 text-gray-700">
-          We take pride in having served over 130 clients across diverse
-          industries, delivering results-driven digital solutions that exceed
-          expectations. Our focus on quality, customer satisfaction, and
-          long-term partnerships has earned us the trust of businesses across
-          India. Join the growing list of brands that trust us to drive their
-          digital transformation and growth.
+          We’re proud to have earned the trust of over 1200 clients who rely on our expertise to fuel their success—and that number keeps rising!
         </p>
       </div>
 

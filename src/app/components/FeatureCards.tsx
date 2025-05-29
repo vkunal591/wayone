@@ -23,14 +23,11 @@ const FeatureCards = ({ features }: FeatureCardsProps) => {
       <div className="container mx-auto">
         <div className="section-heading text-left  mb-12">
           <h2 className="text-4xl font-bold lg:w-3/4 text-gray-800">
-            Customised Digital Solutions That Drive{' '}
-            <span className="text-primary">Real Business Results</span>
+            Our Core Development &
+            <span className="text-primary">Technology Services</span>
           </h2>
           <p className="font-[cabin] lg:w-3/5 text-base text-gray-600 mt-4">
-            At WayOne, we craft innovative, results-focused digital solutions built around your unique business needs.
-            Whether it’s a dynamic website, custom software, or performance-driven digital strategy — our work is
-            designed to elevate your brand, improve user experience, and deliver measurable success. We focus on
-            quality, engagement, and impact — helping your business grow, thrive, and lead in the digital era.
+            We offer a wide range of services to boost your online presence and business growth. Our team of professionals is committed to creating personalized strategies that help your brand outshine the rest in today’s competitive digital environment.
           </p>
         </div>
 
