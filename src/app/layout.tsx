@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cabin, Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Cabin, Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
@@ -15,6 +15,13 @@ const poppins = Poppins({
 
 const cabin = Cabin({
   variable: "--font-cabin",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
@@ -69,7 +76,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${poppins.variable} ${cabin.variable} antialiased`}>
+      <body className={`${poppins.variable} ${cabin.variable} ${montserrat.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

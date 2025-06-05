@@ -23,7 +23,7 @@ const TechnologySection: React.FC = () => {
   return (
     <section className="technology cs-technology py-16">
       <div className="section-heading text-left mb-8 me-auto ">
-        <h2 className="text-4xl font-semibold lg:w-3/5 text-gray-800">
+        <h2 className="text-4xl font-medium lg:w-3/5 text-gray-800">
           Innovative Technologies <span className="text-primary">Powering Our Solutions</span>
         </h2>
         <p className="mt-4 font-[cabin] lg:w-3/5 text-gray-700">

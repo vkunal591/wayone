@@ -33,7 +33,7 @@ const UIUXProcessSection: React.FC<UIUXProcessSectionProps> = ({
         {/* Section Header */}
         <div className="text-start" data-aos="fade-up">
           <h6 className="highlight text-primary">{subtitle}</h6>
-          <h2 className="font-bold text-gray-800 text-3xl">
+          <h2 className="font-medium text-gray-800 text-3xl">
             {title.split('<span class="highlight">')[0]}
             <span className="highlight text-blue-600">
               {title.split('<span class="highlight">')[1]}
@@ -58,8 +58,8 @@ const UIUXProcessSection: React.FC<UIUXProcessSectionProps> = ({
               <div className="me-3 text-primay text-4xl">
                 <Image src={step?.image} alt="logo" width={70} height={70} />
               </div>
-              <div className="fw-semibold" style={{ width: "35%" }}>
-                <h4 className="mb-2 font-medium text-gray-800">{step.title}</h4>
+              <div className="fw-medium" style={{ width: "35%" }}>
+                <h4 className="mb-2 font-semibold text-primary">{step.title}</h4>
                 <p className="m-0 text-gray-800">{step.description}</p>
               </div>
             </div>

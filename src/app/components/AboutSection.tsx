@@ -30,7 +30,7 @@ const AboutSection = () => {
           >
             <div className="content">
               <h3 className=" font-medium text-primary">About Us</h3>
-              <h2 className="text-4xl font-semibold text-gray-800 mt-4">
+              <h2 className="text-4xl font-medium text-gray-800 mt-2">
                 Delivering Secure Mobile & Web Solutions for{" "}
                 <span className="text-primary">Modern Solutions</span>
               </h2>

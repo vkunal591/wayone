@@ -30,8 +30,8 @@ const GradietIconCard: React.FC<GradietIconCardProps> = ({
             <div className="container mx-auto px-6">
                 {/* Section Header */}
                 <div className="text-start" data-aos="fade-up">
-                    <h6 className="text-primary font-semibold">{subtitle}</h6>
-                    <h2 className="text-4xl text-gray-800 font-bold">
+                    <h6 className="text-primary font-medium">{subtitle}</h6>
+                    <h2 className="text-4xl text-gray-800 font-medium">
                         {title} <span className="text-primary">{highlight}</span>
                     </h2>
                     <p className="text-gray-600 mt-3" style={{ width: '50%' }}>
@@ -54,12 +54,12 @@ const GradietIconCard: React.FC<GradietIconCardProps> = ({
                                 data-aos-delay={`${step.delay}`}
                             >
                                 <div className="flex flex-row items-start gap-4 p-8">
-                                    <div className="fw-semibold">
+                                    <div className="fw-medium">
                                         <div className="text-primary text-5xl mb-4">
                                             <Icon />
                                         </div>
 
-                                        <h6 className="mb-2 text-lg font-semibold text-primary">{step.title}</h6>
+                                        <h6 className="mb-2 text-lg font-medium text-primary">{step.title}</h6>
                                         <p className="text-gray-800">{step.description}</p>
                                     </div>
                                 </div>

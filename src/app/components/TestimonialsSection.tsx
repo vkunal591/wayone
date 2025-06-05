@@ -52,7 +52,7 @@ const TestimonialsSection: React.FC = () => {
       className="testimonials cs-testimonials section py-16"
     >
       <div className="section-heading text-left mb-12 lg:w-4/5 me-auto">
-        <h2 className="text-3xl text-gray-800 font-semibold">
+        <h2 className="text-3xl text-gray-800 font-medium">
           1200+ Clients,
           {" "}
           <span className="text-primary">
@@ -78,7 +78,7 @@ const TestimonialsSection: React.FC = () => {
               alt="Client 1"
               className="w-full h-auto"
             />
-            <div className="absolute bottom-5 left-5 text-white text-2xl font-semibold flex items-center  gap-4">
+            <div className="absolute bottom-5 left-5 text-white text-2xl font-medium flex items-center  gap-4">
               <span className=" rounded-full text-2xl bg-white p-4">
                 <FaPlay className=" text-primary" />
               </span>
@@ -97,7 +97,7 @@ const TestimonialsSection: React.FC = () => {
               alt="Client 2"
               className="w-full h-auto"
             />
-            <div className="absolute bottom-5 left-5 text-white text-2xl font-semibold flex items-center  gap-4">
+            <div className="absolute bottom-5 left-5 text-white text-2xl font-medium flex items-center  gap-4">
               <span className=" rounded-full text-2xl bg-white p-4">
                 <FaPlay className=" text-primary" />
               </span>
@@ -127,7 +127,7 @@ const TestimonialsSection: React.FC = () => {
                         className="testimonial-img w-16 h-16 object-cover rounded-full flex-shrink-0"
                       />
                       <div className="ml-4">
-                        <h3 className="font-semibold text-xl text-gray-800">
+                        <h3 className="font-medium text-xl text-gray-800">
                           {testimonial.name}
                         </h3>
                       </div>

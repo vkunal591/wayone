@@ -31,8 +31,8 @@ const ContactSection: React.FC = () => {
   return (
     <div className="wrapper cs-wrapper py-16">
       <div className="contact-container flex flex-col-reverse md:flex-row items-center justify-between">
-        <div className="contact-form w-full md:w-2/4 bg-gray-100  lg:p-16 rounded-4xl ">
-          <h2 className="text-2xl font-semibold text-left text-primary mb-4">
+        <div className="contact-form w-full md:w-2/4 bg-gray-100 p-6 lg:p-16 rounded-4xl ">
+          <h2 className="text-2xl font-medium text-left text-primary mb-4">
             Let’s Build the Future Together! Contact Us Today
           </h2>
           <p className=" text-gray-700 mb-6 text-left">

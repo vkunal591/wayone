@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface Service {
@@ -19,7 +20,7 @@ const AIServicesSection: React.FC<ServicesSectionProps> = ({ subtitle, heading, 
     <section id="services" className="py-4 lg:py-16">
       <div className="container mx-auto ">
         <div className="text-left  my-4" data-aos="fade-up">
-          <span className="text-sm font-semibold text-gray-600 mb-2 block">{subtitle}</span>
+          <span className="text-sm font-medium text-gray-600 mb-2 block">{subtitle}</span>
           <h2 className="text-4xl font-extrabold text-gray-900 w-full">
             <span className="text-primary">{heading}</span>
             <br />
@@ -37,10 +38,10 @@ const AIServicesSection: React.FC<ServicesSectionProps> = ({ subtitle, heading, 
               data-aos-delay={`${service.delay}`}
             >
               <div className="text-blue-600 text-4xl">
-                <i className={service.icon}></i>
+                <Image src={service?.icon} width={1200} height={1200} alt='logo' className={'w-12 h-12 object-contain '}></Image>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800 mt-4">{service.title}</h3>
-              <p className="text-sm font-semibold text-gray-600 mt-2">{service.description}</p>
+              <h3 className="text-lg font-medium text-gray-800 mt-4">{service.title}</h3>
+              <p className="text-sm font-medium text-gray-600 mt-2">{service.description}</p>
             </div>
           ))}
         </div>

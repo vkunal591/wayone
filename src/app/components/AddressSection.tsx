@@ -13,7 +13,7 @@ const AddressSection: React.FC = () => {
             <div className="img w-4/5 mx-auto  lg:mx-0">
               <Image width={900} height={900} src="/assets/images/india.png" alt="India" className="w-full " />
             </div>
-            <h2 className="text-2xl text-primary font-semibold mt-4">INDIA</h2>
+            <h2 className="text-2xl text-primary font-medium mt-4">INDIA</h2>
             <Link
               href={"tel:+919889988909"}
               className='pr-2 border-r-[1.5px] border-gray-400'
@@ -40,7 +40,7 @@ const AddressSection: React.FC = () => {
             <div className="img  mx-auto  lg:mx-0">
               <Image width={900} height={900} src="/assets/images/dubai city line-01 1.png" alt="India" className="w-full" />
             </div>
-            <h2 className="text-2xl text-primary font-semibold mt-4">DUBAI</h2>
+            <h2 className="text-2xl text-primary font-medium mt-4">DUBAI</h2>
             <Link href={"tel:+971 0556476847"}>
               +971 0556 4768 47
             </Link>
@@ -57,7 +57,7 @@ const AddressSection: React.FC = () => {
             <div className="img w-3/4 ml-auto mx-auto md:mx-0">
               <Image width={900} height={900} src="/assets/images/australlia.png" alt="Dubai" className="w-full  py-6" />
             </div>
-            <h2 className="text-2xl text-primary font-semibold mt-4">AUSTRALIA</h2>
+            <h2 className="text-2xl text-primary font-medium mt-4">AUSTRALIA</h2>
             <Link href={"tel:+610411537183"}>
               +61  0411 5371 83
             </Link>

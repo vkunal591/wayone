@@ -6,7 +6,7 @@ export default function OurCoreValue() {
         <h3 className="text-lg text-primary font-medium lg:w-3/4 m-auto uppercase mb-2">
           Our Core Values
         </h3>
-        <h2 className="text-3xl md:text-4xl text-gray-800 font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl text-gray-800 font-medium mb-6">
           The Pillars of Innovation, Excellence and Integrity{" "}
         </h2>
         <p className="text-gray-700 font-[cabin] m-auto lg:w-4/5 mb-6">

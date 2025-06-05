@@ -13,7 +13,7 @@ export default function NotFound() {
         priority
         className="object-contain filter invert-25 "
       />
-      <h2 className="text-2xl mt-5 font-bold text-primary">
+      <h2 className="text-2xl mt-5 font-medium text-primary">
         404 - Page Not Found
       </h2>
       <p className="mt-2 text-lg text-gray-600">

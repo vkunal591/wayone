@@ -38,7 +38,7 @@ export default function IndustriesSection() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-white text-primary px-6 py-2 rounded-full font-semibold transition hover:bg-gray-100"
+            className="inline-block bg-white text-primary px-6 py-2 rounded-full font-medium transition hover:bg-gray-100"
           >
             Kick Start Your Project
           </a>

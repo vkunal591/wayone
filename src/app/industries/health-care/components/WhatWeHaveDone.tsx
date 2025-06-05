@@ -51,7 +51,7 @@ export default function WhatWeHaveDone() {
 
     const renderImageSlider = (images: string[], title: string) => (
         <div className="app-item mb-16">
-            <h3 className='text-4xl text-primary font-bold mb-8 mt-8 px-4 lg:px-16'>
+            <h3 className='text-4xl text-primary font-medium mb-8 mt-8 px-4 lg:px-16'>
                 {title}
             </h3>
             <div className="app-screens w-full overflow-x-auto whitespace-nowrap flex gap-6 px-4 lg:px-16" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
@@ -74,26 +74,26 @@ export default function WhatWeHaveDone() {
                     textAlign={"text-left"}
                 />
 
-                <h3 className='text-4xl text-primary font-bold mb-8 mt-8'>
+                <h3 className='text-4xl text-primary font-medium mb-8 mt-8'>
                     Fever99.Com - {activePanel.charAt(0).toUpperCase() + activePanel.slice(1)} Panel
                 </h3>
 
                 {/* Panel Switch Buttons */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 border border-color-primary rounded-2xl p-6 mb-16'>
                     <button
-                        className={`p-4 rounded-lg text-center font-semibold shadow-md border transition-colors duration-200 ${activePanel === 'patient' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
+                        className={`p-4 rounded-lg text-center font-medium shadow-md border transition-colors duration-200 ${activePanel === 'patient' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
                         onClick={() => handlePanelClick('patient')}
                     >
                         Patient's Panel
                     </button>
                     <button
-                        className={`p-4 rounded-lg text-center font-semibold shadow-md border transition-colors duration-200 ${activePanel === 'doctor' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
+                        className={`p-4 rounded-lg text-center font-medium shadow-md border transition-colors duration-200 ${activePanel === 'doctor' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
                         onClick={() => handlePanelClick('doctor')}
                     >
                         Doctor's Panel
                     </button>
                     <button
-                        className={`p-4 rounded-lg text-center font-semibold shadow-md border transition-colors duration-200 ${activePanel === 'nurse' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
+                        className={`p-4 rounded-lg text-center font-medium shadow-md border transition-colors duration-200 ${activePanel === 'nurse' ? 'bg-primary text-white' : 'text-primary border-color-primary bg-transparent'}`}
                         onClick={() => handlePanelClick('nurse')}
                     >
                         Nurse's Panel

@@ -20,7 +20,7 @@ const AppServicesSection: React.FC<ServicesSectionProps> = ({ services }) => {
       <div className="container mx-auto ">
         <div className="section-header text-left mb-16" data-aos="fade-up">
           <span className="section-subtitle text-xl text-gray-500">Our App Development Services</span>
-          <h2 className="text-3xl font-semibold text-gray-900 mt-2">
+          <h2 className="text-3xl font-medium text-gray-900 mt-2">
             Innovative <span className="text-primary">App Development Services</span>
             <br />
             Customized to Your Business Needs
@@ -34,17 +34,17 @@ const AppServicesSection: React.FC<ServicesSectionProps> = ({ services }) => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="service-card bg-white p-6 rounded-lg shadow-lg"
+              className="service-card bg-white p-6  border-2  border-blue-900 rounded-xl shadow-lg"
               data-aos="fade-up"
               data-aos-delay={service.delay.toString()}
             >
               <div className="service-icon-wrapper mb-6">
-                <div className="service-icon text-primary text-4xl">
+                <div className="service-icon text-primary text-6xl">
                   <i className={service.icon}></i>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-              <p className="text-gray-600 mt-4">{service.description}</p>
+              <h3 className="text-xl font-medium mb-4 text-gray-900">{service.title}</h3>
+              <p className="text-gray-600 mb-10">{service.description}</p>
             </div>
           ))}
         </div>

@@ -259,7 +259,7 @@ export default function Footer() {
           </div>
 
           {/* <div>
-            <h3 className="mb-5 text-lg  font-semibold">Support</h3>
+            <h3 className="mb-5 text-lg  font-medium">Support</h3>
             <ul className="text-sm text-gray-200 space-y-3.5">
               {support &&
                 support?.map((item, index) => (
@@ -278,7 +278,7 @@ export default function Footer() {
             </h3>
             <div>
               <Link
-                href={"mailto:allabove@company.com"}
+                href={"mailto:info@wayone.co.in"}
                 className="text-sm mb-2 flex items-center"
               >
                 <strong>

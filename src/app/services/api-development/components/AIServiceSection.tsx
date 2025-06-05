@@ -24,7 +24,7 @@ const AIServicesSection: React.FC<ServicesSectionProps> = ({
     <section id="services" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         <div className="text-left  my-4" data-aos="fade-up">
-          <span className="text-sm font-semibold text-gray-600 mb-2 block">
+          <span className="text-sm font-medium text-gray-600 mb-2 block">
             {subtitle}
           </span>
           <h2 className="text-4xl font-extrabold text-gray-900 w-full">
@@ -42,7 +42,7 @@ const AIServicesSection: React.FC<ServicesSectionProps> = ({
               data-aos="fade-up"
               data-aos-delay={`${service.delay}`}
             >
-              <div className="text-primary text-xl font-semibold">0{index + 1}</div>
+              <div className="text-primary text-xl font-medium">0{index + 1}</div>
               <h3 className="text-2xl font-medium text-primary mt-4">
                 {service.title}
               </h3>

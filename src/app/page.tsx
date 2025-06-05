@@ -55,7 +55,7 @@ const featuresData = [
     title: "UI/UX Designing",
     description:
       "We create intuitive and visually appealing UI/UX designs with a focus on usability, accessibility, and interaction flow. Our design process ensures high engagement and conversion across all platforms and screen sizes.",
-    iconSrc: "/assets/images/icon/ux 2.png",
+    iconSrc: "/assets/images/icon/ux.png",
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 600,
@@ -102,6 +102,7 @@ const featuresData = [
     link: "/services/crm-development"
   },
 ];
+
 
 export default function Home() {
   return (

@@ -21,8 +21,8 @@ const AIProcessSection: React.FC<AIProcessProps> = ({ title, subtitle, descripti
             <div className="container mx-auto px-6">
                 {/* Section Header */}
                 <div className="text-start" data-aos="fade-up">
-                    <h6 className="text-primary font-semibold">{subtitle}</h6>
-                    <h2 className="text-4xl text-gray-800 font-bold">
+                    <h6 className="text-primary font-medium">{subtitle}</h6>
+                    <h2 className="text-4xl text-gray-800 font-medium">
                        {title}
                     </h2>
                     <p className="text-gray-600 mt-3">
@@ -43,9 +43,9 @@ const AIProcessSection: React.FC<AIProcessProps> = ({ title, subtitle, descripti
                             data-aos-delay={`${step.delay}`}
                         >
                             <div className="flex flex-row items-center justify-center text-left p-6">
-                                <div className="fw-semibold">
+                                <div className="fw-medium">
 
-                                    <span className='font-semibold text-primary'>{"0" + (index + 1) + "."}</span>
+                                    <span className='font-medium text-primary'>{"0" + (index + 1) + "."}</span>
 
                                     <h6 className="mb-2 font-medium text-primary">{step.title}</h6>
                                     <p className='text-gray-800'>{step.description}</p>

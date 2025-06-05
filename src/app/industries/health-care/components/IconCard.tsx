@@ -30,8 +30,8 @@ const IconCard: React.FC<IconCardProps> = ({
             <div className="container mx-auto px-6">
                 {/* Section Header */}
                 <div className="text-start" data-aos="fade-up">
-                    <h6 className="text-primary font-semibold">{subtitle}</h6>
-                    <h2 className="text-4xl text-gray-800 font-bold">
+                    <h6 className="text-primary font-medium">{subtitle}</h6>
+                    <h2 className="text-4xl text-gray-800 font-medium">
                         {title} <span className="text-primary">{highlight}</span>
                     </h2>
                     <p className="text-gray-600 mt-3" style={{ width: '50%' }}>
@@ -57,7 +57,7 @@ const IconCard: React.FC<IconCardProps> = ({
                                             <Icon />
                                         </div>
 
-                                        <h6 className="mb-2 text-lg font-semibold line-clamp-2 text-primary">{step.title}</h6>
+                                        <h6 className="mb-2 text-lg font-medium line-clamp-2 text-primary">{step.title}</h6>
                                         <p className="text-gray-800 line-clamp-6">{step.description}</p>
                                     </div>
                                 </div>

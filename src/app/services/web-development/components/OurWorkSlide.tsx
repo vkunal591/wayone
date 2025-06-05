@@ -34,7 +34,7 @@ const portfolioItems = [
     title: "Saash",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Saash is a fashion brand offering elegant jewelry and curated gift boxes for women. Known for its oxidized silver-tone pieces and stylish designs, Saash combines tradition with modern aesthetics, making it a popular choice for trendy ethnic accessories.",
     image: "/assets/images/SASSHI (1) 1.png",
   },
 ];
@@ -75,7 +75,7 @@ export default function OurWorkSlide() {
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <h3 className="text-2xl text-gray-800 font-semibold">
+                  <h3 className="text-2xl text-gray-800 font-medium">
                     {item.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 my-3">

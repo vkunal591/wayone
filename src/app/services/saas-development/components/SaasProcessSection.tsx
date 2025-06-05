@@ -23,8 +23,8 @@ const SaasProcessSection: React.FC<UiUxProcessSectionProps> = ({
     <section id="ui-ux-process" className="py-4 lg:py-16">
       <div className="container mx-auto px-6">
         <div className="text-start" data-aos="fade-up">
-          <h6 className="text-primary font-bold">{subtitle}</h6>
-          <h2 className="font-bold text-3xl">
+          <h6 className="text-primary font-medium">{subtitle}</h6>
+          <h2 className="font-medium text-3xl">
             {title}
             <span className="text-primary block">
               Seamless <br /> Deployment
@@ -50,7 +50,7 @@ const SaasProcessSection: React.FC<UiUxProcessSectionProps> = ({
                   alt={`Step ${index + 1} icon`}
                   className="mb-2 w-16 h-16"
                 />
-                <p className="text-lg font-semibold mb-2 w-4/5 m-auto ">{step.title}</p>
+                <p className="text-lg font-medium mb-2 w-4/5 m-auto ">{step.title}</p>
                 <p className="text-sm text-gray-800">{step.description}</p>
               </div>
             ))}

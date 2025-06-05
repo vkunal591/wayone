@@ -8,7 +8,7 @@ export default function HeroContact() {
             {/* Contact Form */}
             <div className="w-full lg:w-7/12">
               <div className="contact-form space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">
+                <h2 className="text-3xl md:text-4xl font-medium">
                   Let’s Connect and Build Something Amazing Together
                 </h2>
                 <p className="text-gray-700">
@@ -50,7 +50,7 @@ export default function HeroContact() {
                   ></textarea>
                   <button
                     type="submit"
-                    className=" bg-primary hover:bg-primary w-full text-center text-white font-semibold px-6 py-3 rounded-lg transition"
+                    className=" bg-primary hover:bg-primary w-full text-center text-white font-medium px-6 py-3 rounded-lg transition"
                   >
                     Submit Form
                   </button>

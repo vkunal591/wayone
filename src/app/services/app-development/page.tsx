@@ -117,6 +117,62 @@ const portfolioItems = [
         ],
     },
 ];
+
+
+
+const appfaqs = [
+  {
+    "question": "What is app development?",
+    "answer": "App development involves creating mobile or web applications designed to offer specific functionalities, enhance user experience, and engage your audience."
+  },
+  {
+    "question": "How long does it take to build an app?",
+    "answer": "The timeline varies based on the complexity of the app. Simple apps may take a few weeks, while complex apps can take several months."
+  },
+  {
+    "question": "Which platforms do you develop apps for?",
+    "answer": "We develop apps for iOS, Android, and web platforms, ensuring cross-platform compatibility and a seamless experience."
+  },
+  {
+    "question": "Do you offer app maintenance services?",
+    "answer": "Yes, we offer ongoing app maintenance and updates to ensure optimal performance, security, and new feature implementation."
+  },
+  {
+    "question": "How do you ensure the quality of your apps?",
+    "answer": "We conduct rigorous testing, including usability testing, performance testing, and security audits, to ensure the highest quality and user satisfaction."
+  },
+  {
+    "question": "Can you develop custom features for my app?",
+    "answer": "Absolutely! We specialize in building custom features that align with your business goals and provide unique value to your users."
+  },
+  {
+    "question": "What technologies do you use for app development?",
+    "answer": "We use technologies like React Native, Flutter, Swift, Kotlin, and more to build robust, high-performance apps."
+  },
+  {
+    "question": "Do you help with app store submission?",
+    "answer": "Yes, we assist with the app submission process, ensuring your app is compliant with store guidelines and successfully published."
+  },
+  {
+    "question": "Can you integrate third-party services into my app?",
+    "answer": "Yes, we can integrate APIs, payment gateways, social media logins, and other third-party services to enhance your app's functionality."
+  },
+  {
+    "question": "How do you ensure my app’s security?",
+    "answer": "We implement industry-standard encryption, secure authentication, and data protection measures to ensure your app and user data remain secure."
+  }
+]
+
+
+
+export const metadata = {
+  title: "Best Custom App Development Company | WayOne IT Solutions",
+  description:
+    "WayOne IT Solutions, the best custom app development company, delivers best mobile and web apps designed to meet your unique business needs. Contact us today!",
+  metadataBase: new URL("https://wayone.co.in/services/app-development/"),
+};
+
+
 export default function page() {
     return (
         <div className='bg-white'>
@@ -129,7 +185,7 @@ export default function page() {
             <div className='max-w-7xl m-auto p-4 lg:px-16'>
                 <IndustriesSection />                
                 <PartnerWithUsSection />
-                <FaqSection />
+                <FaqSection faqsData={appfaqs} />
             </div>
         </div>
     )

@@ -148,8 +148,8 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50); // Change 50 to whatever offset you prefer
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const handleMouseEnter = (submenuId: string) => {
     setActiveSubmenuId(submenuId); // Set the submenu as active on hover
@@ -186,8 +186,19 @@ const Navbar = () => {
 
   const handleLinkClick = () => setActiveSubmenuId(null);
 
+  const hideNav = () => {
+    if (pathname.includes("/home/")) {
+      return true;
+    }
+    return false;
+  };
+  console.log(pathname);
   return (
-    <nav className={`${!scrolled ? "bg-transparent":"bg-white shadow"} fixed flex justify-between p-4 lg:p-0 lg:justify-evenly items-center lg:h-24  top-0 z-[100] w-full `}>
+    <nav
+      className={`${hideNav() ? "hidden":""} ${
+        !scrolled ? "bg-transparent" : "bg-white shadow"
+      } fixed flex justify-between p-4 lg:p-0 lg:justify-evenly items-center lg:h-24  top-0 z-[100] w-full `}
+    >
       <div>
         <Link href={"/"}>
           <Image
@@ -208,14 +219,18 @@ const Navbar = () => {
           <div
             key={item.name}
             className="relative group"
-            onMouseEnter={() => handleMouseEnter(item.name)}   // Hover behavior
+            onMouseEnter={() => handleMouseEnter(item.name)} // Hover behavior
           >
-            <Link href={item.path} className="border-none outline-none hover:text-blue-800">
+            <Link
+              href={item.path}
+              className="border-none outline-none hover:text-blue-800"
+            >
               <li
-                className={`mr-10 text-sm  hover:scale-105 ${pathname === item.path
-                    ? "border-b-4 border-color-primary text-primary font-bold"
+                className={`mr-10 text-sm  hover:scale-105 ${
+                  pathname.split("/")[1] === item.path.split("/")[1]
+                    ? "border-b-4 border-color-primary text-primary font-medium"
                     : "text-dark-primary  transition-all duration-300"
-                  } `}
+                } `}
                 onClick={(e) => {
                   item.submenu && e.preventDefault(); // Prevent link navigation to enable click behavior
                   handleClick(item.name); // Toggle submenu on click
@@ -228,8 +243,9 @@ const Navbar = () => {
             {/* Submenu */}
             {item.submenu && (
               <div
-                className={`absolute top-16 left-[-20rem] w-[60vw] mt-2 z-[10000] rounded-2xl bg-gray-100 text-gray-800 shadow ${activeSubmenuId === item.name ? "block" : "hidden"
-                  }`}
+                className={`absolute top-16 left-[-20rem] w-[60vw] mt-2 z-[10000] rounded-2xl bg-gray-100 text-gray-800 shadow ${
+                  activeSubmenuId === item.name ? "block" : "hidden"
+                }`}
                 onMouseLeave={handleMouseLeave} // Reset on mouse leave
               >
                 <ul className="space-y-2 p-2 grid grid-cols-1 lg:grid-cols-3">
@@ -238,9 +254,12 @@ const Navbar = () => {
                       <Link
                         href={subItem.path}
                         onClick={handleLinkClick}
-                        className="px-4 py-2 text-base text-gray-700 rounded-xl hover:bg-gray-200 flex justify-start items-center gap-4"
+                        className={`px-4 py-2 text-base text-gray-700 rounded-xl hover:bg-gray-200 hover:text-gray-700 flex justify-start items-center gap-4 ${
+                          pathname === subItem?.path + "/" &&
+                          "text-white bg-blue-900"
+                        }  `}
                       >
-                        <span className="text-3xl rounded-full p-3 group-hover:bg-white">
+                        <span className="text-3xl rounded-full p-3 bg-white">
                           <Image
                             src={subItem?.image}
                             width={50}

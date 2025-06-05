@@ -96,6 +96,67 @@ const steps = [
   },
 ];
 
+const crmFaqs = [
+  {
+    question: "What is CRM development?",
+    answer:
+      "CRM (Customer Relationship Management) development involves creating software that helps businesses manage customer interactions, streamline processes, and improve customer satisfaction.",
+  },
+  {
+    question: "Why should I use a CRM for my business?",
+    answer:
+      "A CRM helps you track customer interactions, manage leads, and improve sales, ultimately leading to stronger relationships and higher revenue.",
+  },
+  {
+    question: "What CRM platforms do you develop?",
+    answer:
+      "We specialize in developing custom CRM solutions using platforms like Salesforce, HubSpot, and Zoho, or create tailored CRM systems to meet your specific needs.",
+  },
+  {
+    question: "How does a CRM improve customer relationships?",
+    answer:
+      "A CRM centralizes customer data, allowing you to personalize communication, track interactions, and offer more responsive, customer-centric service.",
+  },
+  {
+    question: "Can CRM systems integrate with other tools?",
+    answer:
+      "Yes, we can integrate your CRM with marketing platforms, email systems, social media, and other tools to ensure seamless data flow.",
+  },
+  {
+    question: "Is CRM software secure?",
+    answer:
+      "Yes, we implement robust security measures, including encryption and user authentication, to protect your customer data and privacy.",
+  },
+  {
+    question: "How long does it take to develop a custom CRM?",
+    answer:
+      "The timeline depends on your requirements but typically ranges from a few weeks to a few months for a fully functional CRM solution.",
+  },
+  {
+    question: "Can CRM help automate sales processes?",
+    answer:
+      "Yes, CRM systems can automate lead tracking, follow-up reminders, and sales reporting, saving time and improving efficiency.",
+  },
+  {
+    question: "Do you offer CRM training and support?",
+    answer:
+      "Yes, we provide training and ongoing support to ensure your team can use the CRM effectively and derive maximum value from it.",
+  },
+  {
+    question: "How do I know which CRM system is right for my business?",
+    answer:
+      "We assess your business needs, processes, and goals to recommend the best CRM solution, whether it's an off-the-shelf system or a custom-built platform.",
+  },
+];
+
+
+export const metadata = {
+  title: "CRM Software Development Company | WayOne IT Solutions",
+  description:
+    "WayOne, a trusted CRM development company, specializes in creating custom CRM software to improve your business operations and boost efficiency. Contact us now!",
+  metadataBase: new URL("https://wayone.co.in/services/crm-development/"),
+};
+
 export default function page() {
   return (
     <div className="bg-white">
@@ -119,7 +180,7 @@ export default function page() {
       <div className="max-w-7xl m-auto p-4 lg:px-16">
         <IndustriesSection />
         <PartnerWithUsSection />
-        <FaqSection />
+        <FaqSection faqsData={crmFaqs} />
       </div>
     </div>
   );

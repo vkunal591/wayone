@@ -5,10 +5,10 @@ export default function ReachOut() {
   return (
     <section className="reach-out py-16 ">
       <div className="max-w-3xl mx-auto text-center mb-12 px-4">
-        <h6 className="text-primary uppercase tracking-wide font-semibold mb-2">
+        <h6 className="text-primary uppercase tracking-wide font-medium mb-2">
           Reach Out To Us
         </h6>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl font-medium mb-4">
           We’re Ready to Listen –{" "}
           <span className="text-primary">Let’s Start the Conversation</span>
         </h2>
@@ -27,7 +27,7 @@ export default function ReachOut() {
               alt="Email Icon"
               className="w-8 h-8 mb-3"
             />
-            <h3 className="text-xl font-semibold mb-2">Email Support</h3>
+            <h3 className="text-xl font-medium mb-2">Email Support</h3>
             <Link href="mailto:info@wayone.co.in" className=" hover:underline">
               info@wayone.co.in
             </Link>
@@ -40,7 +40,7 @@ export default function ReachOut() {
               alt="Location Icon"
               className="w-6 h-6 mb-3"
             />
-            <h3 className="text-xl font-semibold mb-2">Visit Our Office</h3>
+            <h3 className="text-xl font-medium mb-2">Visit Our Office</h3>
             <p className="text-gray-700">
               9 Laxmi Garden, 2nd floor above ICICI bank,
               <br />
@@ -55,7 +55,7 @@ export default function ReachOut() {
               alt="Email Icon"
               className="w-8 h-8 mb-3"
             />
-            <h3 className="text-xl font-semibold mb-2">Mobile Support</h3>
+            <h3 className="text-xl font-medium mb-2">Mobile Support</h3>
             <Link href="tel:+917599990331" className=" hover:underline">
               +91 7599 9903 31
             </Link>

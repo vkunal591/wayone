@@ -23,8 +23,8 @@ const BlockchainServicesSection: React.FC<BlockchainServicesSectionProps> = ({
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-left  my-4" data-aos="fade-up">
-          <span className="text-primary font-semibold mb-2 block">{subtitle}</span>
-          <h2 className="text-4xl text-gray-800 font-bold">
+          <span className="text-primary font-medium mb-2 block">{subtitle}</span>
+          <h2 className="text-4xl text-gray-800 font-medium">
             Secure & Scalable <span className="text-primary">{title}</span>
             <br />
             Services
@@ -41,7 +41,7 @@ const BlockchainServicesSection: React.FC<BlockchainServicesSectionProps> = ({
               data-aos="fade-up"
               data-aos-delay={`${100 * (index + 1)}`}
             >
-              <h3 className="text-xl font-semibold text-primary">{`${service.title}`}</h3>
+              <h3 className="text-xl font-medium text-primary">{`${service.title}`}</h3>
               <p className="mt-2 text-sm text-gray-600">{service.description}</p>
             </div>
           ))}

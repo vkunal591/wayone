@@ -77,12 +77,12 @@ export default function DevelopmentProcessSection() {
                      key={index}
                      className="bg-gray-200/40 rounded-4xl shadow-lg p-8"
                    >
-                     <div className="text-primary text-xl font-bold mb-4">
+                     <div className="text-primary text-xl font-medium mb-4">
                        <span className="bg-blue-100/50 text-primary px-3 py-1 rounded-full">
                          {stepData.step}
                        </span>
                      </div>
-                     <h3 className="text-2xl text-gray-800 font-semibold mb-6">{stepData.title}</h3>
+                     <h3 className="text-2xl text-gray-800 font-medium mb-6">{stepData.title}</h3>
                      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                        {stepData.items.map((item, i) => (
                          <div

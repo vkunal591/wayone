@@ -23,7 +23,7 @@ const AppDevelopmentProcessSection: React.FC<
           <span className="section-subtitle text-xl text-gray-500">
             Our App Development Process
           </span>
-          <h2 className="text-3xl font-semibold text-gray-900 mt-2">
+          <h2 className="text-3xl font-medium text-gray-900 mt-2">
             Turning Big Ideas into Effortless,{" "}
             <span className="text-primary"> Game-Changing Apps</span>
           </h2>
@@ -35,14 +35,14 @@ const AppDevelopmentProcessSection: React.FC<
 
         <div className="flex flex-col lg:flex-row justify-between gap-4">
           {processSteps.map((step, index) => (
-            <div
-              key={step.id}
-              className="process-step flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg w-full sm:w-1/2 lg:w-1/5"
-              data-aos="fade-up"
-              data-aos-delay={(index + 1) * 100}
-            >
-              <div className="process-circle mb-4">
-                <div className="step-number text-primary text-4xl">
+            <div className="flex flex-col justify-center items-center ">
+              <div className="border-[1.5px] border-blue-900 border-dashed rounded-full p-2 mb-6">
+                <div
+                  key={step.id}
+                  className=" flex flex-col w-30 h-30 justify-center items-center text-center text-primary text-4xl bg-blue-900/15  p-6 rounded-full "
+                  data-aos="fade-up"
+                  data-aos-delay={(index + 1) * 100}
+                >
                   <i className={step.icon}></i>
                   {/* <FaCode /> */}
                 </div>

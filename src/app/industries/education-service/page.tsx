@@ -78,7 +78,7 @@ export default function Page() {
                         highlighted: "text-red-600",
                         description: "text-md text-white",
                         tag: "bg-white/20 text-white",
-                        button: "bg-white hover:bg-white/90 text-primary button-seondary font-semibold",
+                        button: "bg-white hover:bg-white/90 text-primary button-seondary font-medium",
                         image: "",
                         itemContainer: "gap-10",
                         portfolioItem:"bg-primary p-6 rounded-xl",

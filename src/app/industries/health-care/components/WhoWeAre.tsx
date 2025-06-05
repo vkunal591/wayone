@@ -54,7 +54,7 @@ const WhoWeAre = ({
           >
             <div className="content">
               <h3 className="font-medium text-primary">{heading}</h3>
-              <h2 className="text-4xl font-semibold text-gray-800 mt-4">
+              <h2 className="text-4xl font-medium text-gray-800 mt-4">
                 {subheading}{" "}
                 <span className="text-primary">{highlightedText}</span>
               </h2>

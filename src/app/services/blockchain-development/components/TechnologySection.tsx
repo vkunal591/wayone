@@ -22,8 +22,8 @@ const SaasTechnologiesSection: React.FC<TechnologiesSectionProps> = ({
         <section id="ui-ux-process" className="py-4 lg:py-16">
             <div className="container mx-auto px-6">
                 <div className="text-start" data-aos="fade-up">
-                    <h6 className="text-primary font-bold">{subtitle}</h6>
-                    <h2 className="font-bold text-gray-800 text-3xl">
+                    <h6 className="text-primary font-medium">{subtitle}</h6>
+                    <h2 className="font-medium text-gray-800 text-3xl">
                         <span className="text-primary">{title}</span> Powering Innovation
                         <br /> with Cutting-Edge Tools
                     </h2>
@@ -41,7 +41,7 @@ const SaasTechnologiesSection: React.FC<TechnologiesSectionProps> = ({
                                 alt={`${tech.name} logo`}
                                 className="mb-2 w-16 h-16 object-contain"
                             />
-                            <p className="text-lg text-gray-800 font-semibold text-center">{tech.name}</p>
+                            <p className="text-lg text-gray-800 font-medium text-center">{tech.name}</p>
                         </div>
                     ))}
                 </div>

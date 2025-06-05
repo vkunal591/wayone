@@ -8,7 +8,7 @@ export default function Page() {
                 <meta name="description" content="Read the Privacy Policy for using WayOne services." />
             </Head>
             <main className="max-w-7xl mx-auto px-4 py-10 text-gray-800">
-                <h1 className="text-3xl font-bold mb-6">Privacy Policy for WayOne</h1>
+                <h1 className="text-3xl font-medium mb-6">Privacy Policy for WayOne</h1>
                 <p className="mb-4"><strong>Last updated:</strong> May 12, 2025</p>
 
                 <p className="mb-4">This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
@@ -17,11 +17,11 @@ export default function Page() {
                     We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Interpretation and Definitions</h2>
-                <h3 className="text-xl font-semibold mb-2">Interpretation</h3>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Interpretation and Definitions</h2>
+                <h3 className="text-xl font-medium mb-2">Interpretation</h3>
                 <p className="mb-4">The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or plural.</p>
 
-                <h3 className="text-xl font-semibold mb-2">Definitions</h3>
+                <h3 className="text-xl font-medium mb-2">Definitions</h3>
                 <p className="mb-4">For the purposes of this Privacy Policy:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
                     <li><strong>Account:</strong> A unique account created for You to access our Service or parts of our Service.</li>
@@ -38,10 +38,10 @@ export default function Page() {
                     <li><strong>You:</strong> The individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
                 </ul>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Collecting and Using Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Collecting and Using Your Personal Data</h2>
 
-                <h3 className="text-xl font-semibold mt-8 mb-4">Types of Data Collected</h3>
-                <h4 className="text-lg font-semibold">Personal Data</h4>
+                <h3 className="text-xl font-medium mt-8 mb-4">Types of Data Collected</h3>
+                <h4 className="text-lg font-medium">Personal Data</h4>
                 <p className="mb-4">
                     While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
                 </p>
@@ -52,12 +52,12 @@ export default function Page() {
                     <li>Address, State, Province, ZIP/Postal code, City</li>
                 </ul>
 
-                <h4 className="text-lg font-semibold">Usage Data</h4>
+                <h4 className="text-lg font-medium">Usage Data</h4>
                 <p className="mb-4">
                     Usage Data is collected automatically when using the Service. It may include information such as Your Device's Internet Protocol address (IP address), browser type, browser version, pages visited, time spent on those pages, unique device identifiers, and other diagnostic data.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Tracking Technologies and Cookies</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Tracking Technologies and Cookies</h2>
                 <p className="mb-4">
                     We use Cookies and similar tracking technologies to track activity on Our Service and store certain information. These include Cookies, Web Beacons, and other technologies like tags and scripts.
                 </p>
@@ -65,7 +65,7 @@ export default function Page() {
                     Cookies help improve our Service by tracking user activity, and Web Beacons help analyze user interaction with our content and communications. You can manage your cookie preferences through your browser settings.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Use of Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Use of Your Personal Data</h2>
                 <p>The Company may use Personal Data for the following purposes:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
                     <li>To provide and maintain our Service.</li>
@@ -76,22 +76,22 @@ export default function Page() {
                     <li>For other purposes such as data analysis and improving our Service.</li>
                 </ul>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Retention of Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Retention of Your Personal Data</h2>
                 <p>
                     The Company will retain Your Personal Data only for as long as necessary for the purposes set out in this Privacy Policy. We may also retain Usage Data for internal analysis, but this data is generally retained for shorter periods.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Transfer of Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Transfer of Your Personal Data</h2>
                 <p>
                     Your information may be transferred and processed in a jurisdiction other than Your own. We ensure that all necessary steps are taken to ensure the security of Your data.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Delete Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Delete Your Personal Data</h2>
                 <p>
                     You have the right to delete or request assistance in deleting the Personal Data collected by Us. You can manage and delete your information by signing into Your Account.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Disclosure of Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Disclosure of Your Personal Data</h2>
                 <p>We may disclose Your Personal Data in the following circumstances:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
                     <li>In case of business transactions.</li>
@@ -99,17 +99,17 @@ export default function Page() {
                     <li>To protect and defend the rights of the Company.</li>
                 </ul>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Security of Your Personal Data</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Security of Your Personal Data</h2>
                 <p>
                     While we strive to secure Your Personal Data, please note that no method of transmission or storage is 100% secure. We aim to use commercially acceptable means to protect Your information.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to this Privacy Policy</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Changes to this Privacy Policy</h2>
                 <p>
                     We may update Our Privacy Policy periodically. Changes will be posted here with the updated "Last updated" date.
                 </p>
 
-                <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
+                <h2 className="text-2xl font-medium mt-8 mb-4">Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact us:</p>
                 <ul className="list-disc list-inside space-y-2 mb-8">
                     <li>By email: <a href="mailto:info@wayone.co.in" className="text-blue-600 underline">info@wayone.co.in</a></li>

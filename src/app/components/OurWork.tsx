@@ -51,7 +51,7 @@ const OurWork = ({ layout }: { layout?: any }) => {
     <section className="portfolio-page cs-portfolio py-16">
       <div className={`container mx-auto ${layout}`}>
         <div className="section-heading text-left  mr-auto">
-          <h2 className="text-4xl font-semibold lg:w-3/4 mb-4 text-gray-800">
+          <h2 className="text-4xl font-medium lg:w-3/4 mb-4 text-gray-800">
             Where Every Project Tells a  <span className="text-primary">Story of Innovation</span>
           </h2>
           <p className="font-[cabin] lg:w-3/5 text-gray-600">
@@ -83,7 +83,7 @@ const OurWork = ({ layout }: { layout?: any }) => {
                   <p className="text-gray-700 font-[cabin] mb-6">{item.description}</p>
                   <Link
                     href={item.link}
-                    className="mt-6 inline-flex items-center button-primary rounded-lg p-3  "
+                    className="mt-6 inline-flex items-center text-sm button-primary rounded-lg p-3  "
                   >
                     <span>Let's Discuss Your Project</span>
                     <i className="fas fa-chevron-right fa-icon ml-2" />
@@ -105,7 +105,7 @@ const OurWork = ({ layout }: { layout?: any }) => {
                           alt={item.title}
                           width={800}
                           height={500}
-                          className="hover:scale-105 transition-all ease-in-out duration-300 rounded-lg"
+                          className="scale-130 hover:scale-125 transition-all ease-in-out duration-300 rounded-lg"
                         />
                       </div>
                     </div>

@@ -49,7 +49,7 @@ const HeroSection = ({
 
   return (
     <section id="hero" className="hero section px-4 py-16 pt-[6rem]">
-      <div className="container mx-auto text-center py-4">
+      <div className="container mx-auto text-center ">
         <motion.div
           ref={ref}
           variants={fadeUpVariant}
@@ -58,7 +58,7 @@ const HeroSection = ({
           className="flex flex-col items-center justify-center space-y-8 lg:space-y-5"
         >
           {client && (
-            <div className="happy-client flex items-center gap-2">
+            <div className="happy-client flex items-center gap-2 py-10">
               <Image
                 src="/assets/images/happy-client.png"
                 alt="Happy Client"
@@ -71,7 +71,7 @@ const HeroSection = ({
             </div>
           )}
 
-          <h1 className="text-3xl md:text-3xl lg:text-5xl/16 font-extrabold text-gray-800">
+          <h1 className="text-3xl md:text-3xl lg:text-5xl/16 font-medium text-gray-800">
             {title1 || "Advanced Web & App Development "} <br className="hidden md:inline" />
             <span className="text-primary">
               {title2 || "Solutions for  Your Business"}
@@ -105,8 +105,8 @@ const HeroSection = ({
           </div>
 
           {awardShow && (
-            <div className="container lg:mt-16">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="container lg:mt-16 m-auto lg:max-w-4xl">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
                 {[1, 2, 3, 4].map((num) => (
                   <div
                     key={num}
@@ -115,8 +115,9 @@ const HeroSection = ({
                     <Image
                       src={`/assets/images/0${num}.png`}
                       alt={`Award ${num}`}
-                      width={150}
-                      height={100}
+                      width={750}
+                      height={700}
+                      className="w-4/5 object-contain"
                     />
                   </div>
                 ))}

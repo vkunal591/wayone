@@ -32,7 +32,7 @@ const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
           <span className="section-subtitle text-primary d-block mb-2">
             {subtitle}
           </span>
-          <h2 className="text-4xl text-gray-800 font-bold">{title}</h2>
+          <h2 className="text-4xl text-gray-800 font-medium">{title}</h2>
           <p className="section-desc mt-3 text-gray-600">{description}</p>
         </div>
 
@@ -41,7 +41,7 @@ const UIUXServicesSection: React.FC<ServicesSectionProps> = ({
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card text-start border-2 border-color-primary rounded-lg p-6"
+              className="service-card text-start border-2 border-color-primary rounded-2xl p-6"
               data-aos="fade-up"
               data-aos-delay={`${service.delay}`}
             >

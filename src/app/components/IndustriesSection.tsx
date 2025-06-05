@@ -25,7 +25,7 @@ const IndustriesSection: React.FC = () => {
   return (
     <section className="industries cs-industries py-16">
       <div className="section-heading text-left mb-8 me-auto ">
-        <h2 className="text-4xl text-gray-800 lg:w-3/4 font-semibold">
+        <h2 className="text-4xl text-gray-800 lg:w-3/4 font-medium">
           Industries We <span className="text-primary"> Serve </span>
         </h2>
         <p className="mt-4 font-cabin lg:w-3/5 text-gray-700  ">
@@ -39,7 +39,7 @@ const IndustriesSection: React.FC = () => {
             <div key={index} className="col flex justify-center items-center bg-gray-200/30 rounded-4xl p-4 h-60">
               <div className="industry-content text-center">
                 <img src={item.src} alt={item.alt} className="mx-auto mb-4 w-20 h-20 object-contain" />
-                <p className="text-xl font-semibold text-gray-800">{item.label}</p>
+                <p className="text-xl font-medium text-gray-800">{item.label}</p>
               </div>
             </div>
           ))}

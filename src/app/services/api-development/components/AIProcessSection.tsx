@@ -28,8 +28,8 @@ const AIProcessSection: React.FC<AIProcessProps> = ({
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-start" data-aos="fade-up">
-          <h6 className="text-primary font-semibold">{subtitle}</h6>
-          <h2 className="text-4xl text-gray-800 font-bold">
+          <h6 className="text-primary font-medium">{subtitle}</h6>
+          <h2 className="text-4xl text-gray-800 font-medium">
             From Initial Concept to{" "}
             <span className="text-primary">Seamless Deployment</span>
           </h2>
@@ -51,8 +51,8 @@ const AIProcessSection: React.FC<AIProcessProps> = ({
               data-aos-delay={`${step.delay}`}
             >
               <div className="flex flex-row items-center justify-center text-left p-6">
-                <div className="fw-semibold text-center">
-                  <span className="font-semibold text-primary m-auto  justify-center mb-2 rounded-full inline-block bg-white p-4">
+                <div className="fw-medium text-center">
+                  <span className="font-medium text-primary m-auto  justify-center mb-2 rounded-full inline-block bg-white p-4">
                     <Image
                       width={40}
                       height={40}

@@ -91,6 +91,15 @@ const technologies = [
 
 
 
+export const metadata = {
+  title: "Best Blockchain Application Development Service | WayOne",
+  description:
+    "We provide custom blockchain app development services, offering decentralized solutions to enhance security, transparency, and efficiency for your business needs.",
+  metadataBase: new URL("https://wayone.co.in/services/blockchain-development/"),
+};
+
+
+
 export default function page() {
     return (
         <div className='bg-white'>

@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Pagination } from "swiper/modules";
+import Image from "next/image";
 
 const portfolioItems = [
   {
@@ -15,26 +16,25 @@ const portfolioItems = [
       "We developed a custom CRM for Fever99.com to handle dynamic user data, automate communication, and manage real-time engagement metrics.",
     image: "/assets/images/screens/fever99.png",
   },
- 
 ];
 
 export default function OurWorkSlide() {
   return (
     <section className="py-4 lg:py-16 bg-white">
       <div className="w-full">
-        <div className="text-center mb-12">
-          <span className="text-primary font-semibold mb-2 block">
+        <div className="text-left mb-12">
+          <span className="text-primary font-medium mb-2 block">
             {"Our CRM Development Services"}
           </span>
-          <h2 className="text-4xl text-gray-800 font-bold">
+          <h2 className="text-4xl text-gray-800 font-medium">
             Proven Results Through Customized
             <br />
             <span className="text-primary">CRM Implementations</span>
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mt-4">
+          <p className="text-gray-600 max-w-3xl mt-4">
             We design high-performing CRM solutions for companies from every
             industry, helping them streamline customer interactions, track
-            performance, and increase overall productivity. 
+            performance, and increase overall productivity.
           </p>
         </div>
 
@@ -46,16 +46,18 @@ export default function OurWorkSlide() {
         >
           {portfolioItems.map((item, idx) => (
             <SwiperSlide className="" key={idx}>
-              <div className="flex flex-col lg:flex-row items-center gap-8 w-10/12 m-auto ">
+              <div className="flex flex-col lg:flex-row-reverse items-center gap-8 w-10/12 m-auto ">
                 <div className="lg:w-1/2">
-                  <img
+                  <Image
+                    width={1200}
+                    height={1200}
                     src={item.image}
                     alt={item.title}
-                    className="rounded-lg"
+                    className="rounded-lg object-contain  w-full h-full scale-130"
                   />
                 </div>
                 <div className="lg:w-1/2">
-                  <h3 className="text-2xl text-gray-800 font-semibold">
+                  <h3 className="text-2xl text-gray-800 font-medium">
                     {item.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 my-3">

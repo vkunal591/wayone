@@ -7,6 +7,7 @@ import PartnerWithUs from "./components/PartnerWithUs";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import PartnerWithUsSection from "../components/PartnerWithUsSection";
+import OurTeam from "../components/OurTeam";
 
 export default function page() {
   return (
@@ -24,6 +25,7 @@ export default function page() {
         <WhoWeAre />
         <OurVission />
         <OurCoreValue />
+        <OurTeam />
         <PartnerWithUsSection />
         <TestimonialsSection />
         <ContactSection />

@@ -16,7 +16,7 @@ const WhoWeAre: React.FC = () => {
           >
             <div>
               <h3 className="text-primary">Who We Are</h3>
-              <h2 className="text-3xl md:text-4xl font-bold leading-snug text-gray-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-medium leading-snug text-gray-800 mb-4">
                 Innovators in <br />
                 <span className="text-blue-800">Web & App Development</span>
               </h2>

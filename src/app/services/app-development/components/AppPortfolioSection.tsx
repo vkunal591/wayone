@@ -17,8 +17,8 @@ const AppPortfolioSection: React.FC<PortfolioSectionProps> = ({ items }) => {
         <section id="portfolio" className="py-4 lg:py-16 bg-gray-50">
             <div className="container mx-auto p-4 ">
                 <div className="section-header text-left mb-16" data-aos="fade-up">
-                    <div className="section-subtitle text-xl text-gray-500">Our Portfolio</div>
-                    <h2 className="text-3xl font-semibold text-gray-900 mt-2">
+                    <div className="section-subtitle text-xl text-primary text-gray-500">Our Portfolio</div>
+                    <h2 className="text-3xl font-medium text-gray-900 mt-2">
                         From Initial Concept to <span className="text-primary">Seamless <br /> Deployment</span>
                     </h2>
                     <p className="section-desc text-gray-700 mt-4">
@@ -30,7 +30,7 @@ const AppPortfolioSection: React.FC<PortfolioSectionProps> = ({ items }) => {
                     <div className="space-y-12">
                         {items.map((item) => (
                             <div key={item.id} className="app-item">
-                                <h3 className="text-left text-2xl font-semibold text-gray-900 mb-5">{item.title}</h3>
+                                <h3 className="text-left text-2xl font-medium text-gray-900 mb-5">{item.title}</h3>
                                 <div
                                     className="app-screens overflow-x-auto overflow-y-hidden whitespace-nowrap flex gap-6"
                                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
