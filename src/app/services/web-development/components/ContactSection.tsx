@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function ContactHeroSection({ title, heiglight, shortDesc, description, ctaText, ctaLink, subheading }: {
@@ -32,12 +33,12 @@ export default function ContactHeroSection({ title, heiglight, shortDesc, descri
                 {description ? description : "Elevate your online presence with WayOne's expert web development services. We specialize in designing responsive, user-friendly websites that not only look great but also deliver tangible results. Our solutions are tailored to meet your unique business needs, ensuring scalability and performance at every step."}
               </p>
               <div>
-                <a
+                <Link
                   href={ctaLink || "#services"}
                   className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
                 >
                   {ctaText || "View Portfolio"} <i className="fa-solid fa-arrow-right text-primary bg-white p-2 rounded-full ml-2"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

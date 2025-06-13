@@ -1,66 +1,51 @@
 import type { Metadata } from "next";
-import { Cabin, Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
+import {
+  Alexandria,
+  Cabin,
+  Fustat,
+  Plus_Jakarta_Sans,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/common/Navbar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 import Footer from "./components/common/Footer";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from "./components/common/Navbar";
 
-
-const poppins = Poppins({
+export const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
-  display: "swap",
 });
 
-const cabin = Cabin({
+export const cabin = Cabin({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-cabin",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
 });
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+export const fustat = Fustat({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-fustat",
+});
+
+export const alexandria = Alexandria({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-alexandria",
+});
+
+export const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-plus-jakarta-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Wayone",
-  description: "",
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "WayOne IT Solutions",
-  "url": "https://wayone.co.in/",
-  "logo": "https://wayone.co.in/assets/images/logo.png",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+91 7599 9903 31",
-      "contactType": "customer service",
-      "contactOption": "TollFree",
-      "areaServed": "IN",
-      "availableLanguage": "en"
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+91 9889 9889 09",
-      "contactType": "technical support",
-      "contactOption": "TollFree",
-      "areaServed": "IN",
-      "availableLanguage": "en"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/wayone.india",
-    "https://www.instagram.com/wayone.india",
-    "https://wayone.co.in/"
-  ]
+  title: "WayOne It Solution",
+  description: "WayOne It Solution",
 };
 
 export default function RootLayout({
@@ -71,14 +56,55 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PT322KCB');
+          `}
+        </Script>
+        {/* Google Analytics (optional) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17057891149"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics-2" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17057891149');
+          `}
+        </Script>
       </head>
-      <body className={`${poppins.variable} ${cabin.variable} ${montserrat.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${alexandria.variable} ${fustat.variable} ${cabin.variable} ${plusJakartaSans.variable} antialiased`}
+      >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PT322KCB"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        <div id="modal-root"></div>
+
         <Navbar />
         {children}
+        <ToastContainer
+          rtl={false}
+          autoClose={2000}
+          newestOnTop={true}
+          position="top-right"
+          hideProgressBar={false}
+          className={"z-[99999]"}
+        />
         <Footer />
       </body>
     </html>

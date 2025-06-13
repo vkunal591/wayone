@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Page() {
     return (
@@ -27,7 +28,7 @@ export default function Page() {
                     <li><strong>Service</strong> refers to the Website.</li>
                     <li><strong>Terms and Conditions</strong> (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</li>
                     <li><strong>Third-party Social Media Service</strong> means any services or content provided by a third-party that may be displayed, included or made available by the Service.</li>
-                    <li><strong>Website</strong> refers to WayOne, accessible from <a href="https://wayone.co.in/" className="text-blue-600 underline">https://wayone.co.in/</a></li>
+                    <li><strong>Website</strong> refers to WayOne, accessible from <Link href="https://wayone.co.in/" className="text-blue-600 underline">https://wayone.co.in/</Link></li>
                     <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
                 </ul>
 
@@ -125,8 +126,8 @@ export default function Page() {
                 <h2 className="text-2xl font-medium mt-8 mb-4">Contact Us</h2>
                 <p className="mb-2">If you have any questions about these Terms and Conditions, You can contact us:</p>
                 <ul className="list-disc list-inside space-y-2 mb-8">
-                    <li>By email: <a href="mailto:info@wayone.co.in" className="text-blue-600 underline">info@wayone.co.in</a></li>
-                    <li>By visiting this page: <a href="https://wayone.co.in/contact-us/" className="text-blue-600 underline">https://wayone.co.in/contact-us/</a></li>
+                    <li>By email: <Link href="mailto:info@wayone.co.in" className="text-blue-600 underline">info@wayone.co.in</Link></li>
+                    <li>By visiting this page: <Link href="https://wayone.co.in/contact-us/" className="text-blue-600 underline">https://wayone.co.in/contact-us/</Link></li>
                     <li>By phone number: +91 9889 9889 09</li>
                 </ul>
 

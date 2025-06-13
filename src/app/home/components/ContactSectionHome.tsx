@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { BiMapPin, BiPhone, BiSolidPhoneCall } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
@@ -183,7 +184,7 @@ export default function ContactSectionHome() {
                 {" "}
                 {/* Optional: to stretch links */}
                 {data.map((card, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={card.link}
                     target="_blank"
@@ -197,7 +198,7 @@ export default function ContactSectionHome() {
                       </h4>
                       <p className="text-gray-600 text-sm">{card.desc}</p>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

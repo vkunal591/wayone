@@ -1,5 +1,6 @@
 import HeaderSection from "@/app/components/common/HeaderSection";
 import Image from "next/image";
+import Link from "next/link";
 import {
   BsHospital,
   BsBank,
@@ -36,12 +37,12 @@ export default function IndustriesSection() {
             Take advantage of our experience and advanced methods to ensure the
             success of your web app.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-white text-primary px-6 py-2 rounded-full font-medium transition hover:bg-gray-100"
           >
             Kick Start Your Project
-          </a>
+          </Link>
           <Image
             width={100}
             height={100}

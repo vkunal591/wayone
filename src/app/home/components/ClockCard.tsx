@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface ClockCardProps {
@@ -80,7 +81,7 @@ const ClockCard = ({ country, flag, timezone, data }: ClockCardProps) => {
 
       <div className="flex flex-col justify-start  flex-1 pt-2">
         {data.map((card, index) => (
-          <a
+          <Link
             key={index}
             href={card.link}
             target="_blank"
@@ -94,7 +95,7 @@ const ClockCard = ({ country, flag, timezone, data }: ClockCardProps) => {
               </h4>
               <p className="text-gray-600 text-sm">{card.desc}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

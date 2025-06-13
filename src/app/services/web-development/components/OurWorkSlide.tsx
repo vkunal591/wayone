@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import HeaderSection from "@/app/components/common/HeaderSection";
+import Link from "next/link";
 
 const portfolioItems = [
   {
@@ -89,12 +90,12 @@ export default function OurWorkSlide() {
                     ))}
                   </div>
                   <p className="text-gray-600">{item.description}</p>
-                  <a
+                  <Link
                     href="#"
                     className="inline-block mt-6 text-primary border border-primary px-6 py-2 rounded hover:bg-primary hover:text-white transition"
                   >
                     Let's Discuss Your Project
-                  </a>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

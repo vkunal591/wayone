@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import HeroSection from "./components/common/HeroSection";
 import FeatureCards from "./components/FeatureCards";
 import AboutSection from "./components/AboutSection";
@@ -9,6 +9,8 @@ import PartnerWithUsSection from "./components/PartnerWithUsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import AddressSection from "./components/AddressSection";
+import JsonLd from "@/utils/scripts/JsonLd";
+import { useEffect } from "react";
 
 const featuresData = [
   {
@@ -19,7 +21,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 100,
-    link: "/web-development"
+    link: "/web-development",
   },
   {
     title: "App Development",
@@ -29,7 +31,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 200,
-    link: "/services/app-development"
+    link: "/services/app-development",
   },
   {
     title: "Artificial Intelligence",
@@ -39,7 +41,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 300,
-    link: "/services/artificial-intelligence"
+    link: "/services/artificial-intelligence",
   },
   {
     title: "SaaS Development",
@@ -49,7 +51,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 400,
-    link: "/services/saas-development"
+    link: "/services/saas-development",
   },
   {
     title: "UI/UX Designing",
@@ -59,7 +61,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 600,
-    link: "/services/ux-ui-designing"
+    link: "/services/ux-ui-designing",
   },
   {
     title: "Digital Marketing",
@@ -69,7 +71,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 600,
-    link: "/services/digital-marketing"
+    link: "/services/digital-marketing",
   },
   {
     title: "BlockChain Development",
@@ -79,7 +81,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 800,
-    link: "/services/blockchain-development"
+    link: "/services/blockchain-development",
   },
   {
     title: "API Development",
@@ -89,7 +91,7 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 700,
-    link: "/services/api-development"
+    link: "/services/api-development",
   },
   {
     title: "CRM Development",
@@ -99,26 +101,76 @@ const featuresData = [
     buttonText: "Learn more",
     bgColor: "bg-gray-50",
     delay: 700,
-    link: "/services/crm-development"
+    link: "/services/crm-development",
   },
 ];
 
-
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      name: "Wayone IT Solutions",
+      alternateName: "Wayone IT Solutions",
+      url: "https://wayone.co.in/",
+      logo: "https://wayone.co.in/assets/images/logo.png",
+      sameAs: [
+        "https://www.instagram.com/wayone.india",
+        "https://www.facebook.com/wayone.india",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+91-9889988909",
+        contactType: "Customer Support",
+        areaServed: "India",
+        availableLanguage: ["English", "Hindi"],
+      },
+      founder: {
+        "@type": "Person",
+        name: "Amit Gupta",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "9 Laxmi Garden, 2nd floor above ICICI bank, Shivaji marg",
+        addressLocality: "New Delhi",
+        addressRegion: "Delhi",
+        postalCode: "110015",
+        addressCountry: "IN",
+      },
+    });
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className="bg-white">
-      <HeroSection client={true} awardShow={true} primaryLinkTitle={"What We Do"} primaryLink={"/our-work"} secondaryLinkTitle={"View More"} secondaryLink={"/about-us"} />
-      <div className="max-w-7xl m-auto p-4 lg:px-16 bg-white">
-        <FeatureCards features={featuresData} />
-        <AboutSection />
-        <OurWork />
-        <TechnologySection />
-        <IndustriesSection />
-        <PartnerWithUsSection />
-        <TestimonialsSection />
-        <ContactSection />
-        <AddressSection />
+    <>
+      {/* <JsonLd /> */}
+      <div className="bg-white">
+        <HeroSection
+          client={true}
+          awardShow={true}
+          primaryLinkTitle={"What We Do"}
+          primaryLink={"/our-work"}
+          secondaryLinkTitle={"View More"}
+          secondaryLink={"/about-us"}
+        />
+        <div className="max-w-7xl m-auto p-4 lg:px-16 bg-white">
+          <FeatureCards features={featuresData} />
+          <AboutSection />
+          <OurWork />
+          <TechnologySection />
+          <IndustriesSection />
+          <PartnerWithUsSection />
+          <TestimonialsSection />
+          <ContactSection />
+          <AddressSection />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
