@@ -35,7 +35,7 @@ const AboutSection = () => {
                 <span className="text-primary">Modern Solutions</span>
               </h2>
               <p className="text-base font-[cabin] text-gray-600 mt-4">
-                Wayone India is an advanced technology for enterprises which require high-quality, scalable, and high-performing digital apps. We render custom mobile and web development solutions as per the needs of enterprise requirements of the current times. Our experienced team of experts apply the latest frameworks and agile development principles to develop applications that are secure, accessible, and future-ready. Whether a business application, e-commerce website, or enterprise software, we ensure seamless integration, quick deployment, and extended support — helping businesses streamline operations and achieve digital success with confidence.
+                Wayone IT Solutions PVT. LTD is an advanced technology for enterprises which require high-quality, scalable, and high-performing digital apps. We render custom mobile and web development solutions as per the needs of enterprise requirements of the current times. Our experienced team of experts apply the latest frameworks and agile development principles to develop applications that are secure, accessible, and future-ready. Whether a business application, e-commerce website, or enterprise software, we ensure seamless integration, quick deployment, and extended support — helping businesses streamline operations and achieve digital success with confidence.
               </p>
 
               <div className=" mt-8">

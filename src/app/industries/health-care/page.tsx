@@ -11,22 +11,22 @@ import TestimonialsSection from "@/app/components/TestimonialsSection";
 import AboutSection from "./components/WhoWeAre";
 const aiprocessSteps = [
     {
-        title: 'Ideation',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        title: 'Data Security & Privacy',
+        description: 'Protecting patient data is paramount within the health sector. Encrypted data security, access control, and compliance with international healthcare regulations must be adopted to maintain patient privacy, trust, and compliance in digital care that use sensitive information.',
         number: 1,
         delay: 100,
         icon: FaRocket,
     },
     {
-        title: 'Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        title: 'Mobile Health',
+        description: 'Mobility with reliable and established mHealth apps, accessibility using synced data and shoulder experience for patient-centered, expensive and accessible digital care devices and notes and for sustainability by professionals of digital care.',
         number: 2,
         delay: 200,
         icon: FaCogs,
     },
     {
-        title: 'Deployment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        title: 'Personalized Healthcare',
+        description: "Technology advantages (using AI, analytics) compares value to traditional health choices and when used as an innovative, predictable operational tool for Health care delivery over a patient's pathway experience.",
         number: 3,
         delay: 300,
         icon: FaCheckCircle,
@@ -41,16 +41,15 @@ export default function Page() {
     return (
         <div className="max-w-7xl !pt-24 mx-auto bg-white">
             <div className="max-w-7xl m-auto px-4 lg:px-16 bg-white">
-                <HeroSection title1={"Smart Healthcare IT Solutions for Better Patient Care"} title2={""} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <HeroSection title1={"Smart Healthcare IT Solutions to ultimately "} title2={"provide better Patient Care"} description={"Our smart and scalable healthcare IT Solutions increases patient care, smooth clinical workflows and makes data-driven decisions better for news, hospitals, clinics, and wellness centers."} />
                 <WhoWeAre
                     imageSrc="/assets/images/whoweare.png"
                     imageAlt="About WayOne"
                     heading="Who We Are"
                     subheading="Smart"
-                    highlightedText="Health & Fitness"
+                    highlightedText="Health & Fitness Software Solutions"
                     paragraphs={[
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation.",
-                        "With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
+                        "Wayone builds engaging, sophisticated, advanced digital health and fitness platforms designed for clinical objectives and lifestyle choices. Smooth integration and real time tracking with personalized user experiences allows clients to utilize our services for outstanding impact.",
                     ]}
                     linkText="Know More"
                     linkHref="/about-us"
@@ -61,20 +60,13 @@ export default function Page() {
             <div className="max-w-7xl m-auto px-4 lg:px-16">
                 <GradietIconCard
                     subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    title="Key Challenges in the "
+                    highlight="Healthcare Industry"
+                    description="Solving tomorrow's health issues today with technology led solutions specific for realistic health-related challenges."
                     steps={aiprocessSteps}
                 />
 
-                <IconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    steps={aiprocessSteps}
-                />
-
+         
                 <TestimonialsSection />
                 <ContactSection />
             </div>

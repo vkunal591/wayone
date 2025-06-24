@@ -12,21 +12,21 @@ import PortfolioSection from "../finance-banking/components/PortfolioSection";
 const aiprocessSteps = [
     {
         title: 'Ideation',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'We initiate with your vision, market data, and user behavior to construct a focused, holistic strategy. Any action is based on our sustainability plan - to make your retail business relevant, and your plans supported in leading the way.',
         number: 1,
         delay: 100,
         icon: FaRocket,
     },
     {
         title: 'Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: "We create fast, responsive platforms with secure payment systems, intuitive UI/UX, and backend flexibility — perfect for growing retail and e-commerce operations. Every feature is designed to delight users and simplify your team's work behind the scenes.",
         number: 2,
         delay: 200,
         icon: FaCogs,
     },
     {
         title: 'Deployment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'From testing to launch, we ensure your e-commerce or retail solution runs smoothly. Post-launch, we offer ongoing optimization, real-time performance monitoring, and upgrades so your brand stays current, competitive, and always customer-ready.',
         number: 3,
         delay: 300,
         icon: FaCheckCircle,
@@ -36,17 +36,9 @@ const aiprocessSteps = [
 
 const portfolioData = [
     {
-        title: "WorkSafe",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
-        imageSrc: "/assets/images/screens/worksafe.png",
-        link: "#",
-    },
-    {
         title: "Maskeen",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Maskeen Toys specializes in manufacturing and selling high-quality children's toys. From educational games to fun playsets, their products are designed to entertain and engage young minds. With a focus on safety and creativity, they make childhood more joyful and interactive.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/screens/maskeen.png",
         link: "#",
@@ -54,7 +46,7 @@ const portfolioData = [
     {
         title: "Icon Furniture",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Icon Furniture offers premium-quality outdoor furniture that combines style, durability, and comfort. From garden sets to patio loungers, their designs enhance open spaces. They provide weather-resistant, elegant solutions perfect for residential and commercial outdoor settings.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/screens/iconfurniture.png",
         link: "#",
@@ -67,25 +59,24 @@ export default function Page() {
     return (
         <div className="max-w-7xl !pt-24 mx-auto bg-white">
             <div className="max-w-7xl m-auto px-4 lg:px-16 bg-white">
-                <HeroSection title1={"Empowering Retail & E-Commerce with Smart Digital Solutions"} title2={""} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <HeroSection title1={"Boost Your Retail & E-Commerce"} title2={" Game with Next-Gen Digital Power"} description={"Stay ahead of the digital retail competition. We provide customer-centric, data-driven solutions that enhance engagement, increase sales, and streamline activities - for ambitious retail and eCommerce brands that are ready to grow smarter and faster."} />
                 <WhoWeAre
                     imageSrc="/assets/images/industry/ecom.png"
                     imageAlt="About WayOne"
                     heading="Who We Are"
-                    subheading="Driving Digital Innovation in "
-                    highlightedText="Retail & E-Commerce"
+                    subheading="We Build Digital Retail Brands  "
+                    highlightedText="That Sell Smarter"
                     paragraphs={[
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs.",
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
+                        "We are a technology partner focused on the future for retail and eCommerce businesses. From user-friendly to instant, we view technology as an experience that connects your customers and converts purchases. Our mission is to grow retail with agile, smart, and scalable digital solutions that position your brand for success",
                     ]}
                     linkText="Know More"
                     linkHref="/about-us"
                 />
 
                 <PortfolioSection
-                    sectionTitle="Showcasing"
-                    highlightedText="Our Excellence"
-                    sectionDescription="We specialize in delivering exceptional designs..."
+                    sectionTitle="Retail Wins That Speak"
+                    highlightedText="Louder Than Words"
+                    sectionDescription="See how our smart solutions have helped retail brands scale, connect, and thrive in a competitive digital world."
                     portfolioItems={portfolioData}
                     classNames={{
                         section: "",
@@ -99,32 +90,22 @@ export default function Page() {
                         itemContainer: "gap-10",
                         portfolioItem: "bg-primary p-6 rounded-xl",
                         title: "text-white",
-
                     }}
                 />
 
             </div>
             <div className="max-w-7xl m-auto px-4 lg:px-16">
                 <GradietIconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    steps={aiprocessSteps}
-                />
-
-                <IconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    subtitle="Retails & E-commerce Challenges"
+                    title="Retail Roadblocks to Digital Transformation - "
+                    highlight="And How We Solve Them"
+                    description="We build future-ready retail technology opposed to existing resistance to personalization, inventory elimination, omnichannel synchronization, and buyer behavior change."
                     steps={aiprocessSteps}
                 />
 
                 <TestimonialsSection />
                 <ContactSection />
             </div>
-
         </div>
     )
 }

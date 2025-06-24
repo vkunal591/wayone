@@ -18,13 +18,10 @@ const industries = [
   { icon: <BsHospital size={32} />, label: "Healthcare" },
   { icon: <BsBank size={32} />, label: "Finance & Banking" },
   { icon: <BsShop size={32} />, label: "Retail & E-Commerce" },
-  { icon: <BsBuilding size={32} />, label: "Government & Smart Cities" },
   { icon: <BsTruck size={32} />, label: "Logistics & Transportation" },
   { icon: <BsHouseGear size={32} />, label: "Real Estate & Construction" },
   { icon: <BsBook size={32} />, label: "Education & E-Learning" },
   { icon: <BsCupHot size={32} />, label: "Hospitality & Tourism" },
-  { icon: <BsFuelPump size={32} />, label: "Oil & Gas / Energy" },
-  { icon: <BsTicketPerforated size={32} />, label: "Event & Ticket" },
 ];
 
 export default function IndustriesSection() {

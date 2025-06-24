@@ -32,12 +32,6 @@ const services = [
     id: "saas", // Unique ID for submenu
   },
   {
-    name: "Blockchain Development",
-    image: "/assets/images/block.png",
-    path: "/services/blockchain-development",
-    id: "blockchain", // Unique ID for submenu
-  },
-  {
     name: "CRM Development",
     image: "/assets/images/crm.png",
     path: "/services/crm-development",
@@ -71,12 +65,6 @@ const industries = [
     path: "/industries/health-care",
   },
   {
-    id: "oil-gas-energy", // Added id
-    name: "Oil & Gas Energy",
-    image: "/assets/images/serve2.png",
-    path: "/industries/oil-gas-energy",
-  },
-  {
     id: "retails-e-commerce", // Added id
     name: "Retails & E-Commerce",
     image: "/assets/images/serve3.png",
@@ -95,12 +83,6 @@ const industries = [
     path: "/industries/finance-banking",
   },
   {
-    id: "government-smart-cities", // Added id
-    name: "Goverment & Smart Cities",
-    image: "/assets/images/serve6.png",
-    path: "/industries/government-smart-cities",
-  },
-  {
     id: "education-service", // Added id
     name: "Education Service",
     image: "/assets/images/serve7.png",
@@ -117,12 +99,6 @@ const industries = [
     name: "Hospitality & Tourism",
     image: "/assets/images/serve9.png",
     path: "/industries/hospitality-tourism",
-  },
-  {
-    id: "events", // Added id
-    name: "Events & Tickets ",
-    image: "/assets/images/serve10.png",
-    path: "/industries/events-tickets",
   },
   {
     id: "manufacturing", // Added id
@@ -262,10 +238,10 @@ const Navbar = () => {
                         <span className="text-3xl rounded-full p-3 bg-white">
                           <Image
                             src={subItem?.image}
-                            width={50}
-                            height={50}
+                            width={200}
+                            height={200}
                             alt="Icon"
-                            className="w-7 h-7 filter invert"
+                            className="w-7 h-7 object-contain filter invert"
                           />
                         </span>
                         {subItem.name}

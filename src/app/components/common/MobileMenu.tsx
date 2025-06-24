@@ -45,12 +45,6 @@ export const services = [
         id: "saas", // Unique ID for submenu
       },
       {
-        label: "Blockchain Development",
-        image: "/assets/block.png",
-        href: "/services/blockchain-development",
-        id: "blockchain", // Unique ID for submenu
-      },
-      {
         label: "CRM Development",
         image: "/assets/crm.png",
         href: "/services/crm-development",
@@ -86,12 +80,6 @@ export const services = [
         href: "/industries/health-care",
       },
       {
-        id: "oil-gas-energy",
-        label: "Oil & Gas Energy",
-        image: "/assets/images/serve2.png",
-        href: "/industries/oil-gas-energy",
-      },
-      {
         id: "retails-e-commerce",
         label: "Retails & E-Commerce",
         image: "/assets/images/serve3.png",
@@ -108,12 +96,6 @@ export const services = [
         label: "Finance & Banking",
         image: "/assets/images/serve5.png",
         href: "/industries/finance-banking",
-      },
-      {
-        id: "government-smart-cities",
-        label: "Goverment & Smart Cities",
-        image: "/assets/images/serve6.png",
-        href: "/industries/government-smart-cities",
       },
       {
         id: "education-service",
@@ -133,12 +115,7 @@ export const services = [
         image: "/assets/images/serve9.png",
         href: "/industries/hospitality-tourism",
       },
-      {
-        id: "events",
-        label: "Events & Tickets",
-        image: "/assets/images/serve10.png",
-        href: "/industries/events-tickets",
-      },
+ 
       {
         id: "manufacturing",
         label: "Manufacturig Industries",

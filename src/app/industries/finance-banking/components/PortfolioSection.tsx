@@ -61,7 +61,7 @@ const PortfolioSection = ({
     <section className={`portfolio-page cs-portfolio py-16 ${classNames.section ?? ""}`}>
       <div className={`container mx-auto ${layout} ${classNames.wrapper ?? ""}`}>
         <div className={`section-heading text-left mr-auto ${classNames.heading ?? ""}`}>
-          <h2 className={`text-4xl font-medium lg:w-3/4 mb-4 text-gray-800 ${classNames.headingTitle ?? ""}`}>
+          <h2 className={`text-4xl font-medium lg:w-3/4 mb-2 text-gray-800 ${classNames.headingTitle ?? ""}`}>
             {sectionTitle}{" "}
             <span className={`text-primary ${classNames.highlighted ?? ""}`}>{highlightedText}</span>
           </h2>
@@ -86,7 +86,7 @@ const PortfolioSection = ({
                     {item.description}
                   </p>
 
-                  <p className="text-gray-50 font-medium mb-4">Design & Developmewnt Process</p>
+                  <p className="text-gray-50 font-medium mb-4">Design & Development Process</p>
                   <div
                     className={`widebloktag cs-portfolio-work mb-4 text-sm text-gray-600 grid  md:grid-cols-2 gap-2 ${classNames.tagsWrapper ?? ""}`}
                   >

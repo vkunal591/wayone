@@ -12,21 +12,21 @@ import PortfolioSection from "../finance-banking/components/PortfolioSection";
 const aiprocessSteps = [
     {
         title: 'Ideation',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'We explore your brand goals, operational requirements, and the guest journey. We don’t simply the guest journey - we help scope a solution architecture that will bring more visible occupancies, increase repeat loyalty, and make for memorable guest engagements across all digital touchpoints.',
         number: 1,
         delay: 100,
         icon: FaRocket,
     },
     {
         title: 'Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'We develop custom technology ecosystems — property websites, booking applications, digital concierge, CRMs — powered by the cloud, automation, and analytics. Each piece of technology is geared toward ongoing effective maintenance and positive guest engagement',
         number: 2,
         delay: 200,
         icon: FaCogs,
     },
     {
         title: 'Deployment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'Once we have tested and configured the entire system, we deploy to your property, our deployment is accompanied by final documentation and training for your teams. Our support team continues to support the performance of deployments and recommend upgrades from the guest experience and user behaviour.',
         number: 3,
         delay: 300,
         icon: FaCheckCircle,
@@ -38,7 +38,7 @@ const portfolioData = [
     {
         title: "Bluesky Banquet Hall ",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Blue Sky Banquet offers elegant party hall and marriage home services, perfect for weddings, receptions, birthdays, and corporate events, with customizable décor, catering, and event management support.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/screens/bluesky.png",
         link: "#",
@@ -51,25 +51,24 @@ export default function Page() {
     return (
         <div className="max-w-7xl !pt-24 mx-auto bg-white">
             <div className="max-w-7xl m-auto px-4 lg:px-16 bg-white">
-                <HeroSection title1={"Enhancing Hospitality & Tourism with  "} title2={"Smart Digital Solutions"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <HeroSection title1={"Digitally Transforming Guest Experiences through  "} title2={" Hospitality & Travel Technology"} description={"Hospitality and Travel technology providing guest seamless journeys; booking engine & CRM, digital concierge, review management represented in context tools to build guests experiences which mean hotels, resorts and travel brands can do better, smarter and grow digitally in an 'experience-first' world. "} />
                 <WhoWeAre
                     imageSrc="/assets/images/industry/tourism.png"
                     imageAlt="About WayOne"
                     heading="Who We Are"
-                    subheading="Driving Digital  "
-                    highlightedText="Innovation in Hospitality & Tourism"
+                    subheading="Transforming Guest Experiences  "
+                    highlightedText=" through Technology "
                     paragraphs={[
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs.",
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
+                        "Wayone is about creating and providing custom hospitality and travel technology to deliver better customer experience and bookings conversion rates while enhancing property operations. Be it a boutique resort or travel agent, our technology let you own the frictionless digital experience managing the guest life cycle end to end.",                        
                     ]}
                     linkText="Know More"
                     linkHref="/about-us"
                 />
 
                 <PortfolioSection
-                    sectionTitle="Showcasing"
-                    highlightedText="Our Excellence"
-                    sectionDescription="We specialize in delivering exceptional designs..."
+                    sectionTitle="Hospitality solutions that "
+                    highlightedText="people remember"
+                    sectionDescription="•	See firsthand how we’ve changed hospitality brands with our digital products and high levels of customizations and automating user experiences. "
                     portfolioItems={portfolioData}
                     classNames={{
                         section: "",
@@ -90,20 +89,13 @@ export default function Page() {
             </div>
             <div className="max-w-7xl m-auto px-4 lg:px-16">
                 <GradietIconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    subtitle="Hospitality Tourism Industries Challenges"
+                    title="Tackling Digital Challenges in "
+                    highlight="an Evolving Industry"
+                    description="From OTA reliance to inadequate digital visibility — we assist brands in overcoming the biggest issues that impact guest experience and revenue growth."
                     steps={aiprocessSteps}
                 />
 
-                <IconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    steps={aiprocessSteps}
-                />
 
                 <TestimonialsSection />
                 <ContactSection />

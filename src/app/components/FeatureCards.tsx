@@ -31,18 +31,18 @@ const FeatureCards = ({ features }: FeatureCardsProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`feature-box p-8 rounded-4xl shadow-lg transition-all duration-300 hover:scale-105 ${feature.bgColor}`}
+              className={`feature-box p-5 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 ${feature.bgColor}`}
               data-aos="zoom-in"
               data-aos-delay={feature.delay.toString()}
             >
-              <Image src={feature.iconSrc} alt={feature?.title} width={1200} height={1200} unoptimized className="mb-4 w-16 object-contain" />
+              <Image src={feature.iconSrc} alt={feature?.title} width={1200} height={1200} unoptimized className="mb-4 w-12 object-contain" />
               <h4 className="text-xl font-medium text-gray-800 mb-2">{feature?.title}</h4>
-              <p className="text-base font-[cabin] h-40 text-gray-600 line-clamp-6 mb-4">{feature.description}</p>
-              <Link href={feature?.link || "/"} className="mt-4 px-6 py-2 button-primary text-white rounded-lg hover:bg-primary">
+              <p className="text-sm  font-[cabin] text-gray-600 line-clamp-6 mb-4">{feature.description}</p>
+              <Link href={feature?.link || "/"} className="mt-4 px-4 py-1.5 text-sm button-primary text-white rounded-lg hover:bg-primary">
                 {feature.buttonText}
               </Link>
             </div>

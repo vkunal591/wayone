@@ -15,8 +15,6 @@ const industryItems: IndustryItem[] = [
   { src: '/assets/images/icon/property 2.png', alt: 'Real Estate & Constructions', label: 'Real Estate & Constructions' },
   { src: '/assets/images/icon/higher-education 2.png', alt: 'Education & E-learning', label: 'Education & E-learning' },
   { src: '/assets/images/icon/hotel-cleaning 2.png', alt: 'Hospitality & Tourism', label: 'Hospitality & Tourism' },
-  { src: '/assets/images/icon/oil-drum 2.png', alt: 'Oil & Gas / Energy', label: 'Oil & Gas / Energy' },
-  { src: '/assets/images/icon/insurance 2.png', alt: 'Event & Ticket', label: 'Event & Ticket' },
   { src: '/assets/images/icon/manufacture 1.png', alt: 'Manufacturing & Industrial', label: 'Manufacturing & Industrial' },
   { src: '/assets/images/icon/connection 2.png', alt: 'Technology & Innovation', label: 'Technology & Innovation' },
 ];

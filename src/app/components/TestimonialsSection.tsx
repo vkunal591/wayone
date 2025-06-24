@@ -27,13 +27,13 @@ const testimonials: any = [
   },
   {
     image: "/assets/images/testimonials/testimonials-3.jpg",
-    name: "Arvind Sharma",
+    name: "Neha Sharma",
     testimonial:
-      "“The branding and design services provided by WayOne gave our company a modern, professional look that resonates with our target audience. We’ve noticed a significant increase in customer engagement!”",
+      "“The branding and design services provided by Wayone IT Solutions PVT. LTD gave our company a modern, professional look that resonates with our target audience. We’ve noticed a significant increase in customer engagement!”",
   },
   {
     image: "/assets/images/testimonials/testimonials-4.jpg",
-    name: "Sneha Mehta",
+    name: "Rohan Mehta",
     testimonial:
       "“The results from WayOne’s digital marketing campaigns have been outstanding. Our social media following has grown significantly, and we’re seeing tangible results from their PPC and SEO efforts.”",
   },

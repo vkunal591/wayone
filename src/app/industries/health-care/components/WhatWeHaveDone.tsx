@@ -70,7 +70,7 @@ export default function WhatWeHaveDone() {
                 <HeaderSection
                     subtitle={"What We Have Done"}
                     title={"Healthcare Project We’ve Delivered with Innovation & Excellence"}
-                    description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                    description={"Making a difference in healthcare through technology-driven solutions, that focus on people making their choices better for their digital well-being and patient engagement."}
                     textAlign={"text-left"}
                 />
 

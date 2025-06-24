@@ -12,21 +12,21 @@ import PortfolioSection from "../finance-banking/components/PortfolioSection";
 const aiprocessSteps = [
     {
         title: 'Ideation',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'The beginning of the process begins with clearly understood academic purposes, user types and delivery model of your institution. We will collaboratively construct a techno diversity road map to achieve the learner outcomes, assist managerial roles with management and create a platform that can dynamically accommodate the changes dictated by education.',
         number: 1,
         delay: 100,
         icon: FaRocket,
     },
     {
         title: 'Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'We will construct strong, scalable platforms with infinite abilities for content management, assessments, tracking students, embedding video content and analytics. Each module will be constructed to have accessibility, performance and security features that meet data privacy and all device and browser types.',
         number: 2,
         delay: 200,
         icon: FaCogs,
     },
     {
         title: 'Deployment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'As a result of extensive testing, your solution will be deployed with as little disruption for the users as possible. We will also construct the trainer, documentation and resources for educators and managers so that everyone is confident and ready to transition your platform, while knowing that it will grow with the institutions needs.',
         number: 3,
         delay: 300,
         icon: FaCheckCircle,
@@ -38,10 +38,10 @@ const portfolioData = [
     {
         title: "Hebrew Academy",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Hebrew Academy teaches the Hebrew language through expert-led classes, helping learners build strong language skills for academic, cultural, or religious purposes in a structured and supportive environment.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/screens/hebrewacad.png",
-        link: "#",
+        link: "/contact-us",
     },
 ];
 
@@ -51,25 +51,24 @@ export default function Page() {
     return (
         <div className="max-w-7xl !pt-24 mx-auto bg-white">
             <div className="max-w-7xl m-auto px-4 lg:px-16 bg-white">
-                <HeroSection title1={"Smart Digital Solutions for "} title2={"Real Estate & Construction Excellence"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <HeroSection title1={"Revolutionizing Learning for  "} title2={"the Digital Age"} description={"Enable learning that is immersive, elastic and tech-enabled across platforms for educational institutions, universities, and online education providers. From the digital classroom to AI-enabled learning analytics, we partner with institutions to increase the quality of teaching, improve operations, and deliver engaging educational experiences across platforms and formats."} />
                 <WhoWeAre
                     imageSrc="/assets/images/industry/realestate.png"
                     imageAlt="About WayOne"
                     heading="Who We Are"
-                    subheading="Smart Solutions for "
-                    highlightedText="Real Estate & Construction"
+                    subheading="Revolutionizing Learning Experiences for  "
+                    highlightedText="a Digital-First Future."
                     paragraphs={[
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs.",
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
+                        "At Wayone, we develop made-to-order custom educational platforms that create an easier experience between educators and learners. From custom LMS, live class to exam automation - we build tailored solutions that are then adopted by institutions to successfully scale, engage and develop the future of digital education.",
                     ]}
                     linkText="Know More"
                     linkHref="/about-us"
                 />
 
                 <PortfolioSection
-                    sectionTitle="Showcasing"
-                    highlightedText="Our Excellence"
-                    sectionDescription="We specialize in delivering exceptional designs..."
+                    sectionTitle="Delivering Results for"
+                    highlightedText=" Classrooms and Campuses"
+                    sectionDescription="Learn about the ways our education solutions have supported institutions to enhance access, engagement and operational efficiencies at scale. "
                     portfolioItems={portfolioData}
                     classNames={{
                         section: "",
@@ -90,20 +89,14 @@ export default function Page() {
             </div>
             <div className="max-w-7xl m-auto px-4 lg:px-16">
                 <GradietIconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    subtitle="Education Industries Challenges"
+                    title="Confronting Important "
+                    highlight="Challenges to Modern Education"
+                    description="We will confront the challenges to education in a digital world, including engagement, data management and ensuring access to hybrid delivery. "
                     steps={aiprocessSteps}
                 />
 
-                <IconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    steps={aiprocessSteps}
-                />
+    
 
                 <TestimonialsSection />
                 <ContactSection />

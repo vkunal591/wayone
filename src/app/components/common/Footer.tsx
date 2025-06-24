@@ -37,12 +37,7 @@ export default function Footer() {
       path: "/services/saas-development",
       id: "saas", // Unique ID for submenu
     },
-    {
-      name: "Blockchain Development",
-      image: "/assets/block.png",
-      path: "/services/blockchain-development",
-      id: "blockchain", // Unique ID for submenu
-    },
+
     {
       name: "CRM Development",
       image: "/assets/crm.png",
@@ -72,8 +67,8 @@ export default function Footer() {
   const company = [
     { name: "About", url: "/about-us" },
     { name: "Contact Us", url: "/contact-us" },
-    // { name: "Careers", url: "/careers" },
-    // { name: "Culture", url: "/culture" },
+    { name: "Shipping and Delivery", url: "/shipping-and-delivery" },
+    { name: "Refund and Cancellation Policy", url: "/refund-policy" },
     // { name: "Blog", url: "/blog" },
   ];
 
@@ -113,12 +108,7 @@ export default function Footer() {
           href: "/services/saas-development",
           id: "saas", // Unique ID for submenu
         },
-        {
-          label: "Blockchain Development",
-          image: "/assets/block.png",
-          href: "/services/blockchain-development",
-          id: "blockchain", // Unique ID for submenu
-        },
+   
         {
           label: "CRM Development",
           image: "/assets/crm.png",
@@ -155,12 +145,6 @@ export default function Footer() {
           href: "/industries/health-care",
         },
         {
-          id: "oil-gas-energy", // Added id
-          label: "Oil & Gas Energy",
-          image: "/assets/serve2.png",
-          href: "/industries/oil-gas-energy",
-        },
-        {
           id: "retails-e-commerce", // Added id
           label: "Retails & E-Commerce",
           image: "/assets/serve3.png",
@@ -177,12 +161,6 @@ export default function Footer() {
           label: "Finance & Banking",
           image: "/assets/serve5.png",
           href: "/industries/finance-banking",
-        },
-        {
-          id: "government-smart-cities", // Added id
-          label: "Goverment & Smart Cities",
-          image: "/assets/serve6.png",
-          href: "/industries/government-smart-cities",
         },
         {
           id: "education-service", // Added id
@@ -333,7 +311,7 @@ export default function Footer() {
         <hr className="my-8 border-gray-800" />
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <div className="text-gray-900/80">
-            © {new Date().getFullYear()} Wayone Pvt. Ltd. All rights reserved.
+            © {new Date().getFullYear()} Wayone IT Solutions PVT. LTD. All rights reserved.
           </div>
           <div className="flex space-x-4 text-base mt-2 md:mt-0">
             <Link

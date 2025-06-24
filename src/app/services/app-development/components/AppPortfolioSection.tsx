@@ -22,8 +22,7 @@ const AppPortfolioSection: React.FC<PortfolioSectionProps> = ({ items }) => {
                         From Initial Concept to <span className="text-primary">Seamless <br /> Deployment</span>
                     </h2>
                     <p className="section-desc text-gray-700 mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+  Explore how our expert team transforms ideas into fully functional digital solutions — from strategy and design to final launch.                    </p>
                 </div>
 
                 <div className="app-showcase" data-aos="fade-up">

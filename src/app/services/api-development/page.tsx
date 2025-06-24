@@ -150,9 +150,9 @@ export default function page() {
           services={aiservices}
         />
         <AIProcessSection
-          subtitle="Our Artificial Development Process"
+          subtitle="Our API Development Process"
           title="From Initial Concept to"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          description="A step-by-step approach to building robust, secure, and scalable APIs — from initial planning to smooth integration and deployment."
           steps={aiprocessSteps}
         />
       </div>

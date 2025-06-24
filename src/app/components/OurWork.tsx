@@ -15,36 +15,52 @@ const OurWords: OurWord[] = [
   {
     title: "Unifi Cars",
     description:
-      "Unifi Cars is a trusted platform for buying and selling used vehicles. With no hidden fees, an easy interface, and protected transactions, we make the experience speedy and stress-free, so you get the best offer each time.",
+      "Unifi Cars specializes in the buying and selling of used cars. With a wide selection of quality pre-owned vehicles, they ensure a smooth and transparent process for both sellers and buyers.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
     imageSrc: "/assets/images/UNIFICARS (2) 1.png",
     link: "/contact-us",
   },
   {
-    title: "WayOne FX",
+    title: "Esteem Cars",
     description:
-      "Wayon FX is a top forex trading platform, providing an intuitive interface and live market information. We offer innovative strategies and tools to assist traders in succeeding in the ever-changing forex environment. Our sophisticated security features guarantee safe, effective trading for every investor.",
+      "Esteem Cars is a trusted name in the preowned car market. They offer thoroughly inspected, verified, and well-maintained cars, making them ideal for a hassle-free car purchase experience.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
-    imageSrc: "/assets/images/WAYONE (2) 1.png",
+    imageSrc: "/assets/images/esteem cars.png",
+    link: "/contact-us",
+  },
+  {
+    title: "Esteem Finance",
+    description:
+      "Esteem Finance provides easy and accessible financing for used car buyers, with customised loan options, competitive interest rates, and minimal paperwork for quick approvals.",
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
+    imageSrc: "/assets/images/Esteem Finance.png",
+    link: "/contact-us",
+  },
+  {
+    title: "BYD",
+    description:
+      "BYD (Build Your Dreams) is a global leader in electric vehicles, offering innovative and sustainable mobility solutions focused on performance, safety, and energy efficiency.",
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
+    imageSrc: "/assets/images/BYD.png",
+    link: "/contact-us",
+  },
+  {
+    title: "Books Wagon",
+    description:
+      "Books Wagon is an online bookstore with a vast collection ranging from academic and competitive exam materials to novels and children’s literature, catering to every reader.",
+    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
+    imageSrc: "/assets/images/BooksWagon.png",
     link: "/contact-us",
   },
   {
     title: "Dunlop",
     description:
-      "Dunlop Tyres provides superior-quality tyres for all vehicle types. Focused on delivering top-notch performance, longevity, and safety, we offer the ideal solution for your driving needs. Our vast collection ensures an ideal fit for your car, so you drive confidently and in peace of mind on every ride.",
+      "Dunlop is a renowned tyre brand offering durable and high-performance tyres for cars, bikes, and commercial vehicles, trusted for safety and reliability worldwide.",
     tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
-    imageSrc: "/assets/images/dunlopbahrain (1) 1.png",
+    imageSrc: "/assets/images/dunlopbahrain 1 (1).png",
     link: "/contact-us",
-  },
-  {
-    title: "Saash",
-    description:
-      "Saash is a fashion brand offering elegant jewelry and curated gift boxes for women. Known for its oxidized silver-tone pieces and stylish designs, Saash combines tradition with modern aesthetics, making it a popular choice for trendy ethnic accessories.",
-    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
-    imageSrc: "/assets/images/SASSHI (1) 1.png",
-    link: "/contact-us",
-  },
-];
+  }
+]
 
 const OurWork = ({ layout }: { layout?: any }) => {
   return (
@@ -59,7 +75,7 @@ const OurWork = ({ layout }: { layout?: any }) => {
           </p>
         </div>
 
-        <div className="row grid grid-cols-1 gap-8">
+        <div className="row grid grid-cols-1 ">
           {OurWords.map((item, index) => (
             <div
               key={index}

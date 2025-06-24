@@ -48,7 +48,7 @@ const HeroSection = ({
   }, [isInView, controls]);
 
   return (
-    <section id="hero" className="hero section px-4 py-16 pt-[6rem]">
+    <section id="hero" className="hero section px-4  pt-[6rem]">
       <div className="container mx-auto text-center ">
         <motion.div
           ref={ref}
@@ -78,7 +78,7 @@ const HeroSection = ({
             </span>
           </h1>
 
-          <p className="text-base font-[cabin] lg:w-4/5 text-gray-600 px-4 md:px-16">
+          <p className="text-lg font-[cabin] lg:w-4/5 text-gray-600 px-4 md:px-16">
             {description ||
               "We provide innovative and scalable web and mobile application solutions, developed with latest  technologies and framework to improve performance, guarantee system reliability, and business efficiency across various digital platforms"}
           </p>
@@ -105,7 +105,7 @@ const HeroSection = ({
           </div>
 
           {awardShow && (
-            <div className="container lg:mt-16 m-auto lg:max-w-4xl">
+            <div className="container lg:mt-8 m-auto lg:max-w-4xl">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
                 {[1, 2, 3, 4].map((num) => (
                   <div

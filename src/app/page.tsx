@@ -74,16 +74,6 @@ const featuresData = [
     link: "/services/digital-marketing",
   },
   {
-    title: "BlockChain Development",
-    description:
-      "We provide decentralized blockchain application development for sectors such as fintech, logistics, and healthcare. Our services involve smart contract development, DApps, and tokenization on Ethereum, Polygon, and other secure platforms.",
-    iconSrc: "/assets/images/icon/gear 2.png",
-    buttonText: "Learn more",
-    bgColor: "bg-gray-50",
-    delay: 800,
-    link: "/services/blockchain-development",
-  },
-  {
     title: "API Development",
     description:
       "We develop secure, strong, and Restful APIs for smooth communication between your systems and third-party services. Our APIs provide real-time data flow, strong authentication, and high scalability across platforms.",

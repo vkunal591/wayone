@@ -128,7 +128,7 @@ export default function Page() {
               src="/assets/images/logo.png"
               width={800}
               height={800}
-              alt="WayOne Logo"
+              alt="Wayone IT Solutions PVT. LTD Logo"
               className="object-contain w-40 h-16 mt-3 lg:mt-0 md:w-40 lg:h-16"
             />
           </div>

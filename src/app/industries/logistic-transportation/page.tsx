@@ -12,21 +12,21 @@ import PortfolioSection from "../finance-banking/components/PortfolioSection";
 const aiprocessSteps = [
     {
         title: 'Ideation',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: "We start by identifying the areas in your logistics flow to create visibility and a more efficient logistics process from inventory to delivery. We will work together to identify digital prioritization and goals, operational KPI's, integrations, consistent with your business model and customer expectations.",
         number: 1,
         delay: 100,
         icon: FaRocket,
     },
     {
         title: 'Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: "We develop full-scale platforms with tracking and visibility for order management, notifications, and analytics delivered through cloud, API, and mobile-first solutions. Think about automation, cost efficiency, and user performance wishing to 'automated multimode' logistics experience. ",
         number: 2,
         delay: 200,
         icon: FaCogs,
     },
     {
         title: 'Deployment',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores consequatur suscipit, dolor provident alias tenetur magni sapiente aspernatur aliquam reprehenderit sunt eum tempora asperiores illum, impedit ea fugiat quisquam rerum?',
+        description: 'We deploy solutions to your operational systems with minimal business disruption while your people have full understanding about features.  We will provide full support, version-upgrade, and monitor analytics expectations after the launch to help you evolve your platform to emerging demand, global trends and customer needs.',
         number: 3,
         delay: 300,
         icon: FaCheckCircle,
@@ -38,10 +38,10 @@ const portfolioData = [
     {
         title: "Kapil & Sons",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            "Kapil and Sons operates in the logistics sector, providing reliable transportation and supply chain solutions. They handle goods movement efficiently across regional and national networks, ensuring timely and secure delivery. Their services support industries with smooth cargo operations and logistics management.",
         tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
         imageSrc: "/assets/images/screens/kapilandsons.png",
-        link: "#",
+        link: "/contact-us",
     },
 ];
 
@@ -51,25 +51,24 @@ export default function Page() {
     return (
         <div className="max-w-7xl !pt-24 mx-auto bg-white">
             <div className="max-w-7xl m-auto px-4 lg:px-16 bg-white">
-                <HeroSection title1={"Smart Digital Solutions for "} title2={"Logistics & Transportation"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."} />
+                <HeroSection title1={"Harnessing Smart Technology Solutions for  "} title2={"Logistics & Transport Optimisation"} description={"Collaborate with us to develop custom designed logistics and transport technology platforms to optimise your supply chain efficiency. With visibility into real-time vehicle tracking, warehouse automation, and last mile delivery optimisation, logistics companies can continue to deliver smarter, faster and more transparently - securely and at scale, with technology led for the future website section. "} />
                 <WhoWeAre
                     imageSrc="/assets/images/industry/logisti.png"
                     imageAlt="About WayOne"
                     heading="Who We Are"
-                    subheading="Innovating Logistics & Transportation Solutions"
-                    highlightedText="Retail & E-Commerce"
+                    subheading="Operational Excellence for "
+                    highlightedText="Logistics & Transport"
                     paragraphs={[
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs.",
-                        "Wayone is a forward-thinking IT solutions provider committed to driving digital transformation. With expertise in cutting-edge technologies, we empower businesses with scalable, innovative, and efficient solutions tailored to their unique needs."
+                        "Wayone is a digital transformation specialist for logistics and transport companies. With leading experience in digital automation, the Internet of things (IoT) and real time data analytics, we help deliver end to end optimisation - from fleet management + navigation; through to shipment tracking and inventory management - building connected, agile and cost effective logistics networks.",
                     ]}
                     linkText="Know More"
                     linkHref="/about-us"
                 />
 
                 <PortfolioSection
-                    sectionTitle="Showcasing"
-                    highlightedText="Our Excellence"
-                    sectionDescription="We specialize in delivering exceptional designs..."
+                    sectionTitle="Operational Excellence for"
+                    highlightedText=" Logistics & Transport"
+                    sectionDescription="Wayone is a digital transformation specialist for logistics and transport companies. With leading experience in digital automation, the Internet of things (IoT) and real time data analytics, we help deliver end to end optimisation - from fleet management + navigation; through to shipment tracking and inventory management - building connected, agile and cost effective logistics networks."
                     portfolioItems={portfolioData}
                     classNames={{
                         section: "",
@@ -90,20 +89,14 @@ export default function Page() {
             </div>
             <div className="max-w-7xl m-auto px-4 lg:px-16">
                 <GradietIconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    subtitle=" Logistics & Transport Industries Challenges"
+                    title="Innovations to keep "
+                    highlight="Supply chains moving"
+                    description="Wayone is a digital transformation specialist for logistics and transport companies. With leading experience in digital automation, the Internet of things (IoT) and real time data analytics, we help deliver end to end optimisation - from fleet management + navigation; through to shipment tracking and inventory management - building connected, agile and cost effective logistics networks."
                     steps={aiprocessSteps}
                 />
 
-                <IconCard
-                    subtitle="Healthcare Industries Challenges"
-                    title="Key Challenges in the Healthcare Industry"
-                    highlight=""
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    steps={aiprocessSteps}
-                />
+     
 
                 <TestimonialsSection />
                 <ContactSection />
