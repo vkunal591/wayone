@@ -1,8 +1,10 @@
 "use client";
+
 import AnimatedButton from "@/app/components/common/AnimatedButton";
 import Image from "next/image";
 import { useState } from "react";
-import { BiPhoneCall, BiSolidPhoneCall } from "react-icons/bi";
+import { Post } from "@/utils/api";
+import { BiSolidPhoneCall } from "react-icons/bi";
 import {
   FaUser,
   FaPhone,
@@ -13,14 +15,27 @@ import {
 
 export default function HomeSection() {
   const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
+    firstName: "",
+    lastName: "",
+    phone: "",
     email: "",
     subject: "",
-    project: "",
+    message: "",
   });
 
+  const [errors, setErrors] = useState<any>({});
   const [showModal, setShowModal] = useState(false);
+
+  const validate = () => {
+    const newErrors: any = {};
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = "Phone must be exactly 10 digits.";
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required.";
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+    return newErrors;
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -28,25 +43,42 @@ export default function HomeSection() {
     >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors((prev: any) => ({ ...prev, [e.target.name]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add actual form submission logic here (API call etc.)
-    setShowModal(true);
-    setFormData({ name: "", mobile: "", email: "", subject: "", project: "" });
+
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
+    try {
+      await Post("/api/contact", formData, 5000);
+      setShowModal(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (error) {
+      alert("Submission failed. Please try again later.");
+    }
   };
 
   return (
     <section
       id="Home"
       className="min-h-screen bg-cover bg-center p-4 lg:p-10 relative flex flex-col justify-center items-center"
-      style={{
-        backgroundImage: "url('/assets/images/home.webp')",
-      }}
+      style={{ backgroundImage: "url('/assets/images/home.webp')" }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-blue-950 to-red-900 opacity-90 z-0" />
-      <div className=" w-full relative z-10 max-w-7xl rounded-xl  lg:p-8 flex flex-col lg:flex-row gap-10">
+      <div className="w-full relative z-10 max-w-7xl rounded-xl lg:p-8 flex flex-col lg:flex-row gap-10">
         {/* Left Content */}
         <div className="flex-1 flex flex-col justify-center gap-4">
           <p className="text-white text-sm font-medium">Welcome to WayOne</p>
@@ -57,8 +89,8 @@ export default function HomeSection() {
           <p className="text-gray-200 text-base">
             Ready to turn your ideas into reality? We create innovative digital
             solutions that make your vision come to life. Whether you're
-            launching a new project or enhancing an existing one, we're here to
-            help every step of the way. Get Started
+            launching a new subject or enhancing an existing one, we're here to
+            help every step of the way.
           </p>
           <AnimatedButton
             label="Get Started"
@@ -66,7 +98,6 @@ export default function HomeSection() {
             onClick={() => console.log("Clicked!")}
             className="mt-4"
           />
-
           <Image
             src={"/assets/images/homesection.png"}
             width={800}
@@ -82,32 +113,49 @@ export default function HomeSection() {
             onSubmit={handleSubmit}
             className="flex flex-col gap-5 shadow lg:w-3/4 m-auto p-4 py-8 rounded-2xl bg-white border-blue-800 border-4"
           >
-            <div className="relative">
-              <FaUser className="absolute left-2 top-3 text-blue-900" />
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Name"
-                className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                required
-              />
+
+            <div className="flex items-center justify-center gap-4">
+              <div className="relative">
+                <FaUser className="absolute left-2 top-3 text-blue-900" />
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="First Name"
+                  className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
+                />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              </div>
+              <div className="relative">
+                <FaUser className="absolute left-2 top-3 text-blue-900" />
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Last Name"
+                  className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
+                />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              </div>
             </div>
 
+            {/* Phone */}
             <div className="relative">
               <BiSolidPhoneCall className="absolute left-2 top-3 text-xl text-blue-900" />
               <input
-                type="tel"
-                name="mobile"
-                value={formData.mobile}
+                type="number"
+                name="phone"
+                value={formData.phone}
                 onChange={handleChange}
-                placeholder="Mobile No"
-                className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                required
+                placeholder="Phone No"
+                className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
               />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
             </div>
 
+            {/* Email */}
             <div className="relative">
               <FaEnvelope className="absolute left-2 top-3 text-blue-900" />
               <input
@@ -116,11 +164,12 @@ export default function HomeSection() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                required
+                className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
               />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
             </div>
-            {/* 
+
+            {/* Subject */}
             <div className="relative">
               <FaClipboard className="absolute left-2 top-3 text-blue-900" />
               <input
@@ -129,36 +178,40 @@ export default function HomeSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Subject"
-                className="w-full pl-8 pb-2 border-b-2 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
+                className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
               />
-            </div> */}
+              {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
+            </div>
 
-            {/* <div className="relative">
+            {/* subject Type
+            <div className="relative">
               <FaBriefcase className="absolute left-2 top-3 text-blue-900" />
               <select
-                name="project"
-                value={formData.project}
+                name="subject"
+                value={formData.subject}
                 onChange={handleChange}
-                className="w-full pl-8 pb-2 border-b-2 border-blue-900 bg-transparent text-gray-700 focus:outline-none"
+                className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent text-gray-700 focus:outline-none"
               >
-                <option value="" disabled>
-                  Select Project Type
-                </option>
+                <option value="" disabled>Select subject Type</option>
                 <option value="Website">Website</option>
-                <option value="Mobile App">Mobile App</option>
+                <option value="Phone App">Phone App</option>
                 <option value="E-Commerce">E-Commerce</option>
                 <option value="Marketing">Marketing</option>
               </select>
+              {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
             </div> */}
 
+            {/* Message */}
             <div>
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Project Details"
+                value={formData.message}
                 onChange={handleChange}
-                className="w-full pb-2 pl-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none resize-none"
-              ></textarea>
+                placeholder="subject Details"
+                className="w-full pb-2 pl-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none resize-none"
+              />
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
             </div>
 
             <button
@@ -167,6 +220,7 @@ export default function HomeSection() {
             >
               Submit
             </button>
+
             <p className="text-xs text-gray-500 mt-2">
               <span className="font-semibold text-sm mr-2">Note:</span>
               We respect your privacy. Your details will never be shared.
@@ -179,12 +233,9 @@ export default function HomeSection() {
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
           <div className="bg-white rounded-xl p-8 shadow-lg text-center w-[90%] max-w-md">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">
-              Thank You!
-            </h3>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Thank You!</h3>
             <p className="text-gray-700 mb-6">
-              Your request has been submitted successfully. We’ll get back to
-              you soon.
+              Your request has been submitted successfully. We’ll get back to you soon.
             </p>
             <button
               onClick={() => setShowModal(false)}

@@ -10,6 +10,7 @@ import {
 } from "react-icons/io5";
 import Accordion from "./FooterAccordion";
 import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
+import { GrCurrency } from "react-icons/gr";
 
 export default function Footer() {
   const services = [
@@ -108,7 +109,7 @@ export default function Footer() {
           href: "/services/saas-development",
           id: "saas", // Unique ID for submenu
         },
-   
+
         {
           label: "CRM Development",
           image: "/assets/crm.png",
@@ -233,6 +234,12 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+              <li className="bg-green-500 flex items-center justify-center gap-2 px-4 py-3 mt-2 text-white font-semibold text-center rounded-xl" >
+                {/* <GrCurrency /> */}
+                <Link href={'/payment'} className="hover:text-gray-600">
+                  {'Make Payment'}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -305,6 +312,7 @@ export default function Footer() {
                 </Link>
               </p>
               {/* <p className=" pt-5 text-primary font-medium ">Wayone Pvt Ltd</p> */}
+
             </div>
           </div>
         </div>

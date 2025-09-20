@@ -20,14 +20,14 @@ const OurWords: OurWord[] = [
     imageSrc: "/assets/images/UNIFICARS (2) 1.png",
     link: "/contact-us",
   },
-  {
-    title: "Esteem Cars",
-    description:
-      "Esteem Cars is a trusted name in the preowned car market. They offer thoroughly inspected, verified, and well-maintained cars, making them ideal for a hassle-free car purchase experience.",
-    tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
-    imageSrc: "/assets/images/esteem cars.png",
-    link: "/contact-us",
-  },
+  // {
+  //   title: "Esteem Cars",
+  //   description:
+  //     "Esteem Cars is a trusted name in the preowned car market. They offer thoroughly inspected, verified, and well-maintained cars, making them ideal for a hassle-free car purchase experience.",
+  //   tags: ["UX/UI Design", "Development", "Strategy", "Quality Assurance"],
+  //   imageSrc: "/assets/images/esteem cars.png",
+  //   link: "/contact-us",
+  // },
   {
     title: "Esteem Finance",
     description:
@@ -106,25 +106,15 @@ const OurWork = ({ layout }: { layout?: any }) => {
                     <span className="circle ml-2" />
                   </Link>
                 </div>
-                <div className="lg:w-1/2">
-                  <div className="images-wide-blocktt">
-                    <div className="tilt-outer">
-                      <div
-                        className="innerwidedevice tilt-inner"
-                        data-tilt
-                        data-tilt-max="4"
-                        data-tilt-speed="1000"
-                        data-tilt-perspective="2000"
-                      >
-                        <Image
-                          src={item.imageSrc}
-                          alt={item.title}
-                          width={800}
-                          height={500}
-                          className="scale-130 hover:scale-125 transition-all ease-in-out duration-300 rounded-lg"
-                        />
-                      </div>
-                    </div>
+                <div className="lg:w-1/2 ">
+                  <div className="images-wide-blocktt overflow-hidden">
+                    <Image
+                      src={item.imageSrc}
+                      alt={item.title}
+                      width={800}
+                      height={500}
+                      className=" hover:scale-95 h-96 object-contain transition-all ease-in-out duration-300 rounded-lg"
+                    />
                   </div>
                 </div>
               </div>

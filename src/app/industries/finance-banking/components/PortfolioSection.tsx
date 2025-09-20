@@ -116,24 +116,14 @@ const PortfolioSection = ({
 
                 {/* Image */}
                 <div className={`lg:w-1/2 ${classNames.imageCol ?? ""}`}>
-                  <div className={`images-wide-blocktt ${classNames.imageOuter ?? ""}`}>
-                    <div className={`tilt-outer ${classNames.imageInner ?? ""}`}>
-                      <div
-                        className="innerwidedevice tilt-inner"
-                        data-tilt
-                        data-tilt-max="4"
-                        data-tilt-speed="1000"
-                        data-tilt-perspective="2000"
-                      >
-                        <Image
-                          src={item.imageSrc}
-                          alt={item.title}
-                          width={800}
-                          height={500}
-                          className={`hover:scale-[1.05] transition-all ease-in-out duration-300 rounded-lg ${classNames.image ?? ""}`}
-                        />
-                      </div>
-                    </div>
+                  <div className={`images-wide-blocktt overflow-hidden ${classNames.imageOuter ?? ""}`}>
+                      <Image
+                        src={item.imageSrc}
+                        alt={item.title}
+                        width={800}
+                        height={500}
+                        className={` hover:scale-95 h-96 object-contain transition-all ease-in-out duration-300 rounded-lg ${classNames.image ?? ""}`}
+                      />
                   </div>
                 </div>
               </div>

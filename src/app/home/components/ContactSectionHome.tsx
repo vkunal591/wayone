@@ -1,11 +1,16 @@
 "use client";
 
+import { Post } from "@/utils/api";
 import Link from "next/link";
 import React, { useState } from "react";
 import { BiMapPin, BiPhone, BiSolidPhoneCall } from "react-icons/bi";
 import { CgMail } from "react-icons/cg";
-import { FaUser, FaPhone, FaEnvelope, FaBriefcase, FaClipboard } from "react-icons/fa";
-// Example icon imports (adjust as per your icon library)
+import {
+  FaUser,
+  FaPhone,
+  FaEnvelope,
+  FaBriefcase,
+} from "react-icons/fa";
 
 const data = [
   {
@@ -36,79 +41,130 @@ const data = [
 
 export default function ContactSectionHome() {
   const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
+    firstName: "",
+    lastName: "",
     email: "",
+    phone: "",
     subject: "",
-    project: "",
+    message: "",
   });
 
-  const [showModal, setShowModal] = useState(false);
+  const [errors, setErrors] = useState<any>({});
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const validate = () => {
+    const newErrors: any = {};
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    if (!formData.subject.trim()) newErrors.subject = "Please select a project type.";
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+    if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = "Phone must be exactly 10 digits.";
+    return newErrors;
+  };
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors((prev: any) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Add actual form submission logic here (API call etc.)
-    setShowModal(true);
-    setFormData({ name: "", mobile: "", email: "", subject: "", project: "" });
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
+    setLoading(true);
+    try {
+      await Post("/api/contact", formData, 5000);
+      setFormSubmitted(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (error: any) {
+      const message = error?.response?.data?.message || "Something went wrong.";
+      setErrors({ form: message });
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <section
       id="ContactUs"
-      className=" relative p-4 lg:p-10 bg-gray-100 font-[montserrat]"
+      className="relative p-4 lg:p-10 bg-gray-100 font-[montserrat]"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 from-30%  to-red-800 to-80% opacity-90 z-0" />
-
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900 from-30% to-red-800 to-80% opacity-90 z-0" />
       <div className="relative">
-        {/* Title */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl lg:w-3/4 m-auto mb-4  font-bold text-gray-100">
+          <h2 className="text-4xl lg:w-3/4 m-auto mb-4 font-bold text-gray-100">
             Ready to Build Your Digital Future?
           </h2>
-          <p className="text-3xl text-white ">
-            Let’s connect and transform your ideas into impactful,
-            market-leading solutions
+          <p className="text-3xl text-white">
+            Let’s connect and transform your ideas into impactful, market-leading solutions
           </p>
         </div>
+
         <div className="grid lg:grid-cols-5 items-center gap-4">
           <div className="lg:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col gap-5 shadow  m-auto p-4 py-8 rounded-2xl bg-white border-blue-800 border-4"
+              className="flex flex-col gap-5 shadow m-auto p-4 py-8 rounded-2xl bg-white border-blue-800 border-4"
             >
-              <div className="relative">
-                <FaUser className="absolute left-2 top-3 text-blue-900" />
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Name"
-                  className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                  required
-                />
+              {/* First + Last Name */}
+              <div className="flex items-center justify-between gap-4">
+                <div className="relative w-full">
+                  <FaUser className="absolute left-2 top-3 text-blue-900" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="First Name"
+                    className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
+                  />
+                  {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+                </div>
+                <div className="relative w-full">
+                  <FaUser className="absolute left-2 top-3 text-blue-900" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Last Name"
+                    className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
+                  />
+                  {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+                </div>
               </div>
 
+              {/* Phone */}
               <div className="relative">
                 <BiSolidPhoneCall className="absolute left-2 top-2 text-xl text-blue-900" />
                 <input
-                  type="tel"
-                  name="mobile"
-                  value={formData.mobile}
+                  type="text"
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   placeholder="Mobile No"
-                  className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                  required
+                  className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
                 />
+                {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
               </div>
 
+              {/* Email */}
               <div className="relative">
                 <FaEnvelope className="absolute left-2 top-3 text-blue-900" />
                 <input
@@ -117,72 +173,66 @@ export default function ContactSectionHome() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
-                  className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                  required
+                  className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
 
-              {/* <div className="relative">
-                <FaClipboard className="absolute left-2 top-3 text-blue-900" />
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject"
-                  className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none"
-                />
-              </div> */}
-
+              {/* Subject Select */}
               <div className="relative">
                 <FaBriefcase className="absolute left-2 top-3 text-blue-900" />
                 <select
-                  name="project"
-                  value={formData.project}
+                  name="subject"
+                  value={formData.subject}
                   onChange={handleChange}
-                  className="w-full pl-8 pb-2 border-b-1 border-blue-900 bg-transparent text-gray-700 focus:outline-none"
+                  className="w-full pl-8 pb-2 border-b border-blue-900 bg-transparent text-gray-700 focus:outline-none"
                 >
-                  <option value="" disabled>
-                    Select Project Type
-                  </option>
+                  <option value="" disabled>Select Project Type</option>
                   <option value="Website">Website</option>
                   <option value="Mobile App">Mobile App</option>
                   <option value="E-Commerce">E-Commerce</option>
                   <option value="Marketing">Marketing</option>
                 </select>
+                {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
               </div>
 
+              {/* Message */}
               <div>
                 <textarea
                   name="message"
                   rows={4}
-                  placeholder="Project Details"
+                  value={formData.message}
                   onChange={handleChange}
-                  className="w-full pb-2 pl-2 border-b-1 border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none resize-none"
-                ></textarea>
+                  placeholder="Project Details"
+                  className="w-full pb-2 pl-2 border-b border-blue-900 bg-transparent placeholder-gray-500 focus:outline-none resize-none"
+                />
+                {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
               </div>
+
+              {/* Global form error */}
+              {errors.form && <p className="text-red-500 text-center">{errors.form}</p>}
 
               <button
                 type="submit"
                 className="bg-blue-900 text-white py-2 px-4 rounded-full hover:bg-blue-800 transition"
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
-              {/* <p className="text-xs text-gray-500 mt-2">
-                <span className="font-semibold text-sm mr-2">Note:</span>
-                We respect your privacy. Your details will never be shared.
-              </p> */}
+
+              {formSubmitted && (
+                <p className="text-green-600 text-sm text-center">
+                  Thank you! We'll contact you soon.
+                </p>
+              )}
             </form>
           </div>
-          <div className="lg:col-span-2 h-full">
-            {" "}
-            {/* Ensure this wrapper fills available height */}
-            <div className="flex flex-col  gap-5 h-full shadow m-auto p-10 rounded-2xl bg-white border-blue-800 border-4">
-              <h3 className="text-xl font-extrabold">Touch With Us</h3>
 
+          {/* Contact Info */}
+          <div className="lg:col-span-2 h-full">
+            <div className="flex flex-col gap-5 h-full shadow m-auto p-10 rounded-2xl bg-white border-blue-800 border-4">
+              <h3 className="text-xl font-extrabold">Touch With Us</h3>
               <div className="flex flex-col justify-start gap-4 flex-1">
-                {" "}
-                {/* Optional: to stretch links */}
                 {data.map((card, index) => (
                   <Link
                     key={index}
@@ -191,11 +241,9 @@ export default function ContactSectionHome() {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 pr-4 border-r border-gray-300 last:border-none"
                   >
-                    <div className="mt-1 h-full">{card.icon}</div>
-                    <div className="flex flex-col justify-center h-full">
-                      <h4 className="text-lg font-semibold text-blue-900">
-                        {card.title}
-                      </h4>
+                    <div className="mt-1">{card.icon}</div>
+                    <div className="flex flex-col">
+                      <h4 className="text-lg font-semibold text-blue-900">{card.title}</h4>
                       <p className="text-gray-600 text-sm">{card.desc}</p>
                     </div>
                   </Link>

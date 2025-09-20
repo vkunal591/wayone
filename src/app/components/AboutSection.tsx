@@ -6,7 +6,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="about section py-16">
+    <section id="about" className="about section">
       <div className="container mx-auto" data-aos="fade-up">
         <div className="flex flex-col lg:flex-row gap-10">
           <div

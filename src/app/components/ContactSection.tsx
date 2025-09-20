@@ -1,16 +1,35 @@
 "use client";
+import { Post } from "@/utils/api";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
   });
 
+  const [errors, setErrors] = useState<any>({});
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const validate = () => {
+    const newErrors: any = {};
+    if (!formData.firstName.trim()) newErrors.name = "Name is required.";
+    if (!formData.lastName.trim()) newErrors.name = "Name is required.";
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+
+    // Validate 10-digit phone if provided
+    if (formData.phone.trim() && !/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
+
+    return newErrors;
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -20,12 +39,48 @@ const ContactSection: React.FC = () => {
       ...formData,
       [name]: value,
     });
+
+    // Live validation on input change
+    setErrors((prev: any) => ({
+      ...prev,
+      [name]: "",
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    setFormSubmitted(true);
+
+    const validationErrors = validate();
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length > 0) return;
+
+    setLoading(true);
+    try {
+      await Post("/api/contact", {
+        firstName: formData.firstName,
+        lastName: formData?.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        subject: "General Contact",
+        message: formData.message,
+      }, 5000);
+
+      setFormSubmitted(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setErrors({});
+    } catch (error: any) {
+      const message = error?.response?.data?.message || "Something went wrong.";
+      setErrors({ form: message });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -39,45 +94,76 @@ const ContactSection: React.FC = () => {
             Reach out now to discuss how our innovative solutions can accelerate your business growth and transform your digital landscape
           </p>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg"
-            />
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email address"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg"
-            />
-            <input
-              type="text"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Enter your Phone Number (Optional)"
-              className="w-full p-3 border border-gray-300 rounded-lg"
-            />
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Message"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg"
-            ></textarea>
+            <div className="flex items-center justify-between gap-4 ">
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="Enter your first name"
+                  className={`w-full p-3 border rounded-lg ${errors.name ? "border-red-500" : "border-gray-300"}`}
+                />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Enter your last name"
+                  className={`w-full p-3 border rounded-lg ${errors.name ? "border-red-500" : "border-gray-300"}`}
+                />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              </div>
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email address"
+                className={`w-full p-3 border rounded-lg ${errors.email ? "border-red-500" : "border-gray-300"}`}
+              />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Enter your Phone Number (Optional)"
+                className={`w-full p-3 border rounded-lg ${errors.phone ? "border-red-500" : "border-gray-300"}`}
+              />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+            </div>
+
+            <div>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                className={`w-full p-3 border rounded-lg ${errors.message ? "border-red-500" : "border-gray-300"}`}
+              />
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+            </div>
+
+            {errors.form && (
+              <p className="text-red-500 text-sm text-center">{errors.form}</p>
+            )}
+
             <button
               type="submit"
-              className="submit-btn button-primary text-white py-3 px-6 rounded-lg w-full  transition duration-300"
+              className="submit-btn button-primary text-white py-3 px-6 rounded-lg w-full transition duration-300"
+              disabled={loading}
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
 
@@ -87,6 +173,7 @@ const ContactSection: React.FC = () => {
             </div>
           )}
         </div>
+
         <div className="contact-image w-full md:w-2/4 rounded-4xl md:rounded-none overflow-hidden mb-8 md:mb-0">
           <Image
             width={900}
@@ -96,7 +183,6 @@ const ContactSection: React.FC = () => {
             className="lg:w-5/6"
           />
         </div>
-
       </div>
     </div>
   );
